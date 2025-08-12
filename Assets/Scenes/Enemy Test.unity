@@ -158,7 +158,7 @@ MonoBehaviour:
   bulletEmitter: {fileID: 18725498}
   health: 100
   movementPattern: {fileID: 11400000, guid: c0de8e49ab3005d47938f6c70dcf6750, type: 2}
-  shootingPattern: {fileID: 11400000, guid: 36af4a3f299e73d4ca12ddcde3b044bc, type: 2}
+  shootingPattern: {fileID: 11400000, guid: 6713f9942dfc463479ee7106f109d198, type: 2}
 --- !u!50 &18725492
 Rigidbody2D:
   serializedVersion: 4
