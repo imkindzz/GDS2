@@ -39,8 +39,7 @@ public class ParticleBulletEmitter2D : MonoBehaviour
     {
         if (((1 << other.layer) & hitMask.value) == 0) return;
 
-        // Example damage application:
-        var hp = other.GetComponent<PlayerHealth2D>(); // your player script
+        PlayerStatus hp = other.GetComponent<PlayerStatus>();
         if (hp) hp.TakeDamage(damage);
     }
 }
