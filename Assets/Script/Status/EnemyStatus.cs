@@ -9,6 +9,7 @@ public class EnemyStatus : StatusBase
     public override void TakeDamage(float amount)
     {
         base.TakeDamage(amount);
+        Debug.Log("Enemy is taking damage");
     }
     #endregion
 

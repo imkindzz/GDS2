@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class StatusBase : MonoBehaviour
 {
+    [Header("Health")]
     [SerializeField] private float _currentHealth = 100f; //the amount of health the status have
     [SerializeField, Min(1)] private float _maxHealth = 100f; //the maximum amount of health
     [SerializeField] private bool showHealthMeter = true; //whether or not the health meter is shown
     [SerializeField] private Slider healthMeter; //the visual slider that shows the amount of health
+
+    [Header("Health")]
+    [SerializeField] private float deathDelay = 0.25f; //the time taken before the gameObject completely disappears
 
     #region Properties
     public float currentHealth { get => _currentHealth; set => _currentHealth = value; }
@@ -96,7 +100,13 @@ public class StatusBase : MonoBehaviour
     //when the status have no health, and is therefore dead
     public virtual void OnDeathState()
     {
-        Destroy(gameObject);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb) rb.velocity = Vector2.zero;
+        
+        Collider2D col = GetComponent<Collider2D>(); 
+        if (col) col.enabled = false;
+        
+        Destroy(gameObject, deathDelay);
     }
     #endregion
 }

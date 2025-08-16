@@ -9,6 +9,7 @@ public class BossStatus : StatusBase
     public override void TakeDamage(float amount)
     {
         base.TakeDamage(amount);
+        Debug.Log("Boss is taking damage");
     }
     #endregion
 
