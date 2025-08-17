@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e1690f8692984f4dbfbaecb8fc3060d, type: 3}
-  m_Name: StraightShot
+  m_Script: {fileID: 11500000, guid: 60ad2e7f5eb45ea44bc3997c4d86c306, type: 3}
+  m_Name: SpreadShot
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
-  bulletLifetime: 5
+  bulletSpeed: 8.42
+  bulletLifetime: 1.36
+  numBullets: 5
+  spread: 23.1
