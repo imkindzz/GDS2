@@ -13,14 +13,11 @@ public class SimplePlayer2D : MonoBehaviour
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         rb.velocity = input * speed;
     }
-}
 
-public class PlayerHealth2D : MonoBehaviour
-{
-    public int health = 100;
-    public void TakeDamage(int amount)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        health -= amount;
-        Debug.Log($"Player took {amount} damage. Health: {health}");
+        //test test
+        StatusBase statusBase = collision.gameObject.GetComponent<StatusBase>();
+        if (statusBase) statusBase.TakeDamage(5f);
     }
 }
