@@ -17,6 +17,11 @@ public class EnemyShooter2D : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        // For top-down shooters you usually want no gravity and no physics rotation
+        rb.gravityScale = 0f;
+        rb.freezeRotation = true;
+
         if (!player)
         {
             var p = GameObject.FindGameObjectWithTag("Player");
@@ -24,27 +29,40 @@ public class EnemyShooter2D : MonoBehaviour
         }
     }
 
-    void Update()
+    // Do physics in FixedUpdate
+    void FixedUpdate()
     {
-        t += Time.deltaTime;
+        float dt = Time.fixedDeltaTime;
+        t += dt;
 
         // movement
         if (movementPattern)
         {
             Vector2 v = movementPattern.EvaluateVelocity(transform, player, t);
-            rb.velocity = v;
+
+            if (rb.bodyType == RigidbodyType2D.Kinematic)
+            {
+                // Kinematic bodies don't advance from velocity automatically
+                rb.MovePosition(rb.position + v * dt);
+            }
+            else
+            {
+                rb.velocity = v; // Dynamic body
+            }
+
             // rotate to face velocity if moving
             if (v.sqrMagnitude > 0.001f)
             {
                 float z = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90f;
-                transform.rotation = Quaternion.Euler(0, 0, z);
+                rb.MoveRotation(z); // use physics-friendly rotation
             }
         }
 
-        // shooting
+        // shooting (ok to tick here; it's tied to pattern time)
         if (shootingPattern && bulletEmitter)
         {
             shootingPattern.Tick(this, bulletEmitter, transform, player, t);
         }
     }
 }
+

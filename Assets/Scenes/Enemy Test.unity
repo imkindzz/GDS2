@@ -150,15 +150,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18725490}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f59629de08458504b9299e22c2422504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 516406421}
   bulletEmitter: {fileID: 18725498}
-  movementPattern: {fileID: 11400000, guid: c0de8e49ab3005d47938f6c70dcf6750, type: 2}
-  shootingPattern: {fileID: 11400000, guid: 6713f9942dfc463479ee7106f109d198, type: 2}
+  movementPattern: {fileID: 11400000, guid: c23a5628a4bc0a04e934b3088df0e126, type: 2}
+  shootingPattern: {fileID: 11400000, guid: 36af4a3f299e73d4ca12ddcde3b044bc, type: 2}
 --- !u!50 &18725492
 Rigidbody2D:
   serializedVersion: 4
@@ -9988,14 +9988,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106806784}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f59629de08458504b9299e22c2422504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 516406421}
   bulletEmitter: {fileID: 106806785}
-  movementPattern: {fileID: 11400000, guid: c0de8e49ab3005d47938f6c70dcf6750, type: 2}
+  movementPattern: {fileID: 11400000, guid: c23a5628a4bc0a04e934b3088df0e126, type: 2}
   shootingPattern: {fileID: 11400000, guid: 6713f9942dfc463479ee7106f109d198, type: 2}
 --- !u!50 &106806790
 Rigidbody2D:

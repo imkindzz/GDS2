@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 593b386655e5a9d4fb418c36baf2f2a0, type: 3}
-  m_Name: New Move_Zig Zag
+  m_Script: {fileID: 11500000, guid: 6e6c3e30ddfbe2244b4825f7f29f2a7e, type: 3}
+  m_Name: Orbit
   m_EditorClassIdentifier: 
-  forwardSpeed: 2.5
-  zigAmplitude: 2
-  zigFrequency: 2
-  forwardDir: {x: 0, y: -1}
+  orbitRadius: 4
+  angularSpeedDeg: 90
+  centerChaseLerp: 2
