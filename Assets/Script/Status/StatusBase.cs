@@ -101,7 +101,7 @@ public class StatusBase : MonoBehaviour
     public virtual void OnDeathState()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (rb) rb.velocity = Vector2.zero;
+        if (rb) rb.constraints = RigidbodyConstraints2D.FreezeAll;
         
         Collider2D col = GetComponent<Collider2D>(); 
         if (col) col.enabled = false;

@@ -5123,7 +5123,7 @@ MonoBehaviour:
   _maxHealth: 100
   showHealthMeter: 1
   healthMeter: {fileID: 0}
-  deathDelay: 0.25
+  deathDelay: 0
 --- !u!1 &106806784
 GameObject:
   m_ObjectHideFlags: 0
@@ -9980,7 +9980,7 @@ MonoBehaviour:
   _maxHealth: 100
   showHealthMeter: 1
   healthMeter: {fileID: 0}
-  deathDelay: 0.25
+  deathDelay: 0
 --- !u!114 &106806789
 MonoBehaviour:
   m_ObjectHideFlags: 0

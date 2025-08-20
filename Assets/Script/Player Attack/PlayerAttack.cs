@@ -25,7 +25,20 @@ public class PlayerAttack : MonoBehaviour
 
         if (damageTimer > damageDelay)
         {
-            foreach (StatusBase status in reachableStatus) status.TakeDamage(damage);
+            List<int> unreachableStatus = new List<int>(); //stores the destroyed/dead enemies by the index
+
+            //makes damage to the enemies
+            for (int i = 0; i < reachableStatus.Count; i++)
+            {
+                StatusBase status = reachableStatus[i];
+
+                status.TakeDamage(damage);
+                if (status.noHealth) unreachableStatus.Add(i);
+            }
+
+            //removes the destroyed/dead enemies from the reachableStatus List
+            for (int i = unreachableStatus.Count - 1; i >= 0; i--) reachableStatus.RemoveAt(unreachableStatus[i]);
+
             damageTimer = 0f;
         }
     }
@@ -36,10 +49,6 @@ public class PlayerAttack : MonoBehaviour
 
         StatusBase status = collision.GetComponent<StatusBase>();
         if (status) reachableStatus.Add(status);
-
-        Debug.LogWarning("reachableStatus");
-        Debug.Log(reachableStatus.Count);
-        foreach (StatusBase statusBase in reachableStatus) Debug.Log(statusBase.gameObject.name);
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -48,10 +57,6 @@ public class PlayerAttack : MonoBehaviour
 
         StatusBase status = collision.GetComponent<StatusBase>();
         if (status) reachableStatus.Remove(status);
-
-        Debug.LogWarning("reachableStatus");
-        Debug.Log(reachableStatus.Count);
-        foreach (StatusBase statusBase in reachableStatus) Debug.Log(statusBase.gameObject.name);
     }
     #endregion
 }
