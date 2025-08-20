@@ -8,15 +8,11 @@ public class EnemyShooter2D : MonoBehaviour
     [SerializeField] private ParticleBulletEmitter2D bulletEmitter; // particle-based bullets
     private Rigidbody2D rb;
 
-    [Header("Stats")]
-    [SerializeField] private float health = 60f;
-
     [Header("Patterns")]
     [SerializeField] private MovementPattern2D movementPattern;
     [SerializeField] private ShootingPattern2D shootingPattern;
 
     private float t; // pattern time
-    private bool isDead;
 
     void Awake()
     {
@@ -30,7 +26,6 @@ public class EnemyShooter2D : MonoBehaviour
 
     void Update()
     {
-        if (isDead) return;
         t += Time.deltaTime;
 
         // movement
@@ -51,20 +46,5 @@ public class EnemyShooter2D : MonoBehaviour
         {
             shootingPattern.Tick(this, bulletEmitter, transform, player, t);
         }
-    }
-
-    public void TakeDamage(float amount)
-    {
-        if (isDead) return;
-        health -= amount;
-        if (health <= 0f) Die();
-    }
-
-    private void Die()
-    {
-        isDead = true;
-        rb.velocity = Vector2.zero;
-        var col = GetComponent<Collider2D>(); if (col) col.enabled = false;
-        Destroy(gameObject, 0.25f);
     }
 }
