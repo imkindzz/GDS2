@@ -10142,9 +10142,9 @@ GameObject:
   - component: {fileID: 516406424}
   - component: {fileID: 516406423}
   - component: {fileID: 516406426}
+  - component: {fileID: 516406422}
   - component: {fileID: 516406427}
   - component: {fileID: 516406428}
-  - component: {fileID: 516406429}
   m_Layer: 3
   m_Name: Circle
   m_TagString: Player
@@ -10167,6 +10167,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &516406422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516406420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7581b353f0ef264b94d2897801adf33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
 --- !u!58 &516406423
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10351,19 +10364,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   damageDelay: 0.5
---- !u!114 &516406429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516406420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17956c32814012247919b45fbb2df4e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!1 &2081319146
 GameObject:
   m_ObjectHideFlags: 0
