@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private float damage; //the amount of damage that the player makes
-    [SerializeField] private float damageRadius; //the radius distance that the player can attack to
+    //to change the enemy detection range for the damage, change the size of the trigger collider
 
-    private CircleCollider2D col;
+    [SerializeField] private float damage; //the amount of damage that the player makes
+    [SerializeField] private float damageDelay; //the time taken for the damage to be in effect
 
     private List<StatusBase> reachableStatus; //the enemy or boss statuses that are within the damageRadius
+
+    private float damageTimer = 0f;
 
     #region Unity methods
     void Start()
     {
-        col = GetComponent<CircleCollider2D>();
-        col.radius = damageRadius;
-
         reachableStatus = new List<StatusBase>();
     }
 
-    private void OnDrawGizmosSelected()
+    void Update()
     {
-        //shows the damage radius range
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, damageRadius);
+        damageTimer += Time.deltaTime;
+
+        if (damageTimer > damageDelay)
+        {
+            foreach (StatusBase status in reachableStatus) status.TakeDamage(damage);
+            damageTimer = 0f;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

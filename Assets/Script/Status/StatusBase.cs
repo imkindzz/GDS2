@@ -11,7 +11,7 @@ public class StatusBase : MonoBehaviour
     [SerializeField] private bool showHealthMeter = true; //whether or not the health meter is shown
     [SerializeField] private Slider healthMeter; //the visual slider that shows the amount of health
 
-    [Header("Health")]
+    [Header("Death")]
     [SerializeField] private float deathDelay = 0.25f; //the time taken before the gameObject completely disappears
 
     #region Properties

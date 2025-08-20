@@ -10349,7 +10349,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 5
 --- !u!114 &516406428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10363,7 +10363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  damageRadius: 5
+  damageDelay: 0.5
 --- !u!1 &2081319146
 GameObject:
   m_ObjectHideFlags: 0
