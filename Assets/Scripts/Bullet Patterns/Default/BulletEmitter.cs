@@ -13,9 +13,6 @@ public class BulletEmitter : MonoBehaviour
 
     private Transform playerTransform;
 
-    public bool aimAtPlayer;
-    public Vector3 aimPos = new Vector3(0,0,0);
-
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -26,19 +23,9 @@ public class BulletEmitter : MonoBehaviour
         fireCooldown -= Time.deltaTime;
         if (fireCooldown <= 0f && bulletPatterns.Count > 0)
         {
+            Vector3? playerPos = playerTransform != null ? playerTransform.position : (Vector3?)null;
 
-            if (aimAtPlayer) 
-            {
-                Vector3? playerPos = playerTransform != null ? playerTransform.position : (Vector3?)null;
-
-                bulletPatterns[currentPatternIndex].Emit(transform, bulletPrefab, playerPos);
-            }
-            else
-            {
-
-                bulletPatterns[currentPatternIndex].Emit(transform, bulletPrefab, aimPos);
-            }
-            
+            bulletPatterns[currentPatternIndex].Emit(transform, bulletPrefab, playerPos);
 
             currentPatternIndex = (currentPatternIndex + 1) % bulletPatterns.Count;
             fireCooldown = 1f / fireRate;

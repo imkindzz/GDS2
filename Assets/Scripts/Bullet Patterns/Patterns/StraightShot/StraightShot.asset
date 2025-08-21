@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1690f8692984f4dbfbaecb8fc3060d, type: 3}
   m_Name: StraightShot
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
-  bulletLifetime: 5
+  bulletSpeed: 12.9
+  bulletLifetime: 2.29

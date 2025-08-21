@@ -1,31 +1,22 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyStatus : StatusBase
 {
-    // Spawner listens to this
-    public event Action<EnemyStatus> Died;
-
-    private bool _deathEventFired;
-
-    // Your base should: reduce HP in TakeDamage and call OnDeathState() when HP <= 0.
+    #region Health methods
     public override void TakeDamage(float amount)
     {
         base.TakeDamage(amount);
         Debug.Log("Enemy is taking damage");
     }
+    #endregion
 
-    // Called exactly once by StatusBase when the enemy dies
+    #region State methods
     public override void OnDeathState()
     {
-        // Fire BEFORE base in case base destroys the GameObject.
-        if (!_deathEventFired)
-        {
-            _deathEventFired = true;
-            Died?.Invoke(this);
-        }
-
-        base.OnDeathState(); // likely destroys/despawns
+        base.OnDeathState();
     }
+    #endregion
 }
-
