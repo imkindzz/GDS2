@@ -16,9 +16,8 @@ GameObject:
   - component: {fileID: 3750264898147574734}
   - component: {fileID: 1720114353125624650}
   - component: {fileID: 1660000090663730677}
-  - component: {fileID: 8973401883685976441}
   m_Layer: 3
-  m_Name: Player
+  m_Name: HeartPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,17 +237,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   damageDelay: 0
---- !u!114 &8973401883685976441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202750654823452815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8a626920c3f6644fb6dbb25e131dd10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: {fileID: 963191888858243461}
-  player2: {fileID: 0}
