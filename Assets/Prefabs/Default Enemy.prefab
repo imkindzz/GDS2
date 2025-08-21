@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59629de08458504b9299e22c2422504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 963191888858243461, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
   health: 60
   movementPattern: {fileID: 11400000, guid: 222cd4be6845ddd4997e3418c546117b, type: 2}
   boundsCenter: {x: 0, y: 0}
