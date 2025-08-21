@@ -6,8 +6,8 @@ public class PlayerAttack : MonoBehaviour
 {
     //to change the enemy detection range for the damage, change the size of the trigger collider
 
-    [SerializeField] private float damage; //the amount of damage that the player makes
-    [SerializeField] private float damageDelay; //the time taken for the damage to be in effect
+    [SerializeField] private float damage = 5f; //the amount of damage that the player makes
+    [SerializeField] private float damageDelay = 0.25f; //the time taken for the damage to be in effect
 
     private List<StatusBase> reachableStatus; //the enemy or boss statuses that are within the damageRadius
 
@@ -45,7 +45,7 @@ public class PlayerAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) return;
+        if (collision.CompareTag("Player") || collision.CompareTag("Soul")) return;
 
         StatusBase status = collision.GetComponent<StatusBase>();
         if (status) reachableStatus.Add(status);
@@ -53,7 +53,7 @@ public class PlayerAttack : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) return;
+        if (collision.CompareTag("Player") || collision.CompareTag("Soul")) return;
 
         StatusBase status = collision.GetComponent<StatusBase>();
         if (status) reachableStatus.Remove(status);
