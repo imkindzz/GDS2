@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4230809457801205476}
   - component: {fileID: 3750264898147574734}
   - component: {fileID: 1720114353125624650}
-  - component: {fileID: 1660000090663730677}
   m_Layer: 3
   m_Name: HeartPlayer
   m_TagString: Player
@@ -223,17 +222,3 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 5
---- !u!114 &1660000090663730677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202750654823452815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb4e9f2ef2991047858aea8692f415b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  damageDelay: 0
