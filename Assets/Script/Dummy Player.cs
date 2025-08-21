@@ -4,17 +4,24 @@ using UnityEngine;
 public class SimplePlayer2D : MonoBehaviour
 {
     public float speed = 6f;
+
+    public string horizontalAxis = "Horizontal";
+    public string verticalAxis = "Vertical";
+
     private Rigidbody2D rb;
 
     void Awake() => rb = GetComponent<Rigidbody2D>();
 
     void Update()
     {
-        Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        Vector2 input = new Vector2(
+            Input.GetAxisRaw(horizontalAxis),
+            Input.GetAxisRaw(verticalAxis)
+        ).normalized;
+
         rb.velocity = input * speed;
     }
 }
-
 public class PlayerHealth2D : MonoBehaviour
 {
     public int health = 100;
