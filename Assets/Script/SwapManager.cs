@@ -9,7 +9,7 @@ public class PlayerSwapManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             // swap pos.
             Vector3 temp = heart.transform.position;
