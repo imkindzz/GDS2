@@ -11,7 +11,7 @@ public class PlayerSwapManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            // swap pos.
+            // swap pos. with q
             Vector3 temp = heart.transform.position;
             heart.transform.position = soul.transform.position;
             soul.transform.position = temp;
