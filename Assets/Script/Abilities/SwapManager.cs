@@ -17,7 +17,7 @@ public class PlayerSwapManager : MonoBehaviour
             soul.transform.position = temp;
 
             // swap input
-            if (!controlsSwapped)
+            /*if (!controlsSwapped)
             {
                 heart.horizontalAxis = "Horizontal2";
                 heart.verticalAxis = "Vertical2";
@@ -34,7 +34,7 @@ public class PlayerSwapManager : MonoBehaviour
                 soul.verticalAxis = "Vertical2";
             }
 
-            controlsSwapped = !controlsSwapped;
+            controlsSwapped = !controlsSwapped;*/
         }
     }
 }

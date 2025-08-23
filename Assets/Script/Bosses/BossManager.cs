@@ -7,7 +7,6 @@ public class BossManager : MonoBehaviour
 {   
     [SerializeField]
     public static TextMeshProUGUI bossText;
-    //public static string bossName = "HobGoblin";
 
     private List<GameObject> Phases = new List<GameObject>();
     
