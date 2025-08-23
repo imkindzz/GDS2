@@ -22,6 +22,9 @@ public class BossStatus : StatusBase
     {
         if (nextPhase != null) {
             nextPhase.SetActive(true);
+            string phase = nextPhase.name;
+            string bossName = nextPhase.transform.parent.gameObject.name;
+            BossManager.updateBossPhaseText(phase, bossName);
         }
 
         base.OnDeathState();
