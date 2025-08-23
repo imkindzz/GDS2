@@ -9,9 +9,9 @@ public class PlayerSwapManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            // swap pos. with q
+            // swap pos. with spacebar
             Vector3 temp = heart.transform.position;
             heart.transform.position = soul.transform.position;
             soul.transform.position = temp;

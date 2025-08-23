@@ -21,8 +21,8 @@ public class SlowMode : MonoBehaviour
     }
 
     void Update()
-    { // spacebar to slow
-        if (Input.GetKey(KeyCode.Space))
+    { // lshift to slow
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             targetSpeed = originalSpeed * slowMultiplier;
         }
