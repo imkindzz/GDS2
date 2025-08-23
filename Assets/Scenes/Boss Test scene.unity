@@ -528,6 +528,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3837801831747461514, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837801831747461514, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
@@ -689,6 +693,10 @@ PrefabInstance:
     - target: {fileID: 627326808767499721, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_Name
       value: SoulPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 645722104344495446, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 645722104344495446, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_GravityScale
