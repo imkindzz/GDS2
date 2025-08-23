@@ -11,12 +11,12 @@ public class PlayerSwapManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // swap pos.
+            // swap pos. with spacebar
             Vector3 temp = heart.transform.position;
             heart.transform.position = soul.transform.position;
             soul.transform.position = temp;
 
-            // swap input
+            /* swap input
             if (!controlsSwapped)
             {
                 heart.horizontalAxis = "Horizontal2";
@@ -35,6 +35,7 @@ public class PlayerSwapManager : MonoBehaviour
             }
 
             controlsSwapped = !controlsSwapped;
+            */
         }
     }
 }

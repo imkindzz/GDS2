@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SpreadShot
   m_EditorClassIdentifier: 
   bulletSpeed: 5
-  bulletLifetime: 3.04
-  numBullets: 2
+  bulletLifetime: 5
+  numBullets: 4
   spread: 18.1
