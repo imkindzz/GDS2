@@ -164,8 +164,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0251599caf64e114c96852009f70e2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints: []
-  waves: []
+  spawnPoints:
+  - {fileID: 377485320}
+  waves:
+  - name: 
+    entries:
+    - prefab: {fileID: 6764002334713747553, guid: 1ed72ddb2accc9c40b0cd421b3581ecf, type: 3}
+      count: 1
   timeBetweenSpawns: 0.15
   timeBetweenWaves: 2
   autoStart: 1

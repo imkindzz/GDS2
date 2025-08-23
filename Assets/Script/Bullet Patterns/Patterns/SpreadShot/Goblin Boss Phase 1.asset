@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60ad2e7f5eb45ea44bc3997c4d86c306, type: 3}
-  m_Name: SpreadShot
+  m_Name: Goblin Boss Phase 1
   m_EditorClassIdentifier: 
   bulletSpeed: 5
   bulletLifetime: 5
-  numBullets: 4
-  spread: 18.1
+  numBullets: 5
+  spread: 20
