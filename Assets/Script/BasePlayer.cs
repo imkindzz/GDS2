@@ -22,12 +22,3 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = input * speed;
     }
 }
-public class PlayerHealth2D : MonoBehaviour
-{
-    public int health = 100;
-    public void TakeDamage(int amount)
-    {
-        health -= amount;
-        Debug.Log($"Player took {amount} damage. Health: {health}");
-    }
-}

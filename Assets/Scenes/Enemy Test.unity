@@ -433,14 +433,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoulPlayer
       objectReference: {fileID: 0}
-    - target: {fileID: 645722104344495446, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6463157382314982394, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: damageAttack
-      value: 
-      objectReference: {fileID: 7913598853871392790, guid: ac1c764e096a36b469424e1db442df62, type: 3}
     - target: {fileID: 6528337429905917336, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.09
@@ -532,10 +524,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 963191888858243461, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3837801831747461514, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
-      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8202750654823452815, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
