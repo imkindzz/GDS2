@@ -5,7 +5,7 @@ public class PlayerSwapManager : MonoBehaviour
     public PlayerMovement heart;
     public PlayerMovement soul;
 
-    private bool controlsSwapped = false;
+    // private bool controlsSwapped = false;
 
     void Update()
     {
