@@ -1863,6 +1863,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Border
       objectReference: {fileID: 0}
+    - target: {fileID: 3545638360591699525, guid: 44654ce9aaddad2449b3f6eef35e85ba, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545638360591699525, guid: 44654ce9aaddad2449b3f6eef35e85ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.894384
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774220415539776738, guid: 44654ce9aaddad2449b3f6eef35e85ba, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.3500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774220415539776738, guid: 44654ce9aaddad2449b3f6eef35e85ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.855616
+      objectReference: {fileID: 0}
     - target: {fileID: 6253735884594224531, guid: 44654ce9aaddad2449b3f6eef35e85ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.930616
