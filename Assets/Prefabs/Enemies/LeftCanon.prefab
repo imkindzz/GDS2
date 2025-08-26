@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 3618744144862584403}
   - component: {fileID: 4027538657595154973}
   - component: {fileID: 950677619299550769}
+  - component: {fileID: -627674987578622262}
   m_Layer: 0
-  m_Name: Canon Goblin
+  m_Name: LeftCanon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   health: 60
-  movementPattern: {fileID: 11400000, guid: 7372f6abca75b4a42991aa1d1e8f2b80, type: 2}
+  movementPattern: {fileID: 11400000, guid: 078d3a1bfc622cd42b2995f061c25419, type: 2}
   boundsCenter: {x: 0, y: 0}
   boundsSize: {x: 40, y: 40}
   edgePadding: 0.02
@@ -172,3 +173,40 @@ MonoBehaviour:
   showHealthMeter: 1
   healthMeter: {fileID: 0}
   deathDelay: 0.25
+--- !u!70 &-627674987578622262
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2967261118870211946}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 0.5}
+  m_Direction: 0

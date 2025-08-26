@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e13128635f62b949a25f4a04fb824d7, type: 3}
-  m_Name: MoveStop
+  m_Name: RightStop
   m_EditorClassIdentifier: 
-  targetPosition: {x: 11, y: 7}
+  targetPosition: {x: 3.6, y: 3}
   speed: 3
   stopDistance: 0.1
