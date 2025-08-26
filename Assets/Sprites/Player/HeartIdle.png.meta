@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 107cd2842715f5942b1c3b716e84ccd2
+guid: fc431f294c1bb5a459f67317b4990c6a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e00ce3b4807844469728e1a0d3e4425
-      internalID: 699850
+      spriteID: 4bcaab9436054e64685c198d1c78fe6e
+      internalID: 275088568
       vertices: []
       indices: 
       edges: []
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54f4ed93bda303e40a6ce274723937fc
-      internalID: 1576285997
+      spriteID: 94e7be8b994baf445b1e5eb90f5843c3
+      internalID: 152844293
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9033034a3dc78049b3137a4ce4bcc2a
-      internalID: -848343984
+      spriteID: c2964ab3615c2dd4fb0cbb392e9353f0
+      internalID: 1963132315
       vertices: []
       indices: 
       edges: []
@@ -171,7 +171,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c26212515de5d6346baad830156e2faa
+    spriteID: b1a0705e3b7caf3459b4dea14b1e661b
     internalID: 0
     vertices: []
     indices: 
@@ -179,9 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HeartIdle_0: 699850
-      HeartIdle_1: 1576285997
-      HeartIdle_2: -848343984
+      HeartIdle_0: 275088568
+      HeartIdle_1: 152844293
+      HeartIdle_2: 1963132315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
