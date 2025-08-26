@@ -5,18 +5,18 @@ public class PlayerSwapManager : MonoBehaviour
     public PlayerMovement heart;
     public PlayerMovement soul;
 
-    private bool controlsSwapped = false;
+    // private bool controlsSwapped = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            // swap pos. with q
+            // swap pos. with spacebar
             Vector3 temp = heart.transform.position;
             heart.transform.position = soul.transform.position;
             soul.transform.position = temp;
 
-            // swap input
+            /* swap input
             if (!controlsSwapped)
             {
                 heart.horizontalAxis = "Horizontal2";
@@ -35,6 +35,7 @@ public class PlayerSwapManager : MonoBehaviour
             }
 
             controlsSwapped = !controlsSwapped;
+            */
         }
     }
 }

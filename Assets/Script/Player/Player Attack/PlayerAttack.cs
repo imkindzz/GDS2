@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,10 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private float damage = 5f; //the amount of damage that the player makes
     [SerializeField] private float damageDelay = 0.25f; //the time taken for the damage to be in effect
+    [SerializeField] private GameObject damageAttack; //the gameObject that shows the attack being made
 
     private List<StatusBase> reachableStatus; //the enemy or boss statuses that are within the damageRadius
+    private List<GameObject> damageAttacks; //the enemy or boss statuses that are within the damageRadius
 
     private float damageTimer = 0f;
 
@@ -17,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         reachableStatus = new List<StatusBase>();
+        damageAttacks = new List<GameObject>();
     }
 
     void Update()
@@ -37,7 +41,15 @@ public class PlayerAttack : MonoBehaviour
             }
 
             //removes the destroyed/dead enemies from the reachableStatus List
-            for (int i = unreachableStatus.Count - 1; i >= 0; i--) reachableStatus.RemoveAt(unreachableStatus[i]);
+            for (int i = unreachableStatus.Count - 1; i >= 0; i--)
+            {
+                int index = unreachableStatus[i];
+
+                reachableStatus.RemoveAt(index);
+                
+                Destroy(damageAttacks[index]);
+                damageAttacks.RemoveAt(index);
+            }
 
             damageTimer = 0f;
         }
@@ -48,7 +60,15 @@ public class PlayerAttack : MonoBehaviour
         if (collision.CompareTag("Player") || collision.CompareTag("Soul")) return;
 
         StatusBase status = collision.GetComponent<StatusBase>();
-        if (status) reachableStatus.Add(status);
+        if (status)
+        {
+            reachableStatus.Add(status);
+
+            GameObject da = Instantiate(damageAttack, transform.position, Quaternion.identity);
+            da.GetComponent<AttackLookAtEnemy>().enemyTarget = collision.gameObject;
+            da.transform.parent = transform;
+            damageAttacks.Add(da);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -56,7 +76,19 @@ public class PlayerAttack : MonoBehaviour
         if (collision.CompareTag("Player") || collision.CompareTag("Soul")) return;
 
         StatusBase status = collision.GetComponent<StatusBase>();
-        if (status) reachableStatus.Remove(status);
+        if (status)
+        {
+            int daIndex = reachableStatus.IndexOf(status);
+            if (daIndex != -1)
+            {
+                Destroy(damageAttacks[daIndex]);
+                damageAttacks.RemoveAt(daIndex);
+            }
+
+            reachableStatus.Remove(status);
+            Debug.Log(daIndex);
+            Debug.Log(reachableStatus.Count);
+        }
     }
     #endregion
 }
