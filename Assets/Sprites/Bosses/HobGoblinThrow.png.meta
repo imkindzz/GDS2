@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: c03c2dfa4bbab094e90f44ba903dc046
+guid: 83228ad85ce59af45b09782541dcc565
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4254159758011566165
-    second: HobGoblin_0
+      213: 2479456231437944663
+    second: HobGoblinThrow_0
   - first:
-      213: -904940739744371593
-    second: HobGoblin_1
+      213: -7998855350497272697
+    second: HobGoblinThrow_1
   - first:
-      213: 3190171562230323065
-    second: HobGoblin_2
-  - first:
-      213: -6309125867554857255
-    second: HobGoblin_3
+      213: -4095571065717721227
+    second: HobGoblinThrow_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HobGoblinSwing_0
+      name: HobGoblinThrow_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,16 +118,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a7ad2fa5ff5cd9e4bb162404b23a0dda
-      internalID: 570123777
+      spriteID: 757ccf64e4cc86220800000000000000
+      internalID: 2479456231437944663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HobGoblinSwing_1
+      name: HobGoblinThrow_1
       rect:
         serializedVersion: 2
         x: 32
@@ -142,16 +139,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 081a570e4766984498f729c3e308ceac
-      internalID: -259533897
+      spriteID: 78c90ef307b5ef090800000000000000
+      internalID: -7998855350497272697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HobGoblinSwing_2
+      name: HobGoblinThrow_2
       rect:
         serializedVersion: 2
         x: 64
@@ -163,16 +160,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 81802e77449e87646ace6ce4a1bdeb69
-      internalID: -1546806792
+      spriteID: 577f683a0db9927c0800000000000000
+      internalID: -4095571065717721227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HobGoblinSwing_3
+      name: HobGoblinThrow_3
       rect:
         serializedVersion: 2
         x: 96
@@ -186,8 +183,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57f66c2267b25a842b0bcad4fe9ec46a
-      internalID: 699782714
+      spriteID: 0a37b35d62bca3249920a266e6b0a142
+      internalID: 699763461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HobGoblinThrow_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9214b63479971254bbbfd8e235954e83
+      internalID: 48883198
       vertices: []
       indices: 
       edges: []
@@ -195,7 +213,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 090e215011b8a29419c2c4248a4a132c
+    spriteID: 9abe70ece08ef9b4d9ffb1733ad9205d
     internalID: 0
     vertices: []
     indices: 
@@ -203,10 +221,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HobGoblinSwing_0: 570123777
-      HobGoblinSwing_1: -259533897
-      HobGoblinSwing_2: -1546806792
-      HobGoblinSwing_3: 699782714
+      HobGoblinThrow_0: 2479456231437944663
+      HobGoblinThrow_1: -7998855350497272697
+      HobGoblinThrow_2: -4095571065717721227
+      HobGoblinThrow_3: 699763461
+      HobGoblinThrow_4: 48883198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
