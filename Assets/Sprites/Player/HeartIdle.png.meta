@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: cb11d068a2b174e43a54beb7ec257a96
+guid: 107cd2842715f5942b1c3b716e84ccd2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4701258154401476048
-    second: PlayerIdleSheet_0
+      213: -8409576310027686880
+    second: HeartSkull_0
   - first:
-      213: -2190160998358941189
-    second: PlayerIdleSheet_1
+      213: -3282843654506959299
+    second: HeartSkull_1
   - first:
-      213: -4136743991927837598
-    second: PlayerIdleSheet_2
-  - first:
-      213: 6966195486748458883
-    second: PlayerIdleSheet_3
+      213: -492027042811760823
+    second: HeartSkull_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerIdleSheet_0
+      name: HeartIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,16 +118,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 032dd7ded96c1ceb0800000000000000
-      internalID: -4701258154401476048
+      spriteID: 0e00ce3b4807844469728e1a0d3e4425
+      internalID: 699850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleSheet_1
+      name: HeartIdle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -142,16 +139,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bf186eb0d2cfa91e0800000000000000
-      internalID: -2190160998358941189
+      spriteID: 54f4ed93bda303e40a6ce274723937fc
+      internalID: 1576285997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleSheet_2
+      name: HeartIdle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -163,31 +160,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 26ce86ab1455796c0800000000000000
-      internalID: -4136743991927837598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerIdleSheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 38f329ff2e5eca060800000000000000
-      internalID: 6966195486748458883
+      spriteID: f9033034a3dc78049b3137a4ce4bcc2a
+      internalID: -848343984
       vertices: []
       indices: 
       edges: []
@@ -195,7 +171,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5a8bca817805a8641a6ef2f89bf6ba17
+    spriteID: c26212515de5d6346baad830156e2faa
     internalID: 0
     vertices: []
     indices: 
@@ -203,10 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerIdleSheet_0: -4701258154401476048
-      PlayerIdleSheet_1: -2190160998358941189
-      PlayerIdleSheet_2: -4136743991927837598
-      PlayerIdleSheet_3: 6966195486748458883
+      HeartIdle_0: 699850
+      HeartIdle_1: 1576285997
+      HeartIdle_2: -848343984
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
