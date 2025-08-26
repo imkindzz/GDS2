@@ -22,6 +22,7 @@ public class PlayerStatus : StatusBase
     public override void OnDeathState()
     {
         //does something
+        this.gameObject.SetActive(false);
         Debug.Log("Player is dead");
     }
     #endregion
