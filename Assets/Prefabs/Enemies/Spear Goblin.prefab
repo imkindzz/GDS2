@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1245233612964482264}
   - component: {fileID: 6737066879830623481}
   - component: {fileID: 6204125889660519607}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spear Goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
