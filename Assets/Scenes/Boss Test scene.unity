@@ -567,10 +567,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3479908037990477250, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
-      propertyPath: m_Color.a
-      value: 0.92156863
-      objectReference: {fileID: 0}
     - target: {fileID: 8202750654823452815, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
       propertyPath: m_Name
       value: HeartPlayer
@@ -759,7 +755,7 @@ PrefabInstance:
     - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8582382810391761260, guid: c8722257cf7430a47962f8a0d1559168, type: 3}
+      objectReference: {fileID: 8581343688317178742, guid: db79cbd9bbf694a4f81057975a9ee6a7, type: 3}
     - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_Color.g
       value: 1
@@ -770,6 +766,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
