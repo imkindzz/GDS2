@@ -639,11 +639,19 @@ MonoBehaviour:
   - {fileID: 1716770903}
   - {fileID: 2013341747}
   waves:
-  - name: 2 enemies
+  - name: 1 Spear
+    entries:
+    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+      count: 1
+  - name: '2 spear '
     entries:
     - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
       count: 1
     - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+      count: 1
+  - name: 1 Canon
+    entries:
+    - prefab: {fileID: 2967261118870211946, guid: c686875fbdd362648b9852e360a94aa5, type: 3}
       count: 1
   - name: 2 canons
     entries:
@@ -659,12 +667,26 @@ MonoBehaviour:
       count: 1
     - prefab: {fileID: 2967261118870211946, guid: c686875fbdd362648b9852e360a94aa5, type: 3}
       count: 1
-  - name: 
-    entries: []
-  - name: 
-    entries: []
+  - name: 1 Kamikaze
+    entries:
+    - prefab: {fileID: 6015687279279957363, guid: d6b01114e03246d4884e6b0ff0836ae4, type: 3}
+      count: 1
+  - name: 2 Kamikaze
+    entries:
+    - prefab: {fileID: 6015687279279957363, guid: d6b01114e03246d4884e6b0ff0836ae4, type: 3}
+      count: 1
+    - prefab: {fileID: 6015687279279957363, guid: d6b01114e03246d4884e6b0ff0836ae4, type: 3}
+      count: 1
+  - name: 2 spear 2 Canon
+    entries:
+    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+      count: 2
+    - prefab: {fileID: 2967261118870211946, guid: c686875fbdd362648b9852e360a94aa5, type: 3}
+      count: 1
+    - prefab: {fileID: 2967261118870211946, guid: c27091db166287141bdfb686c5135d0a, type: 3}
+      count: 1
   timeBetweenSpawns: 1
-  timeBetweenWaves: 4
+  timeBetweenWaves: 7
   autoStart: 1
   loopWaves: 0
 --- !u!4 &888629392
