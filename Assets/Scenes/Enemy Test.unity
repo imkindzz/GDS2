@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &377485320
 Transform:
   m_ObjectHideFlags: 0
@@ -358,17 +358,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 627326808767499721, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
   m_PrefabInstance: {fileID: 2170132326455841661}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1085878599 stripped
+--- !u!114 &1085878607
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9147869334539313153, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-  m_PrefabInstance: {fileID: 2170132326455841661}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922928713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7581b353f0ef264b94d2897801adf33, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5b4bc74599b534aa8fa4361d964776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 6
+  horizontalAxis: Horizontal2
+  verticalAxis: Vertical2
+  waveAmplitude: 5
+  waveFrequency: 3
 --- !u!114 &1769144814 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3750264898147574734, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
@@ -391,6 +397,10 @@ PrefabInstance:
     - target: {fileID: 6015687279279957363, guid: d6b01114e03246d4884e6b0ff0836ae4, type: 3}
       propertyPath: m_Name
       value: Suicide Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015687279279957363, guid: d6b01114e03246d4884e6b0ff0836ae4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6822793826647016435, guid: d6b01114e03246d4884e6b0ff0836ae4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -486,7 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heart: {fileID: 1769144814}
-  soul: {fileID: 1085878599}
+  soul: {fileID: 0}
 --- !u!4 &2079651699
 Transform:
   m_ObjectHideFlags: 0
@@ -646,10 +656,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9147869334539313153, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 627326808767499721, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1085878607}
   m_SourcePrefab: {fileID: 100100000, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
 --- !u!1001 &8113679290119161371
 PrefabInstance:
