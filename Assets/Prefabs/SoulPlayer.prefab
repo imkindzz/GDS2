@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6528337429905917336}
   - component: {fileID: 7369909253210714287}
   - component: {fileID: 645722104344495446}
-  - component: {fileID: 9147869334539313153}
+  - component: {fileID: 347821606067474601}
   - component: {fileID: 37588092306523304}
   - component: {fileID: 6463157382314982394}
   - component: {fileID: 5103786701194442391}
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &9147869334539313153
+--- !u!114 &347821606067474601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,12 +127,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 627326808767499721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7581b353f0ef264b94d2897801adf33, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5b4bc74599b534aa8fa4361d964776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
   horizontalAxis: Horizontal2
   verticalAxis: Vertical2
+  waveAmplitude: 5
+  waveFrequency: 3
 --- !u!58 &37588092306523304
 CircleCollider2D:
   m_ObjectHideFlags: 0

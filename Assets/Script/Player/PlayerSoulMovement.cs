@@ -19,7 +19,8 @@ public class PlayerSoulMovement : PlayerMovement
         if (!input.Equals(Vector2.zero))
         {
             waveTime += Time.deltaTime;
-            float waveMomentum = Mathf.Sin(waveTime * waveFrequency) * waveAmplitude;
+            float radians = (waveTime * waveFrequency) - (Mathf.PI / 2);
+            float waveMomentum = Mathf.Sin(radians) * waveAmplitude;
             Vector2 waveDirection = new Vector2(-input.y, input.x);
 
             waveOffset = waveDirection * waveMomentum;
