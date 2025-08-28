@@ -1,20 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-using TMPro;  
+using TMPro; 
 
 public class PlayerGraze : MonoBehaviour
 {
-    public Collider2D damageHitbox;
-    public Collider2D grazeHitbox;
+    public Collider2D damageHitbox;  
+    public Collider2D grazeHitbox;   
 
-    public int grazeScore = 0;
-    public TMP_Text grazeScoreText; 
+    public int grazeScore = 0;     
+    public TextMeshProUGUI grazeText;
 
     private void Start()
     {
-        UpdateGrazeUI();
+        UpdateGrazeUI(); 
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -41,12 +38,14 @@ public class PlayerGraze : MonoBehaviour
 
     private void UpdateGrazeUI()
     {
-        if (grazeScoreText != null)
-        {
-            grazeScoreText.text = "Graze Score: " + grazeScore;
-        }
+        if (grazeText != null)
+            grazeText.text = "Graze: " + grazeScore;
     }
 }
+
+
+
+
 
 
 

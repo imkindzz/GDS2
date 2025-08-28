@@ -5,10 +5,10 @@ using TMPro;  // only if using TextMeshPro
 
 public class GrazeManager : MonoBehaviour
 {
-    public static GrazeManager Instance; // so other scripts can add graze easily
+    public static GrazeManager Instance; 
     public int grazeScore = 0;
 
-    public TextMeshProUGUI grazeText; // assign in inspector
+    public TextMeshProUGUI grazeText;
 
     void Awake()
     {
