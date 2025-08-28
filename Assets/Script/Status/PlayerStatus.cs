@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerStatus : StatusBase
 {
+    [SerializeField] private GameObject soulBody; //the player's soul body
+
     #region Health methods
     public override void TakeHealth(float amount)
     {
@@ -23,6 +25,8 @@ public class PlayerStatus : StatusBase
     {
         //does something
         this.gameObject.SetActive(false);
+        soulBody.SetActive(false);
+
         Debug.Log("Player is dead");
     }
     #endregion
