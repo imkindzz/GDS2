@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52d4a4ef093c49c46b70b11b86a2dc05, type: 3}
   m_Name: Canon
   m_EditorClassIdentifier: 
-  bulletSpeed: 4
+  bulletSpeed: 3
   bulletLifetime: 4
   scaleMultiplier: 2
   faceTravelDirection: 0

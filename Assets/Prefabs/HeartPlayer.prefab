@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5487220576683879625}
   - component: {fileID: 8067911251070114315}
+  - component: {fileID: 1655184881660780863}
   m_Layer: 3
   m_Name: DamageHitbox
   m_TagString: Untagged
@@ -68,6 +69,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.125
+--- !u!114 &1655184881660780863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011492462070362378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d5a3f7a499ee64fb792558e00636d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6920521812416681689
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +251,6 @@ GameObject:
   - component: {fileID: 3750264898147574734}
   - component: {fileID: -5290121442990883685}
   - component: {fileID: 8451284546675652158}
-  - component: {fileID: 5717567410536383082}
   - component: {fileID: 4216812367534420828}
   - component: {fileID: 1474685202510615111}
   m_Layer: 3
@@ -400,6 +412,7 @@ MonoBehaviour:
   showHealthMeter: 1
   healthMeter: {fileID: 0}
   deathDelay: 0.25
+  soulBody: {fileID: 0}
 --- !u!114 &3750264898147574734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d44a6cb35045b43a0bc13981b6dff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowMultiplier: 0.3
+  slowMultiplier: 0.5
   smoothTime: 0.06
 --- !u!95 &8451284546675652158
 Animator:
@@ -451,18 +464,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5717567410536383082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202750654823452815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30d5a3f7a499ee64fb792558e00636d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4216812367534420828
 MonoBehaviour:
   m_ObjectHideFlags: 0
