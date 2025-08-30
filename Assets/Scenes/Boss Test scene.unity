@@ -567,6 +567,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4216812367534420828, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
+      propertyPath: soulBody
+      value: 
+      objectReference: {fileID: 1033707114}
+    - target: {fileID: 4230809457801205476, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
+      propertyPath: soulBody
+      value: 
+      objectReference: {fileID: 1033707114}
     - target: {fileID: 8202750654823452815, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
       propertyPath: m_Name
       value: HeartPlayer
@@ -928,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heart: {fileID: 566366469}
-  soul: {fileID: 0}
+  soul: {fileID: 1033707118}
 --- !u!4 &934266643
 Transform:
   m_ObjectHideFlags: 0
@@ -1019,6 +1027,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 969581915}
   m_CullTransparentMesh: 1
+--- !u!1 &1033707114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 627326808767499721, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+  m_PrefabInstance: {fileID: 810829384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1033707118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 347821606067474601, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+  m_PrefabInstance: {fileID: 810829384}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033707114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5b4bc74599b534aa8fa4361d964776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1136854500
 GameObject:
   m_ObjectHideFlags: 0
