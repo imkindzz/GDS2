@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6528337429905917336}
   - component: {fileID: 7369909253210714287}
   - component: {fileID: 645722104344495446}
-  - component: {fileID: 9147869334539313153}
+  - component: {fileID: 347821606067474601}
   - component: {fileID: 37588092306523304}
   - component: {fileID: 6463157382314982394}
+  - component: {fileID: 5103786701194442391}
   m_Layer: 3
   m_Name: SoulPlayer
   m_TagString: Soul
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.09, y: -0.05, z: 0}
-  m_LocalScale: {x: 0.7500595, y: 0.7500595, z: 0.7500595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,9 +79,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0.6708865, b: 1, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 8581343688317178742, guid: db79cbd9bbf694a4f81057975a9ee6a7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -116,8 +117,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &9147869334539313153
+  m_Constraints: 4
+--- !u!114 &347821606067474601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,12 +127,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 627326808767499721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7581b353f0ef264b94d2897801adf33, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5b4bc74599b534aa8fa4361d964776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 10
   horizontalAxis: Horizontal2
   verticalAxis: Vertical2
+  waveAmplitude: 0
+  waveFrequency: 0
 --- !u!58 &37588092306523304
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -167,7 +170,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 5
+  m_Radius: 1.2
 --- !u!114 &6463157382314982394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +186,25 @@ MonoBehaviour:
   damage: 5
   damageDelay: 0.25
   damageAttack: {fileID: 7913598853871392790, guid: ac1c764e096a36b469424e1db442df62, type: 3}
+--- !u!95 &5103786701194442391
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627326808767499721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3629fc32e74789e439fc7392cae850e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

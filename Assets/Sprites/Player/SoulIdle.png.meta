@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c8722257cf7430a47962f8a0d1559168
+guid: db79cbd9bbf694a4f81057975a9ee6a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8582382810391761260
-    second: SoulPlayerSheet_0
+      213: 8581343688317178742
+    second: SoulIdle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SoulPlayerSheet_0
+      name: SoulIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,14 +114,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49e2e2c2e4045e880800000000000000
-      internalID: -8582382810391761260
+      spriteID: 6739fad5e9e071770800000000000000
+      internalID: 8581343688317178742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SoulPlayerSheet_1
+      name: SoulIdle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -135,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b457112be603d54499776628ed8fba4
-      internalID: 630283852
+      spriteID: ff06f1c29f9ae6047b8d82e7275bb7b3
+      internalID: -1535519293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SoulPlayerSheet_2
+      name: SoulIdle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5100cb571ef5464ca06903ca2cfbfd5
-      internalID: 881378973
+      spriteID: a29e475f143342c46b60e9da61529a4e
+      internalID: -1717128469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SoulPlayerSheet_3
+      name: SoulIdle_3
       rect:
         serializedVersion: 2
         x: 96
@@ -177,8 +177,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc9ccdf364b7253478caab0b4a9cee2f
-      internalID: 1468788330
+      spriteID: cb72314b328cb8448beb65cef3a1a351
+      internalID: -1521381216
       vertices: []
       indices: 
       edges: []
@@ -186,7 +186,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1d995f28893cb624a98f08115f3f8b30
+    spriteID: b87660493014d554f8bd90794c930c23
     internalID: 0
     vertices: []
     indices: 
@@ -194,10 +194,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SoulPlayerSheet_0: -8582382810391761260
-      SoulPlayerSheet_1: 630283852
-      SoulPlayerSheet_2: 881378973
-      SoulPlayerSheet_3: 1468788330
+      SoulIdle_0: 8581343688317178742
+      SoulIdle_1: -1535519293
+      SoulIdle_2: -1717128469
+      SoulIdle_3: -1521381216
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

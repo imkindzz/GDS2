@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: cb11d068a2b174e43a54beb7ec257a96
+guid: 83228ad85ce59af45b09782541dcc565
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4701258154401476048
-    second: PlayerIdleSheet_0
+      213: 2479456231437944663
+    second: HobGoblinThrow_0
   - first:
-      213: -2190160998358941189
-    second: PlayerIdleSheet_1
+      213: -7998855350497272697
+    second: HobGoblinThrow_1
   - first:
-      213: -4136743991927837598
-    second: PlayerIdleSheet_2
-  - first:
-      213: 6966195486748458883
-    second: PlayerIdleSheet_3
+      213: -4095571065717721227
+    second: HobGoblinThrow_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerIdleSheet_0
+      name: HobGoblinThrow_0
       rect:
         serializedVersion: 2
         x: 0
@@ -123,14 +120,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 032dd7ded96c1ceb0800000000000000
-      internalID: -4701258154401476048
+      spriteID: 757ccf64e4cc86220800000000000000
+      internalID: 2479456231437944663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleSheet_1
+      name: HobGoblinThrow_1
       rect:
         serializedVersion: 2
         x: 32
@@ -144,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf186eb0d2cfa91e0800000000000000
-      internalID: -2190160998358941189
+      spriteID: 78c90ef307b5ef090800000000000000
+      internalID: -7998855350497272697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleSheet_2
+      name: HobGoblinThrow_2
       rect:
         serializedVersion: 2
         x: 64
@@ -165,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26ce86ab1455796c0800000000000000
-      internalID: -4136743991927837598
+      spriteID: 577f683a0db9927c0800000000000000
+      internalID: -4095571065717721227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerIdleSheet_3
+      name: HobGoblinThrow_3
       rect:
         serializedVersion: 2
         x: 96
@@ -184,10 +181,31 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38f329ff2e5eca060800000000000000
-      internalID: 6966195486748458883
+      spriteID: 0a37b35d62bca3249920a266e6b0a142
+      internalID: 699763461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HobGoblinThrow_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9214b63479971254bbbfd8e235954e83
+      internalID: 48883198
       vertices: []
       indices: 
       edges: []
@@ -195,7 +213,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5a8bca817805a8641a6ef2f89bf6ba17
+    spriteID: 9abe70ece08ef9b4d9ffb1733ad9205d
     internalID: 0
     vertices: []
     indices: 
@@ -203,10 +221,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerIdleSheet_0: -4701258154401476048
-      PlayerIdleSheet_1: -2190160998358941189
-      PlayerIdleSheet_2: -4136743991927837598
-      PlayerIdleSheet_3: 6966195486748458883
+      HobGoblinThrow_0: 2479456231437944663
+      HobGoblinThrow_1: -7998855350497272697
+      HobGoblinThrow_2: -4095571065717721227
+      HobGoblinThrow_3: 699763461
+      HobGoblinThrow_4: 48883198
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

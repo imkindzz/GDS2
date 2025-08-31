@@ -2,18 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class BossManager : MonoBehaviour
 {   
-    [SerializeField]
-    public static TextMeshProUGUI bossText;
 
     private List<GameObject> Phases = new List<GameObject>();
+
+    private Slider bossHealthSlider;
+    private static TextMeshProUGUI bossPhaseText;
+
+    public AudioClip bossMusic;
+    
+
     
     // Start is called before the first frame update
     void Start()
     {
-        bossText = FindFirstObjectByType<TextMeshProUGUI>();
+        GameObject BossUI = GameObject.Find("BossUI");
+
+        if (BossUI != null) 
+        {
+            bossHealthSlider = BossUI.GetComponentInChildren<Slider>();
+            bossHealthSlider.enabled = true;
+
+            bossPhaseText = BossUI.GetComponentInChildren<TextMeshProUGUI>(true);
+            bossPhaseText.gameObject.SetActive(true);
+        }
+
+        GameObject audioSource = GameObject.Find("Audio Source");
+        audioSource.GetComponent<AudioSource>().clip = bossMusic;
+        audioSource.GetComponent<AudioSource>().Play();
+
+
     }
 
     // Update is called once per frame
@@ -28,6 +49,6 @@ public class BossManager : MonoBehaviour
             + " - "
             + phase;
 
-        bossText.text = text;
+        bossPhaseText.text = text;
     }
 }

@@ -22,11 +22,11 @@ public class BossStatus : StatusBase
     {
         if (nextPhase != null) {
             nextPhase.SetActive(true);
-            string phase = nextPhase.name;
-            string bossName = nextPhase.transform.parent.gameObject.name;
+            string phase = /*nextPhase.name*/ "Phase 2";
+            string bossName = /*nextPhase.transform.parent.gameObject.name*/ "HobGoblin";
             BossManager.updateBossPhaseText(phase, bossName);
         }
-
+        
         base.OnDeathState();
     }
     #endregion

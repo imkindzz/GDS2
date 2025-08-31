@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: c03c2dfa4bbab094e90f44ba903dc046
+guid: 0e950b2d5c9c0d643b479550cab4759b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4254159758011566165
-    second: HobGoblin_0
+      213: 1256715482252458339
+    second: RunGoblin_0
   - first:
-      213: -904940739744371593
-    second: HobGoblin_1
+      213: 7728602702855817619
+    second: RunGoblin_1
   - first:
-      213: 3190171562230323065
-    second: HobGoblin_2
-  - first:
-      213: -6309125867554857255
-    second: HobGoblin_3
+      213: 8015964536404592413
+    second: RunGoblin_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HobGoblinSwing_0
+      name: RunGoblin_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,16 +118,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a7ad2fa5ff5cd9e4bb162404b23a0dda
-      internalID: 570123777
+      spriteID: 369346f9210c07110800000000000000
+      internalID: 1256715482252458339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HobGoblinSwing_1
+      name: RunGoblin_1
       rect:
         serializedVersion: 2
         x: 32
@@ -142,16 +139,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 081a570e4766984498f729c3e308ceac
-      internalID: -259533897
+      spriteID: 39948d9d533814b60800000000000000
+      internalID: 7728602702855817619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HobGoblinSwing_2
+      name: RunGoblin_2
       rect:
         serializedVersion: 2
         x: 64
@@ -163,31 +160,10 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 81802e77449e87646ace6ce4a1bdeb69
-      internalID: -1546806792
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HobGoblinSwing_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57f66c2267b25a842b0bcad4fe9ec46a
-      internalID: 699782714
+      spriteID: d174684864d6e3f60800000000000000
+      internalID: 8015964536404592413
       vertices: []
       indices: 
       edges: []
@@ -195,7 +171,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 090e215011b8a29419c2c4248a4a132c
+    spriteID: 10db7b6b2be3cea45ad9f8c28caafed4
     internalID: 0
     vertices: []
     indices: 
@@ -203,10 +179,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HobGoblinSwing_0: 570123777
-      HobGoblinSwing_1: -259533897
-      HobGoblinSwing_2: -1546806792
-      HobGoblinSwing_3: 699782714
+      RunGoblin_0: 1256715482252458339
+      RunGoblin_1: 7728602702855817619
+      RunGoblin_2: 8015964536404592413
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

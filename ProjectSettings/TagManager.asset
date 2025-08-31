@@ -13,8 +13,8 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
-  - 
+  - Bullet
+  - Enemy
   - 
   - 
   - 
@@ -51,4 +51,7 @@ TagManager:
     locked: 0
   - name: BlackBar
     uniqueID: 175184931
+    locked: 0
+  - name: GUI
+    uniqueID: 2532504697
     locked: 0

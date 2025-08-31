@@ -106,7 +106,7 @@ public class StatusBase : MonoBehaviour
         Collider2D col = GetComponent<Collider2D>(); 
         if (col) col.enabled = false;
         
-        Destroy(gameObject, deathDelay);
+        Destroy(this.gameObject, deathDelay);
     }
     #endregion
 }
