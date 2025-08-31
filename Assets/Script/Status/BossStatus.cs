@@ -11,7 +11,7 @@ public class BossStatus : StatusBase
 
 
     [Header("Score Settings")]
-    [SerializeField] private int pointsOnDeath = 100;
+    [SerializeField] private int pointsOnDeath = 1000;
 
     #region Health methods
     public override void TakeDamage(float amount)
