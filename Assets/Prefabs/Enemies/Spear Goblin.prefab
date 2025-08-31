@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1245233612964482264}
   - component: {fileID: 6737066879830623481}
   - component: {fileID: 6204125889660519607}
+  - component: {fileID: 1235807214842546982}
   m_Layer: 7
   m_Name: Spear Goblin
   m_TagString: Untagged
@@ -210,3 +211,25 @@ MonoBehaviour:
   showHealthMeter: 1
   healthMeter: {fileID: 0}
   deathDelay: 0.25
+--- !u!95 &1235807214842546982
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6015687279279957363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05ff1b7f9fa2ec149b3326c8b903b21e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
