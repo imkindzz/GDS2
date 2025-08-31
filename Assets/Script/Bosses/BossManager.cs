@@ -11,6 +11,8 @@ public class BossManager : MonoBehaviour
 
     private Slider bossHealthSlider;
     private static TextMeshProUGUI bossPhaseText;
+
+    public AudioClip bossMusic;
     
 
     
@@ -28,7 +30,11 @@ public class BossManager : MonoBehaviour
             bossPhaseText.gameObject.SetActive(true);
         }
 
-        
+        GameObject audioSource = GameObject.Find("Audio Source");
+        audioSource.GetComponent<AudioSource>().clip = bossMusic;
+        audioSource.GetComponent<AudioSource>().Play();
+
+
     }
 
     // Update is called once per frame
