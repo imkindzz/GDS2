@@ -2147,6 +2147,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1384149746}
     - target: {fileID: 4230809457801205476, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
+      propertyPath: soulBody
+      value: 
+      objectReference: {fileID: 1384149746}
+    - target: {fileID: 4230809457801205476, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
       propertyPath: 'heartImages.Array.data[0]'
       value: 
       objectReference: {fileID: 115565711}
