@@ -8,6 +8,9 @@ public class EnemyStatus : StatusBase
 
     private bool _deathEventFired;
 
+    [Header("Score Settings")]
+    [SerializeField] private int pointsOnDeath = 100;
+
     // Your base should: reduce HP in TakeDamage and call OnDeathState() when HP <= 0.
     public override void TakeDamage(float amount)
     {
@@ -22,6 +25,10 @@ public class EnemyStatus : StatusBase
         if (!_deathEventFired)
         {
             _deathEventFired = true;
+
+            ScoreManager.Instance.AddScore(pointsOnDeath);
+            Debug.Log($"Enemy died! Awarded {pointsOnDeath} points.");
+
             Died?.Invoke(this);
         }
 

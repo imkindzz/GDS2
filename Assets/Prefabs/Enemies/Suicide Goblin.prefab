@@ -210,6 +210,7 @@ MonoBehaviour:
   showHealthMeter: 1
   healthMeter: {fileID: 0}
   deathDelay: 0.25
+  pointsOnDeath: 200
 --- !u!95 &-768939564861902795
 Animator:
   serializedVersion: 7
