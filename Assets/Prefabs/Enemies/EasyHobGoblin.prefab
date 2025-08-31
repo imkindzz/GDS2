@@ -651,7 +651,6 @@ GameObject:
   - component: {fileID: 5953644680515131326}
   - component: {fileID: 6361939194813249116}
   - component: {fileID: 3677743766140865472}
-  - component: {fileID: 6366611090954349491}
   m_Layer: 0
   m_Name: Club
   m_TagString: Untagged
@@ -671,8 +670,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2309231070269232543}
+  m_Children: []
   m_Father: {fileID: 1375682995908508076}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5953644680515131326
@@ -762,29 +760,6 @@ MonoBehaviour:
   fireRate: 0.5
   aimAtPlayer: 0
   aimPos: {x: 0, y: 0, z: 0}
---- !u!114 &6366611090954349491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5337365775426962189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0251599caf64e114c96852009f70e2a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 2309231070269232543}
-  waves:
-  - name: 2 Spear Goblins
-    entries:
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
-      count: 2
-  timeBetweenSpawns: 0.15
-  timeBetweenWaves: 2
-  autoStart: 1
-  loopWaves: 0
 --- !u!1 &5383545502268860129
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +774,6 @@ GameObject:
   - component: {fileID: 6357521670438610712}
   - component: {fileID: 7424273018262636478}
   - component: {fileID: 728470009258099297}
-  - component: {fileID: 776280578321754836}
   m_Layer: 0
   m_Name: Phase 1
   m_TagString: Untagged
@@ -970,29 +944,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &776280578321754836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5383545502268860129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0251599caf64e114c96852009f70e2a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 2309231070269232543}
-  waves:
-  - name: 1 Spear Goblin
-    entries:
-    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
-      count: 1
-  timeBetweenSpawns: 0.15
-  timeBetweenWaves: 2
-  autoStart: 1
-  loopWaves: 0
 --- !u!1 &5946669198946357408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +955,7 @@ GameObject:
   - component: {fileID: 8191354335130764375}
   - component: {fileID: 6534895084956858066}
   m_Layer: 0
-  m_Name: HobGoblin
+  m_Name: EasyHobGoblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1041,37 +992,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossMusic: {fileID: 8300000, guid: c77aa2b738e287a48a9be1f1d5e5eeed, type: 3}
---- !u!1 &5995679680724740204
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2309231070269232543}
-  m_Layer: 0
-  m_Name: SpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2309231070269232543
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5995679680724740204}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6445110725069870485}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6251019062091888745
 GameObject:
   m_ObjectHideFlags: 0

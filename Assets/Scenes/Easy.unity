@@ -781,7 +781,7 @@ MonoBehaviour:
       count: 1
     - prefab: {fileID: 4365138899506933012, guid: c2afb9a07bf36fa45be5db80575fb18b, type: 3}
       count: 1
-    - prefab: {fileID: 5946669198946357408, guid: 541687ad2a2f19a4a950be8f55024456, type: 3}
+    - prefab: {fileID: 5946669198946357408, guid: 2069947264942fc41b42b27819d4f7c2, type: 3}
       count: 1
   timeBetweenSpawns: 1
   timeBetweenWaves: 3.5

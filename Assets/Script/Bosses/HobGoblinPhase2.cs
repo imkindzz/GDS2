@@ -1,119 +1,92 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HobGoblinPhase2 : MonoBehaviour
 {
+    public Transform clubStartpos;
     public Vector2 club1pos;
     public Vector2 club2pos;
 
     private BossState currentState;
-
-    public Transform clubStartpos;
-
-    private float attackTimer = 0f;
+    private float stateTimer;
 
     public enum BossState
     {
         Idle,
         Club1,
-        Return,
         Club2,
+        Return,
         Attack
     }
-    // Start is called before the first frame update
+
     void Start()
     {
-        currentState = BossState.Club1;
-        
+
+        EnterState(BossState.Club1);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        switch (currentState) 
+        switch (currentState)
         {
             case BossState.Idle:
-                Idle();
                 break;
+
             case BossState.Club1:
-                Club1();
+                MoveTo(club1pos, BossState.Attack);
                 break;
-            case BossState.Return:
-                Return();
-                break;
+
             case BossState.Club2:
-                Club2();
+                MoveTo(club2pos, BossState.Attack);
                 break;
+
+            case BossState.Return:
+                if (clubStartpos != null)
+                    MoveTo(clubStartpos.position, Random.value < 0.5f ? BossState.Club1 : BossState.Club2);
+                break;
+
             case BossState.Attack:
-                Attack();
+                HandleAttack();
                 break;
         }
     }
 
-    
-
-    private void Attack()
+    void EnterState(BossState newState)
     {
-        attackTimer += Time.deltaTime;
-        this.GetComponent<BulletEmitter>().enabled = true;
+        currentState = newState;
+        stateTimer = 0f;
 
-        if (attackTimer > 2f) 
-        { 
-            currentState = BossState.Return;
-        }
-        
-
-    }
-
-    private void Club1()
-    {
-        this.transform.position = Vector2.MoveTowards(this.transform.position, club1pos, 2f * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, club1pos) < 0.01f)
+        switch (newState)
         {
-
-            currentState = BossState.Attack;
-        }
-
-
-    }
-
-    private void Return()
-    {
-        this.GetComponent<BulletEmitter>().enabled = false;
-        attackTimer = 0f;
-        this.transform.position = Vector2.MoveTowards(this.transform.position, clubStartpos.position, 2f * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, clubStartpos.position) < 0.01f)
-        {
-            switch (UnityEngine.Random.Range(0, 2)) 
-            {
-                case 0:
-                currentState = BossState.Club1;
+            case BossState.Attack:
+                GetComponent<BulletEmitter>().enabled = true;
                 break;
-                case 1:
-                currentState = BossState.Club2; 
+
+            case BossState.Return:
+                GetComponent<BulletEmitter>().enabled = false;
                 break;
-            }
-            
+
+            default:
+                break;
         }
     }
 
-    private void Club2()
+    void MoveTo(Vector2 target, BossState nextState)
     {
-        this.transform.position = Vector2.MoveTowards(this.transform.position, club2pos, 2f * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target, 2f * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, club2pos) < 0.01f)
+        if (Vector2.Distance(transform.position, target) < 0.01f)
         {
-
-            currentState = BossState.Attack;
+            EnterState(nextState);
         }
     }
 
-    private void Idle()
+    void HandleAttack()
     {
-        throw new NotImplementedException();
+        stateTimer += Time.deltaTime;
+
+        if (stateTimer >= 2f)
+        {
+            EnterState(BossState.Return);
+        }
     }
 }
