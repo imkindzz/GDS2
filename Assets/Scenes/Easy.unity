@@ -731,13 +731,13 @@ MonoBehaviour:
   waves:
   - name: 1 Spear
     entries:
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
       count: 1
   - name: '2 spear '
     entries:
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
       count: 1
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
       count: 1
   - name: 1 Canon
     entries:
@@ -751,9 +751,11 @@ MonoBehaviour:
       count: 1
   - name: 2 Spear 1 canon
     entries:
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
       count: 1
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
+      count: 1
+    - prefab: {fileID: 4365138899506933012, guid: c2afb9a07bf36fa45be5db80575fb18b, type: 3}
       count: 1
     - prefab: {fileID: 2967261118870211946, guid: c686875fbdd362648b9852e360a94aa5, type: 3}
       count: 1
@@ -763,8 +765,10 @@ MonoBehaviour:
       count: 1
   - name: 2 spear 2 Canon
     entries:
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
       count: 2
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
+      count: 1
     - prefab: {fileID: 4365138899506933012, guid: c2afb9a07bf36fa45be5db80575fb18b, type: 3}
       count: 1
     - prefab: {fileID: 2967261118870211946, guid: c686875fbdd362648b9852e360a94aa5, type: 3}
