@@ -412,6 +412,13 @@ MonoBehaviour:
   showHealthMeter: 1
   healthMeter: {fileID: 0}
   deathDelay: 0.25
+  maxHealth: 5
+  heartImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   soulBody: {fileID: 0}
 --- !u!114 &3750264898147574734
 MonoBehaviour:

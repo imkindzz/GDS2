@@ -7,6 +7,17 @@ public class PlayerStatus : StatusBase
 {
     [SerializeField] private GameObject soulBody; //the player's soul body
 
+    [Header("Heart Settings")]
+    [SerializeField] private List<Image> heartImages; // drag your 5 heart images here
+    private int currentHearts;
+    private int maxHearts = 5;
+
+    void Start()
+    {
+        currentHearts = maxHearts;
+        UpdateHeartsUI();
+    }
+
     #region Health methods
     public override void TakeHealth(float amount)
     {
@@ -17,6 +28,18 @@ public class PlayerStatus : StatusBase
     {
         base.TakeDamage(amount);
         Debug.Log("Player is taking damage");
+
+        if (noHealth && currentHearts > 0)
+        {
+            currentHearts--;           // lose a heart
+            currentHealth = maxHealth; // reset health for next heart
+            UpdateHeartsUI();
+
+            if (currentHearts <= 0)
+            {
+                OnDeathState(); // player dies if no hearts left
+            }
+        }
     }
     #endregion
 
@@ -30,4 +53,13 @@ public class PlayerStatus : StatusBase
         Debug.Log("Player is dead");
     }
     #endregion
+
+    private void UpdateHeartsUI()
+    {
+        for (int i = 0; i < heartImages.Count; i++)
+        {
+            heartImages[i].gameObject.SetActive(i < currentHearts);
+        }
+    }
+
 }
