@@ -64,7 +64,6 @@ public class WaveSpawner : MonoBehaviour
     private IEnumerator SpawnWave(Wave wave)
     {
         _aliveInWave = 0;
-        int spIndex = 0; // round-robin spawn points
 
         foreach (var entry in wave.entries)
         {
@@ -72,8 +71,9 @@ public class WaveSpawner : MonoBehaviour
 
             for (int i = 0; i < entry.count; i++)
             {
-                var point = spawnPoints[spIndex % spawnPoints.Length];
-                spIndex++;
+                // Clamp index so it’s valid
+                int chosenIndex = Mathf.Clamp(entry.spawnPointIndex, 0, spawnPoints.Length - 1);
+                var point = spawnPoints[chosenIndex];
 
                 GameObject go = Instantiate(entry.prefab, point.position, point.rotation);
 
@@ -81,7 +81,7 @@ public class WaveSpawner : MonoBehaviour
                 if (status != null)
                 {
                     _aliveInWave++;
-                    status.Died += HandleEnemyDied; // <<< subscribe to Died
+                    status.Died += HandleEnemyDied;
                 }
                 else
                 {
@@ -96,7 +96,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void HandleEnemyDied(EnemyStatus status)
     {
-        status.Died -= HandleEnemyDied;       // tidy unsubscribe
+        status.Died -= HandleEnemyDied;
         _aliveInWave = Mathf.Max(0, _aliveInWave - 1);
     }
 
@@ -110,7 +110,9 @@ public class WaveSpawner : MonoBehaviour
     [System.Serializable]
     public class WaveEntry
     {
-        public GameObject prefab; // enemy prefab with EnemyStatus
+        public GameObject prefab;    // enemy prefab with EnemyStatus
         public int count = 5;
+        public int spawnPointIndex = 0; // <— choose spawn point in Inspector
     }
 }
+
