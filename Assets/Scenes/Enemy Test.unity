@@ -173,10 +173,12 @@ MonoBehaviour:
     entries:
     - prefab: {fileID: 6764002334713747553, guid: 1ed72ddb2accc9c40b0cd421b3581ecf, type: 3}
       count: 1
+      spawnPointIndex: 0
   - name: 2
     entries:
     - prefab: {fileID: 6764002334713747553, guid: 1ed72ddb2accc9c40b0cd421b3581ecf, type: 3}
       count: 1
+      spawnPointIndex: 0
   timeBetweenSpawns: 0.15
   timeBetweenWaves: 2
   autoStart: 1

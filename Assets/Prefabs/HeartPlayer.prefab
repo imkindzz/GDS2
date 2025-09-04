@@ -412,14 +412,13 @@ MonoBehaviour:
   showHealthMeter: 1
   healthMeter: {fileID: 0}
   deathDelay: 0.25
-  maxHealth: 5
+  soulBody: {fileID: 0}
   heartImages:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  soulBody: {fileID: 0}
 --- !u!114 &3750264898147574734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,6 +484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soulBody: {fileID: 0}
   isSummoned: 0
+  summonDuration: 10
+  returnSpeed: 30
 --- !u!114 &1474685202510615111
 MonoBehaviour:
   m_ObjectHideFlags: 0
