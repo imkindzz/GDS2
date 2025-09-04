@@ -6,6 +6,9 @@ public class PlayerSummonSoul : MonoBehaviour
 {
     [SerializeField] private GameObject soulBody; //the body of the soul summoned
     [SerializeField] private bool isSummoned = false; //whether or not the soul is summoned
+    [SerializeField] private float summonDuration = 1f; //time taken for how long the soul stay summoned for
+
+    private float summonTimer = 0f; //timer that tracks the time taken when the soul is summoned
 
     #region Unity methods
     void Start()
@@ -21,7 +24,12 @@ public class PlayerSummonSoul : MonoBehaviour
             SummonSoul();
         }
 
-        if (isSummoned && Input.GetKeyDown(KeyCode.R)) RemoveSoul();
+        if (isSummoned)
+        {
+            summonTimer += Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.R) || summonTimer >= summonDuration) RemoveSoul();
+        }
     }
     #endregion
 
@@ -30,6 +38,7 @@ public class PlayerSummonSoul : MonoBehaviour
     private void SummonSoul()
     {
         isSummoned = true;
+        summonTimer = 0f;
 
         soulBody.transform.position = transform.position;
         soulBody.SetActive(true);
