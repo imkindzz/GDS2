@@ -9,10 +9,16 @@ public class PlayerSummonSoul : MonoBehaviour
     [SerializeField] private float summonDuration = 1f; //time taken for how long the soul stay summoned for
     [SerializeField] private float returnSpeed = 1f; //the speed of when the soul returns to the main body
 
+    [Header("Soul Link")]
+    [SerializeField] private GameObject soulLink; //the link between the soul and the main body
+    [SerializeField] private float linkWidth = 1f; //the width of the soul link
+
     private PlayerSoulMovement soulMovement;
 
     private float summonTimer = 0f; //timer that tracks the time taken when the soul is summoned
     private bool onReturn = false; //whether or not the soul returns to the main body
+
+    private bool soulLinkMirrorZ = true; //whether or not the soul link is mirrored
 
     #region Unity methods
     void Awake()
@@ -41,6 +47,8 @@ public class PlayerSummonSoul : MonoBehaviour
         }
 
         if (onReturn) ReturnSoul();
+
+        StretchSoulLink();
     }
     #endregion
 
@@ -77,6 +85,28 @@ public class PlayerSummonSoul : MonoBehaviour
             soulBody.SetActive(false);
             onReturn = false;
         }
+    }
+    #endregion
+
+    #region Soul link methods
+    //stretches the soul link
+    private void StretchSoulLink()
+    {
+        Vector3 startPosition = transform.position;
+        Vector3 endPosition = soulBody.transform.position;
+
+        Vector3 centerPos = (startPosition + endPosition) / 2f;
+        soulLink.transform.position = centerPos;
+
+        Vector3 direction = endPosition - startPosition;
+        direction = Vector3.Normalize(direction);
+        soulLink.transform.right = direction;
+        
+        if (soulLinkMirrorZ) soulLink.transform.right *= -1f;
+
+        Vector3 scale = new Vector3(1, linkWidth, 1);
+        scale.x = Vector3.Distance(startPosition, endPosition);
+        soulLink.transform.localScale = scale;
     }
     #endregion
 }
