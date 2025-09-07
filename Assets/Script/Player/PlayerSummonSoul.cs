@@ -10,7 +10,6 @@ public class PlayerSummonSoul : MonoBehaviour
     [SerializeField] private float returnSpeed = 1f; //the speed of when the soul returns to the main body
 
     [Header("Soul Link")]
-    [SerializeField] private GameObject soulLink; //the link between the soul and the main body
     [SerializeField] private float linkWidth = 1f; //the width of the soul link
     [SerializeField, Range(0, 1)] private float linkMaxOpacity = 1f; //the maximum opacity of the soul link when summoned
     [SerializeField, Range(0, 1)] private float linkMinOpacity = 0f; //the minium opacity of the soul link as the summoning duration decreases
@@ -21,16 +20,16 @@ public class PlayerSummonSoul : MonoBehaviour
     private float summonTimer = 0f; //timer that tracks the time taken when the soul is summoned
     private bool onReturn = false; //whether or not the soul returns to the main body
 
+    private GameObject soulLink; //the link between the soul and the main body
     private bool soulLinkMirrorZ = true; //whether or not the soul link is mirrored
-    private float soulLinkCurrentOpacity = 1f; //the current soul link opacity
 
     #region Unity methods
     void Awake()
     {
         soulMovement = soulBody.GetComponent<PlayerSoulMovement>();
-        spSoulLink = soulLink.GetComponent<SpriteRenderer>();
 
-        soulLinkCurrentOpacity = linkMaxOpacity;
+        soulLink = soulBody.transform.GetChild(0).gameObject;
+        spSoulLink = soulLink.GetComponent<SpriteRenderer>();
     }
 
     void Start()
