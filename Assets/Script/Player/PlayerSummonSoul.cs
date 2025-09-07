@@ -12,18 +12,25 @@ public class PlayerSummonSoul : MonoBehaviour
     [Header("Soul Link")]
     [SerializeField] private GameObject soulLink; //the link between the soul and the main body
     [SerializeField] private float linkWidth = 1f; //the width of the soul link
+    [SerializeField, Range(0, 1)] private float linkMaxOpacity = 1f; //the maximum opacity of the soul link when summoned
+    [SerializeField, Range(0, 1)] private float linkMinOpacity = 0f; //the minium opacity of the soul link as the summoning duration decreases
 
     private PlayerSoulMovement soulMovement;
+    private SpriteRenderer spSoulLink;
 
     private float summonTimer = 0f; //timer that tracks the time taken when the soul is summoned
     private bool onReturn = false; //whether or not the soul returns to the main body
 
     private bool soulLinkMirrorZ = true; //whether or not the soul link is mirrored
+    private float soulLinkCurrentOpacity = 1f; //the current soul link opacity
 
     #region Unity methods
     void Awake()
     {
         soulMovement = soulBody.GetComponent<PlayerSoulMovement>();
+        spSoulLink = soulLink.GetComponent<SpriteRenderer>();
+
+        soulLinkCurrentOpacity = linkMaxOpacity;
     }
 
     void Start()
@@ -42,6 +49,8 @@ public class PlayerSummonSoul : MonoBehaviour
         if (isSummoned)
         {
             summonTimer += Time.deltaTime;
+            
+            DecreaseSoulLinkOpacity();
 
             if (Input.GetKeyDown(KeyCode.R) || summonTimer >= summonDuration) RemoveSoul();
         }
@@ -107,6 +116,17 @@ public class PlayerSummonSoul : MonoBehaviour
         Vector3 scale = new Vector3(1, linkWidth, 1);
         scale.x = Vector3.Distance(startPosition, endPosition);
         soulLink.transform.localScale = scale;
+    }
+
+    //decreases the soul link opacity overtime
+    private void DecreaseSoulLinkOpacity()
+    {
+        float t = summonTimer / summonDuration;
+        float newOpacity = Mathf.Lerp(linkMaxOpacity, linkMinOpacity, t);
+
+        Color linkColor = spSoulLink.color;
+        linkColor.a = newOpacity;
+        spSoulLink.color = linkColor;
     }
     #endregion
 }

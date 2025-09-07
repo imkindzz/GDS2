@@ -486,6 +486,10 @@ MonoBehaviour:
   isSummoned: 0
   summonDuration: 10
   returnSpeed: 30
+  soulLink: {fileID: 0}
+  linkWidth: 0.25
+  linkMaxOpacity: 0.75
+  linkMinOpacity: 0.1
 --- !u!114 &1474685202510615111
 MonoBehaviour:
   m_ObjectHideFlags: 0
