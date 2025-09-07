@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4572193616845116673}
   - component: {fileID: 6932064285243137742}
   - component: {fileID: 4668383517105786774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireWorkEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
