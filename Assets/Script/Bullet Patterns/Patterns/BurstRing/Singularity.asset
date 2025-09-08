@@ -9,12 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 122900d787412094cb7a61e1aa5b7f89, type: 3}
-  m_Name: SeedShot
+  m_Script: {fileID: 11500000, guid: 3805020ba9d136741b1e98c34ed14cf0, type: 3}
+  m_Name: Singularity
   m_EditorClassIdentifier: 
   seedSpeed: 6
-  seedLifetime: 1.6
-  miniSpeed: 7
-  miniLifetime: 0.9
-  miniCount: 4
-  miniScale: 0.7
+  seedTravelTime: 1.5
+  coreDuration: 1.5
+  pulses: 2
+  pulseInterval: 0.25
+  bulletsPerPulse: 6
+  pulseSpeed: 4
+  pulseLifetime: 2
+  coreScale: 1
+  pulseScale: 0.9
+  spinPerPulse: 18

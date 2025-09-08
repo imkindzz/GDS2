@@ -338,12 +338,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
---- !u!4 &1632437085 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 963191888858243461, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
-  m_PrefabInstance: {fileID: 1348506371}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5022554134238350127
+--- !u!1001 &1614583806
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -351,17 +346,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 236090184483892574, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 236090184483892574, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 236090184483892574, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.100182414
+      objectReference: {fileID: 0}
     - target: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       propertyPath: m_Name
-      value: SeedShotEnemy
+      value: BurstShot Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3708660960334106892, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.26
+      value: 4.75
       objectReference: {fileID: 0}
     - target: {fileID: 3708660960334106892, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.45
+      value: 3.36
       objectReference: {fileID: 0}
     - target: {fileID: 3708660960334106892, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -399,11 +406,28 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1632437085}
+    - target: {fileID: 5935341058621485318, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
+      propertyPath: fireRate
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935341058621485318, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
+      propertyPath: aimAtPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935341058621485318, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
+      propertyPath: 'bulletPatterns.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ccaf0f0993cae346a4012943e774c4d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
+--- !u!4 &1632437085 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 963191888858243461, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
+  m_PrefabInstance: {fileID: 1348506371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -411,4 +435,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1348506371}
   - {fileID: 1316794815}
-  - {fileID: 5022554134238350127}
+  - {fileID: 1614583806}
