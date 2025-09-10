@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d1303410ada2f4086628086c912f6c, type: 3}
   m_Name: RingShot
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
-  bulletLifetime: 1
+  bulletSpeed: 4
+  bulletLifetime: 2.5
   numBullets: 12
-  startAngle: 0
+  startAngle: 180
   spinStep: 10

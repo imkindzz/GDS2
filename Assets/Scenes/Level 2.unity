@@ -425,7 +425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 29.692596, y: -109.6519}
+  m_AnchoredPosition: {x: 29.692627, y: -109.6519}
   m_SizeDelta: {x: 59.39, y: 28.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406703526
@@ -1046,7 +1046,7 @@ MonoBehaviour:
       count: 1
       spawnPointIndex: 0
   timeBetweenSpawns: 3
-  timeBetweenWaves: 7
+  timeBetweenWaves: 3
   autoStart: 1
   loopWaves: 0
 --- !u!4 &888629392
@@ -1898,7 +1898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 23.257599, y: -72.1624}
+  m_AnchoredPosition: {x: 23.257568, y: -72.1624}
   m_SizeDelta: {x: 46.52, y: 46.029}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &1778477311
