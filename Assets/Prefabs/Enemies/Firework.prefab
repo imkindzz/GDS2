@@ -189,7 +189,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5955692588573619316, guid: 73fc4af2df615a54db9e1e6fe7ed788b, type: 3}
   bulletPatterns:
   - {fileID: 11400000, guid: 7ccaf0f0993cae346a4012943e774c4d, type: 2}
-  fireRate: 0.7
+  fireRate: 0.45
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
 --- !u!114 &7023527611136259206

@@ -16,10 +16,10 @@ MonoBehaviour:
   seedTravelTime: 1.5
   coreDuration: 1.5
   pulses: 2
-  pulseInterval: 0.25
+  pulseInterval: 0.5
   bulletsPerPulse: 6
-  pulseSpeed: 4
+  pulseSpeed: 3
   pulseLifetime: 2
   coreScale: 1
   pulseScale: 0.9
-  spinPerPulse: 18
+  spinPerPulse: 30
