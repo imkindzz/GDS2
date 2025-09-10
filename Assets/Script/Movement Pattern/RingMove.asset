@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28d04bc38c61be43ae8e01b7b24a8b2, type: 3}
   m_Name: RingMove
   m_EditorClassIdentifier: 
-  width: 3
-  height: 1.5
+  width: 5
+  height: 3
   speed: 2
