@@ -12,10 +12,27 @@ public class PlayerStatus : StatusBase
     private int currentHearts;
     private int maxHearts = 5;
 
+    [Header("Streak System")]
+    [SerializeField] private float streakIncreaseRate = 1f; // How many points per second
+    [SerializeField] private int maxStreak = 100;
+    [SerializeField] private Image streakFillBar; // The animated fill sprite
+    [SerializeField] private GameObject maxStreakFlames; // The flame effect object
+
+    private float currentStreak = 0f;
+    private float streakTimer = 0f;
+    private bool isTakingDamage = false;
+
+    public static PlayerStatus Instance;
+
     void Start()
     {
         currentHearts = maxHearts;
         UpdateHeartsUI();
+    }
+
+    void Update()
+    {
+        HandleStreak();
     }
 
     #region Health methods
@@ -28,6 +45,7 @@ public class PlayerStatus : StatusBase
     {
         base.TakeDamage(amount);
         Debug.Log("Player is taking damage");
+        isTakingDamage = true;
 
         if (noHealth && currentHearts > 0)
         {
@@ -62,4 +80,47 @@ public class PlayerStatus : StatusBase
         }
     }
 
+    private void HandleStreak()
+    {
+        if (isTakingDamage)
+        {
+            currentStreak = 0f;
+            UpdateStreakUI();
+            isTakingDamage = false;
+            return;
+        }
+
+        streakTimer += Time.deltaTime;
+        if (streakTimer >= 1f)
+        {
+            streakTimer = 0f;
+            currentStreak += streakIncreaseRate;
+            currentStreak = Mathf.Clamp(currentStreak, 0f, maxStreak);
+            UpdateStreakUI();
+        }
+    }
+
+    private void UpdateStreakUI()
+    {
+        if (streakFillBar != null)
+        {
+            float fillAmount = currentStreak / maxStreak;
+            streakFillBar.fillAmount = fillAmount;
+        }
+
+        if (maxStreakFlames != null)
+        {
+            maxStreakFlames.SetActive(currentStreak >= maxStreak);
+        }
+    }
+    public float GetScoreMultiplier()
+    {
+        float t = currentStreak / maxStreak;
+        return Mathf.Lerp(1f, 5f, t);      
+    }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 }

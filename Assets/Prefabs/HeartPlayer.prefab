@@ -419,6 +419,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  streakIncreaseRate: 5
+  maxStreak: 100
+  streakFillBar: {fileID: 0}
+  maxStreakFlames: {fileID: 0}
 --- !u!114 &3750264898147574734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,7 +490,6 @@ MonoBehaviour:
   isSummoned: 0
   summonDuration: 10
   returnSpeed: 30
-  soulLink: {fileID: 0}
   linkWidth: 0.25
   linkMaxOpacity: 0.75
   linkMinOpacity: 0.1
