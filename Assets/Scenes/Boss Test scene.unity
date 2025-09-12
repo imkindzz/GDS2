@@ -415,8 +415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bdb4dcc44646d4e9957a0e571a722e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 100
-  _maxHealth: 100
+  _currentHealth: 200
+  _maxHealth: 200
   showHealthMeter: 1
   healthMeter: {fileID: 0}
   deathDelay: 0.25
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f885d8579874bf0429153a9d8231a6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfLines: 5
+  numberOfLines: 7
   screenWidth: 10
   redLine: {fileID: 5627426518954632786, guid: 71c20c56d40087c46a3f26015bcc9ed3, type: 3}
   lineHeight: 10
@@ -495,6 +495,7 @@ MonoBehaviour:
   moveDuration: 5
   changeDirectionInterval: 0.7
   returnSpeed: 7
+  ready: 1
 --- !u!1 &797259866
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class BossStatus : StatusBase
     public GameObject nextPhase;
     private bool _pointsGiven = false;
 
-
+    
     [Header("Score Settings")]
     [SerializeField] private int pointsOnDeath = 1000;
 
@@ -34,14 +34,16 @@ public class BossStatus : StatusBase
         if (nextPhase != null) 
         {
             nextPhase.SetActive(true);
-            string phase = /*nextPhase.name*/ "Phase 2";
-            string bossName = /*nextPhase.transform.parent.gameObject.name*/ "HobGoblin";
-            BossManager.updateBossPhaseText(phase, bossName);
-
 
         }
 
         base.OnDeathState();
     }
     #endregion
+
+
+    private void Start()
+    {
+        this.healthMeter = FindFirstObjectByType<Slider>();
+    }
 }

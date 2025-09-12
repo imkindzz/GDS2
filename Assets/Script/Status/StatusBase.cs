@@ -9,7 +9,7 @@ public class StatusBase : MonoBehaviour
     [SerializeField] private float _currentHealth = 100f; //the amount of health the status have
     [SerializeField, Min(1)] private float _maxHealth = 100f; //the maximum amount of health
     [SerializeField] private bool showHealthMeter = true; //whether or not the health meter is shown
-    [SerializeField] private Slider healthMeter; //the visual slider that shows the amount of health
+    [SerializeField] protected Slider healthMeter; //the visual slider that shows the amount of health
 
     [Header("Death")]
     [SerializeField] private float deathDelay = 0.25f; //the time taken before the gameObject completely disappears

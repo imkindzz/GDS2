@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static HobGoblinPhase2;
 
 public class BossUIManager : MonoBehaviour
 {
 
     public GameObject BossUI;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class VillagerPhase1LineAttack : MonoBehaviour
 {
-    public int numberOfLines = 5;
+    public int numberOfLines = 9;
     public float screenWidth = 10f;
     private List<float> linePositions = new List<float>();
 
@@ -23,7 +23,7 @@ public class VillagerPhase1LineAttack : MonoBehaviour
 
     IEnumerator LineAttack()
     {
-        yield return new WaitForSeconds(2f);
+        //yield return new WaitForSeconds(2f);
 
         CalculateLinePositions();
 
@@ -67,14 +67,39 @@ public class VillagerPhase1LineAttack : MonoBehaviour
 
         linePositions.Clear();
 
-        float spacing = screenWidth / (numberOfLines + 1);
-        float startX = -screenWidth / 2f;
+        float minX = -screenWidth / 2f;
+        float maxX = screenWidth / 2f;
+        float minSpacing = 1.0f; // Minimum distance between lines to avoid overlap
 
-        for (int i = 1; i <= numberOfLines; i++)
+        int attempts = 0;
+        int maxAttempts = 1000;
+
+        while (linePositions.Count < numberOfLines && attempts < maxAttempts)
         {
-            float x = startX + spacing * i;
-            linePositions.Add(x);
+            float randomX = Random.Range(minX, maxX);
+            bool tooClose = false;
+
+            foreach (float existingX in linePositions)
+            {
+                if (Mathf.Abs(existingX - randomX) < minSpacing)
+                {
+                    tooClose = true;
+                    break;
+                }
+            }
+
+            if (!tooClose)
+            {
+                linePositions.Add(randomX);
+            }
+
+            attempts++;
         }
+    }
+
+    public void StartLineAttack()
+    {
+        StartCoroutine(LineAttack());
     }
     // Start is called before the first frame update
     void Start()
