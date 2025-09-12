@@ -145,7 +145,7 @@ public class PlayerStatus : StatusBase
         spriteRenderer.color = Color.white;
         flashRoutine = null;
 
-        EndInvincibility();
+        EndInvincibility(); //ensures that the invincibility have ended
     }
     #endregion
 

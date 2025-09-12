@@ -413,6 +413,9 @@ MonoBehaviour:
   healthMeter: {fileID: 0}
   deathDelay: 0.25
   soulBody: {fileID: 0}
+  invincibilityDuration: 1.5
+  flashDuration: 1.5
+  flashInterval: 0.1
   heartImages:
   - {fileID: 0}
   - {fileID: 0}
@@ -489,6 +492,7 @@ MonoBehaviour:
   soulBody: {fileID: 0}
   isSummoned: 0
   summonDuration: 10
+  summonCooldown: 1.5
   returnSpeed: 30
   linkWidth: 0.25
   linkMaxOpacity: 0.75

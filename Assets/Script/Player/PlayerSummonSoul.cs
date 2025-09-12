@@ -7,6 +7,7 @@ public class PlayerSummonSoul : MonoBehaviour
     [SerializeField] private GameObject soulBody; //the body of the soul summoned
     [SerializeField] private bool isSummoned = false; //whether or not the soul is summoned
     [SerializeField] private float summonDuration = 1f; //time taken for how long the soul stay summoned for
+    [SerializeField] private float summonCooldown = 1f; //the cooldown duration after the summoning ended
     [SerializeField] private float returnSpeed = 1f; //the speed of when the soul returns to the main body
 
     [Header("Soul Link")]
@@ -19,6 +20,9 @@ public class PlayerSummonSoul : MonoBehaviour
 
     private float summonTimer = 0f; //timer that tracks the time taken when the soul is summoned
     private bool onReturn = false; //whether or not the soul returns to the main body
+    
+    private bool canSummon = true; //whether or not the soul can be summoned
+    private Coroutine summonCooldownRoutine; //the cooldown routine
 
     private GameObject soulLink; //the link between the soul and the main body
     private bool soulLinkMirrorZ = true; //whether or not the soul link is mirrored
@@ -40,7 +44,7 @@ public class PlayerSummonSoul : MonoBehaviour
 
     void Update()
     {
-        if (!isSummoned && !onReturn && (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.UpArrow)))
+        if (!isSummoned && !onReturn && canSummon && (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
             SummonSoul();
         }
@@ -92,7 +96,40 @@ public class PlayerSummonSoul : MonoBehaviour
         {
             soulBody.SetActive(false);
             onReturn = false;
+
+            StartSummonCooldown(summonCooldown);
         }
+    }
+    #endregion
+
+    #region Soul cooldown methods
+    //starts the summon cooldown
+    private void StartSummonCooldown(float duration)
+    {
+        canSummon = false;
+
+        if (summonCooldownRoutine != null) StopCoroutine(summonCooldownRoutine);
+        summonCooldownRoutine = StartCoroutine(CooldownRoutine(duration));
+    }
+
+    //ends the summon cooldown
+    private void EndSummonCooldown()
+    {
+        canSummon = true;
+
+        if (summonCooldownRoutine != null)
+        {
+            StopCoroutine(summonCooldownRoutine);
+            summonCooldownRoutine = null;
+        }
+    }
+
+    //summon cooldown coroutine
+    private IEnumerator CooldownRoutine(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        EndSummonCooldown();
     }
     #endregion
 
