@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 7424273018262636478}
   - component: {fileID: 728470009258099297}
   - component: {fileID: 776280578321754836}
+  - component: {fileID: 7999229639112604541}
   m_Layer: 0
   m_Name: Phase 1
   m_TagString: Untagged
@@ -524,6 +525,20 @@ MonoBehaviour:
   timeBetweenWaves: 2
   autoStart: 1
   loopWaves: 0
+--- !u!114 &7999229639112604541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5383545502268860129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1121a4be90d6a7b4e85cc481156c6a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  speed: 1
 --- !u!1 &5946669198946357408
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd214fdba86ef944d8e3b88054853f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossHealthSlider: {fileID: 0}
   bossMusic: {fileID: 8300000, guid: c77aa2b738e287a48a9be1f1d5e5eeed, type: 3}
 --- !u!1 &5995679680724740204
 GameObject:
