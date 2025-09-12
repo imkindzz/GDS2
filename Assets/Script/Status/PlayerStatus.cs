@@ -7,6 +7,11 @@ public class PlayerStatus : StatusBase
 {
     [SerializeField] private GameObject soulBody; //the player's soul body
 
+    [Header("Invinciblity State")]
+    [SerializeField] private float invincibilityDuration = 1.5f;
+    [SerializeField] private float flashDuration = 1.5f;
+    [SerializeField] private float flashInterval = 0.1f;
+
     [Header("Heart Settings")]
     [SerializeField] private List<Image> heartImages; // drag your 5 heart images here
     private int currentHearts;
@@ -18,14 +23,23 @@ public class PlayerStatus : StatusBase
     [SerializeField] private Image streakFillBar; // The animated fill sprite
     [SerializeField] private GameObject maxStreakFlames; // The flame effect object
 
+    private SpriteRenderer spriteRenderer;
+
     private float currentStreak = 0f;
     private float streakTimer = 0f;
     private bool isTakingDamage = false;
 
     public static PlayerStatus Instance;
 
+    //invincibility state
+    private bool isInvincible = false;
+    private float invincibilityTimer = 0f;
+    private Coroutine flashRoutine;
+
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         currentHearts = maxHearts;
         UpdateHeartsUI();
     }
@@ -43,19 +57,24 @@ public class PlayerStatus : StatusBase
 
     public override void TakeDamage(float amount)
     {
-        base.TakeDamage(amount);
-        Debug.Log("Player is taking damage");
-        isTakingDamage = true;
-
-        if (noHealth && currentHearts > 0)
+        if (!isInvincible)
         {
-            currentHearts--;           // lose a heart
-            currentHealth = maxHealth; // reset health for next heart
-            UpdateHeartsUI();
+            base.TakeDamage(amount);
+            Debug.Log("Player is taking damage");
+            StartInvincibility(invincibilityDuration);
 
-            if (currentHearts <= 0)
+            isTakingDamage = true;
+
+            if (noHealth && currentHearts > 0)
             {
-                OnDeathState(); // player dies if no hearts left
+                currentHearts--;           // lose a heart
+                currentHealth = maxHealth; // reset health for next heart
+                UpdateHeartsUI();
+
+                if (currentHearts <= 0)
+                {
+                    OnDeathState(); // player dies if no hearts left
+                }
             }
         }
     }
@@ -64,11 +83,69 @@ public class PlayerStatus : StatusBase
     #region State methods
     public override void OnDeathState()
     {
-        //does something
+        EndInvincibility(); //ensures that the invisbility is gone before anything else
+
         this.gameObject.SetActive(false);
         soulBody.SetActive(false);
 
         Debug.Log("Player is dead");
+    }
+    #endregion
+
+    #region Invincibility methods
+    //starts the invincibility
+    private void StartInvincibility(float duration)
+    {
+        isInvincible = true;
+        invincibilityTimer = duration;
+
+        // Start flash effect
+        if (flashRoutine != null) StopCoroutine(flashRoutine);
+        flashRoutine = StartCoroutine(FlashEffect(duration));
+    }
+
+    //ends the invincibility
+    private void EndInvincibility()
+    {
+        isInvincible = false;
+
+        // Ensure sprite is fully visible
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = Color.white;
+        }
+
+        // Stop flash effect if still running
+        if (flashRoutine != null)
+        {
+            StopCoroutine(flashRoutine);
+            flashRoutine = null;
+        }
+    }
+
+    // Flash effect coroutine
+    private IEnumerator FlashEffect(float duration)
+    {
+        if (spriteRenderer == null) yield break;
+
+        float timer = 0;
+
+        // Flash between visible and partially transparent
+        while (timer < duration)
+        {
+            // Toggle visibility
+            spriteRenderer.color = spriteRenderer.color.a >= 1.0f ?
+                new Color(1f, 1f, 1f, 0.3f) : Color.white;
+
+            yield return new WaitForSeconds(flashInterval);
+            timer += flashInterval;
+        }
+
+        // Ensure sprite is visible at the end
+        spriteRenderer.color = Color.white;
+        flashRoutine = null;
+
+        EndInvincibility(); //ensures that the invincibility have ended
     }
     #endregion
 
