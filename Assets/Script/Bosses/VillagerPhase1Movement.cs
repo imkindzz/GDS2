@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class VillagerPhase1Movement : MonoBehaviour
 {
+    private VillagerPhase1LineAttack lineAttackScript;
+
     public float speed = 3f;
     public float moveDuration = 5f;
     public float changeDirectionInterval = 1f;
@@ -14,9 +17,12 @@ public class VillagerPhase1Movement : MonoBehaviour
     private Transform parentTransform;
     private Camera mainCamera;
     private Vector3 startPosition;
+    public bool ready = true;
 
     void Start()
     {
+        lineAttackScript = GetComponent<VillagerPhase1LineAttack>();
+
         parentTransform = transform.parent;
         if (parentTransform == null)
         {
@@ -27,8 +33,22 @@ public class VillagerPhase1Movement : MonoBehaviour
         mainCamera = Camera.main;
         startPosition = parentTransform.position;
 
-        StartCoroutine(RandomMovementRoutine());
+        StartCoroutine(MovementLoop()); 
     }
+
+    IEnumerator MovementLoop()
+    {
+        while (true)
+        {
+            yield return StartCoroutine(RandomMovementRoutine());
+            yield return StartCoroutine(ReturnToStartPosition());
+
+            lineAttackScript.StartLineAttack();
+
+            yield return new WaitForSeconds(3f); 
+        }
+    }
+
 
     IEnumerator RandomMovementRoutine()
     {
@@ -55,9 +75,6 @@ public class VillagerPhase1Movement : MonoBehaviour
 
         isMoving = false;
         moveDirection = Vector2.zero;
-
-        
-        yield return StartCoroutine(ReturnToStartPosition());
     }
 
     IEnumerator ReturnToStartPosition()
@@ -73,7 +90,14 @@ public class VillagerPhase1Movement : MonoBehaviour
             yield return null;
         }
 
-        parentTransform.position = startPosition; 
+        parentTransform.position = startPosition;
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(3f);
+
+        StartCoroutine(RandomMovementRoutine());
     }
 
     void PickNewDirection()

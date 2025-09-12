@@ -9,12 +9,13 @@ public class BossManager : MonoBehaviour
 
     private List<GameObject> Phases = new List<GameObject>();
 
-    public Slider bossHealthSlider;
+    
     public static TextMeshProUGUI bossPhaseText;
 
     public AudioClip bossMusic;
 
     private BossUIManager bossUIManager;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -23,10 +24,12 @@ public class BossManager : MonoBehaviour
 
         bossUIManager.activateBossUI();
 
+        
+        
+        
 
 
-
-        bossHealthSlider.enabled = true;
+       
 
         GameObject audioSource = GameObject.Find("Audio Source");
         audioSource.GetComponent<AudioSource>().clip = bossMusic;
