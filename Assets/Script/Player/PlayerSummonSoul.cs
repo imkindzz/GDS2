@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerSummonSoul : MonoBehaviour
 {
     [SerializeField] private GameObject soulBody; //the body of the soul summoned
     [SerializeField] private bool isSummoned = false; //whether or not the soul is summoned
     [SerializeField] private float summonDuration = 1f; //time taken for how long the soul stay summoned for
-    [SerializeField] private float summonCooldown = 1f; //the cooldown duration after the summoning ended
     [SerializeField] private float returnSpeed = 1f; //the speed of when the soul returns to the main body
+
+    [Header("Cooldown")]
+    [SerializeField] private float summonCooldown = 1f; //the cooldown duration after the summoning ended
+    [SerializeField] private GameObject cooldownUIRoot; //the gameobject that displays the summon cooldown
+    [SerializeField] private Image cooldownUIImage; //the image of the summon cooldown
 
     [Header("Soul Link")]
     [SerializeField] private float linkWidth = 1f; //the width of the soul link
@@ -22,7 +28,8 @@ public class PlayerSummonSoul : MonoBehaviour
     private bool onReturn = false; //whether or not the soul returns to the main body
     
     private bool canSummon = true; //whether or not the soul can be summoned
-    private Coroutine summonCooldownRoutine; //the cooldown routine
+    private bool onCooldown = false; //whether or not the soul summon is on cooldown
+    private float cooldownTimer = 0; //time taken for during the cooldown
 
     private GameObject soulLink; //the link between the soul and the main body
     private bool soulLinkMirrorZ = true; //whether or not the soul link is mirrored
@@ -38,6 +45,8 @@ public class PlayerSummonSoul : MonoBehaviour
 
     void Start()
     {
+        ShowCooldownUI(isSummoned);
+
         if (isSummoned) SummonSoul();
         else soulBody.SetActive(false);
     }
@@ -59,6 +68,8 @@ public class PlayerSummonSoul : MonoBehaviour
         }
 
         if (onReturn) ReturnSoul();
+
+        if (onCooldown) OnSummonCooldown();
 
         StretchSoulLink();
     }
@@ -97,39 +108,48 @@ public class PlayerSummonSoul : MonoBehaviour
             soulBody.SetActive(false);
             onReturn = false;
 
-            StartSummonCooldown(summonCooldown);
+            StartSummonCooldown();
         }
     }
     #endregion
 
     #region Soul cooldown methods
+    //displays the cooldown timer UI
+    private void ShowCooldownUI(bool show)
+    {
+        if (cooldownUIRoot) cooldownUIRoot.SetActive(show);
+    }
+
+    //updates the UI of the summon cooldown timer
+    private void UpdateCooldownUI()
+    {
+        float fillAmount = 1f - (cooldownTimer / summonCooldown);
+        if (cooldownUIImage) cooldownUIImage.fillAmount = fillAmount;
+    }
+
     //starts the summon cooldown
-    private void StartSummonCooldown(float duration)
+    private void StartSummonCooldown()
     {
         canSummon = false;
 
-        if (summonCooldownRoutine != null) StopCoroutine(summonCooldownRoutine);
-        summonCooldownRoutine = StartCoroutine(CooldownRoutine(duration));
+        onCooldown = true;
+        cooldownTimer = 0f;
+
+        ShowCooldownUI(true);
     }
 
-    //ends the summon cooldown
-    private void EndSummonCooldown()
+    //when on summon cooldown
+    private void OnSummonCooldown()
     {
-        canSummon = true;
+        cooldownTimer += Time.deltaTime;
+        UpdateCooldownUI();
 
-        if (summonCooldownRoutine != null)
+        if (cooldownTimer >= summonCooldown)
         {
-            StopCoroutine(summonCooldownRoutine);
-            summonCooldownRoutine = null;
+            onCooldown = false;
+            canSummon = true;
+            ShowCooldownUI(false);
         }
-    }
-
-    //summon cooldown coroutine
-    private IEnumerator CooldownRoutine(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-
-        EndSummonCooldown();
     }
     #endregion
 
