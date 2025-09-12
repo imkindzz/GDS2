@@ -34,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6445110725069870485}
+  - {fileID: 2649623773193209286}
   m_Father: {fileID: 8191354335130764375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7372541693844501465
@@ -144,6 +145,7 @@ MonoBehaviour:
   healthMeter: {fileID: 2750656474930280086}
   deathDelay: 0.25
   nextPhase: {fileID: 0}
+  pointsOnDeath: 1000
 --- !u!95 &484910178388802785
 Animator:
   serializedVersion: 7
@@ -199,7 +201,7 @@ RectTransform:
   m_Father: {fileID: 6572574756559413430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -349,7 +351,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 39013366053778070}
-  m_Father: {fileID: 8191354335130764375}
+  m_Father: {fileID: 1375682995908508076}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -865,9 +867,10 @@ MonoBehaviour:
   _currentHealth: 250
   _maxHealth: 250
   showHealthMeter: 1
-  healthMeter: {fileID: 2750656474930280086}
+  healthMeter: {fileID: 0}
   deathDelay: 0.25
   nextPhase: {fileID: 464101021153346604}
+  pointsOnDeath: 1000
 --- !u!58 &6357521670438610712
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -976,7 +979,6 @@ Transform:
   m_Children:
   - {fileID: 3489802030596656780}
   - {fileID: 1375682995908508076}
-  - {fileID: 2649623773193209286}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6534895084956858066
@@ -991,6 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd214fdba86ef944d8e3b88054853f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossHealthSlider: {fileID: 0}
   bossMusic: {fileID: 8300000, guid: c77aa2b738e287a48a9be1f1d5e5eeed, type: 3}
 --- !u!1 &6251019062091888745
 GameObject:
@@ -1062,7 +1065,7 @@ RectTransform:
   m_Father: {fileID: 7060935686846908835}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
