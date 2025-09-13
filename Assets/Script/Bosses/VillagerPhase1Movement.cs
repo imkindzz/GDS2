@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class VillagerPhase1Movement : MonoBehaviour
 {
-    private VillagerPhase1LineAttack lineAttackScript;
+    private VillagerPhase1LineAttack lineAttackScriptV;
+    private VillagerPhase1LineAttackHorizontal lineAttackScriptH;
 
     public float speed = 3f;
     public float moveDuration = 5f;
@@ -21,7 +22,8 @@ public class VillagerPhase1Movement : MonoBehaviour
 
     void Start()
     {
-        lineAttackScript = GetComponent<VillagerPhase1LineAttack>();
+        lineAttackScriptV = GetComponent<VillagerPhase1LineAttack>();
+        lineAttackScriptH = GetComponent<VillagerPhase1LineAttackHorizontal>();
 
         parentTransform = transform.parent;
         if (parentTransform == null)
@@ -43,7 +45,8 @@ public class VillagerPhase1Movement : MonoBehaviour
             yield return StartCoroutine(RandomMovementRoutine());
             yield return StartCoroutine(ReturnToStartPosition());
 
-            lineAttackScript.StartLineAttack();
+            lineAttackScriptV.StartLineAttack();
+            lineAttackScriptH.StartLineAttack();
 
             yield return new WaitForSeconds(3f); 
         }
