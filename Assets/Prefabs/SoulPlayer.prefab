@@ -136,6 +136,8 @@ MonoBehaviour:
   verticalAxis: Vertical2
   waveAmplitude: 0
   waveFrequency: 0
+  driftHalfLife: 0.2
+  minDriftSpeed: 2
 --- !u!58 &37588092306523304
 CircleCollider2D:
   m_ObjectHideFlags: 0

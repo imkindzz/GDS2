@@ -321,29 +321,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 37588092306523304, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_Radius
-      value: 1.2
+    - target: {fileID: 347821606067474601, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+      propertyPath: driftHalfLife
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 347821606067474601, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+      propertyPath: minDriftSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 627326808767499721, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_Name
       value: SoulPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 645722104344495446, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528337429905917336, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528337429905917336, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528337429905917336, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6528337429905917336, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -384,26 +372,6 @@ PrefabInstance:
     - target: {fileID: 6528337429905917336, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 8581343688317178742, guid: db79cbd9bbf694a4f81057975a9ee6a7, type: 3}
-    - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7369909253210714287, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
