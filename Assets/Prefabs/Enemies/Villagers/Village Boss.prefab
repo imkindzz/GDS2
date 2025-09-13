@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 6244971459729949165}
   - component: {fileID: 7122872582268774651}
   - component: {fileID: 8940954195324991358}
+  - component: {fileID: 6956166304532282980}
   m_Layer: 0
   m_Name: Phase 1
   m_TagString: Untagged
@@ -334,15 +335,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f885d8579874bf0429153a9d8231a6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfLines: 7
+  numberOfLines: 9
   screenWidth: 10
   redLine: {fileID: 5627426518954632786, guid: 71c20c56d40087c46a3f26015bcc9ed3, type: 3}
   lineHeight: 10
   bulletUp: {fileID: 5955692588573619316, guid: 6ca9a1673a318704d87bd9c563e388bf, type: 3}
   bulletDown: {fileID: 5955692588573619316, guid: 8f30ce8cb288960438a60893aa9474f2, type: 3}
   bulletsPerLine: 20
-  spacing: 1
-  lineFlashDuration: 0.7
+  spacing: 1.2
+  lineFlashDuration: 0.85
 --- !u!114 &8940954195324991358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +361,27 @@ MonoBehaviour:
   changeDirectionInterval: 0.7
   returnSpeed: 7
   ready: 1
+--- !u!114 &6956166304532282980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291844719877411287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03941ac1f94762240ac2e6b37fdb1ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfLines: 9
+  screenHeight: 10
+  redLine: {fileID: 5627426518954632786, guid: 71c20c56d40087c46a3f26015bcc9ed3, type: 3}
+  lineWidth: 10
+  bulletLeft: {fileID: 5955692588573619316, guid: 3a318a64daf84954a812490e3af8bc1a, type: 3}
+  bulletRight: {fileID: 5955692588573619316, guid: ce22bf9fed34b36468c4926f04753a3e, type: 3}
+  bulletsPerLine: 20
+  spacing: 1.2
+  lineFlashDuration: 0.85
 --- !u!1 &7378710323759608569
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class VillagerPhase1Movement : MonoBehaviour
+public class VillagerPhase1MovementEasy : MonoBehaviour
 {
     private VillagerPhase1LineAttack lineAttackScriptV;
     private VillagerPhase1LineAttackHorizontal lineAttackScriptH;
@@ -23,7 +23,7 @@ public class VillagerPhase1Movement : MonoBehaviour
     void Start()
     {
         lineAttackScriptV = GetComponent<VillagerPhase1LineAttack>();
-        lineAttackScriptH = GetComponent<VillagerPhase1LineAttackHorizontal>();
+        //lineAttackScriptH = GetComponent<VillagerPhase1LineAttackHorizontal>();
 
         parentTransform = transform.parent;
         if (parentTransform == null)
@@ -46,7 +46,7 @@ public class VillagerPhase1Movement : MonoBehaviour
             yield return StartCoroutine(ReturnToStartPosition());
 
             lineAttackScriptV.StartLineAttack();
-            lineAttackScriptH.StartLineAttack();
+            //lineAttackScriptH.StartLineAttack();
 
             yield return new WaitForSeconds(3f); 
         }
