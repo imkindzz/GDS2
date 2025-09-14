@@ -408,6 +408,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5b4bc74599b534aa8fa4361d964776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &699551688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699551689}
+  m_Layer: 0
+  m_Name: Spawn4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &699551689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699551688}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.12, y: 3.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 888629392}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708504864
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +518,7 @@ MonoBehaviour:
   - {fileID: 1716770903}
   - {fileID: 2013341747}
   - {fileID: 2129303759}
+  - {fileID: 699551689}
   waves:
   - name: 1 Burst Ring
     entries:
@@ -556,11 +588,11 @@ MonoBehaviour:
     - prefab: {fileID: 5610912872392045532, guid: 64043fa3162e73a458fb019b8de49822, type: 3}
       count: 2
       spawnPointIndex: 1
-  - name: 1 Burst Ring
+  - name: Boss
     entries:
-    - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
+    - prefab: {fileID: 5492666743595665731, guid: 29b773c09c8471f4c8e17f50b767e32d, type: 3}
       count: 1
-      spawnPointIndex: 2
+      spawnPointIndex: 3
     - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
       count: 1
       spawnPointIndex: 0
@@ -584,6 +616,7 @@ Transform:
   - {fileID: 1716770903}
   - {fileID: 2013341747}
   - {fileID: 2129303759}
+  - {fileID: 699551689}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &945006289
