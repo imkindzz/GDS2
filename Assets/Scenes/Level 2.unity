@@ -1184,6 +1184,10 @@ PrefabInstance:
       propertyPath: soulBody
       value: 
       objectReference: {fileID: 1384149746}
+    - target: {fileID: 4216812367534420828, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
+      propertyPath: summonCooldown
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4230809457801205476, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
       propertyPath: soulBody
       value: 
