@@ -13,15 +13,21 @@ public class PlayerStatus : StatusBase
     [SerializeField] private float flashInterval = 0.1f;
 
     [Header("Heart Settings")]
-    [SerializeField] private List<Image> heartImages; // drag your 5 heart images here
+    [SerializeField] private List<Image> heartImages; 
     private int currentHearts;
     private int maxHearts = 5;
 
     [Header("Streak System")]
-    [SerializeField] private float streakIncreaseRate = 1f; // How many points per second
+    [SerializeField] private float streakIncreaseRate = 1f; 
     [SerializeField] private int maxStreak = 100;
-    [SerializeField] private Image streakFillBar; // The animated fill sprite
-    [SerializeField] private GameObject maxStreakFlames; // The flame effect object
+    [SerializeField] private Image streakFillBar; 
+    [SerializeField] private GameObject maxStreakFlames;
+
+    [Header("Damage Flash")]
+    [SerializeField] private SpriteRenderer damageFlashSprite; 
+    [SerializeField] private float flashFadeDuration = 0.5f;   
+
+
 
     private SpriteRenderer spriteRenderer;
 
@@ -64,6 +70,9 @@ public class PlayerStatus : StatusBase
             StartInvincibility(invincibilityDuration);
 
             isTakingDamage = true;
+
+            if (damageFlashRoutine != null) StopCoroutine(damageFlashRoutine);
+            damageFlashRoutine = StartCoroutine(DamageFlash());
 
             if (noHealth && currentHearts > 0)
             {
@@ -200,4 +209,37 @@ public class PlayerStatus : StatusBase
     {
         Instance = this;
     }
+
+    private Coroutine damageFlashRoutine;
+
+
+    private IEnumerator DamageFlash()
+    {
+        if (damageFlashSprite == null) yield break;
+
+        // start fully visible
+        Color c = damageFlashSprite.color;
+        c.a = 1f;
+        damageFlashSprite.color = c;
+        damageFlashSprite.gameObject.SetActive(true);
+
+        float t = 0f;
+        while (t < flashFadeDuration)
+        {
+            t += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, t / flashFadeDuration);
+            c.a = alpha;
+            damageFlashSprite.color = c;
+            yield return null;
+        }
+
+        // ensure fully transparent and optionally disable
+        c.a = 0f;
+        damageFlashSprite.color = c;
+        damageFlashSprite.gameObject.SetActive(false);
+        damageFlashRoutine = null;
+    }
+
+
+
 }
