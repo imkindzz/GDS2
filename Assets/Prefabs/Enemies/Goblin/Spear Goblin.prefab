@@ -172,7 +172,7 @@ MonoBehaviour:
   health: 60
   movementPattern: {fileID: 11400000, guid: 639a77d85cf9cb343b1bc2045a4613cf, type: 2}
   boundsCenter: {x: 0, y: 0}
-  boundsSize: {x: 14, y: 12}
+  boundsSize: {x: 13, y: 12}
   edgePadding: 0.02
   reentryMargin: 0.25
   bounceCooldown: 0.06

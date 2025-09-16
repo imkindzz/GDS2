@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3805020ba9d136741b1e98c34ed14cf0, type: 3}
+  m_Name: EasyFirework
+  m_EditorClassIdentifier: 
+  seedSpeed: 5
+  seedTravelTime: 2
+  coreDuration: 1
+  pulses: 2
+  pulseInterval: 1
+  bulletsPerPulse: 5
+  pulseSpeed: 3
+  pulseLifetime: 2
+  coreScale: 1
+  pulseScale: 0.9
+  spinPerPulse: 30
