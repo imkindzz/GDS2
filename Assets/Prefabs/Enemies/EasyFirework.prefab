@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6015687279279957363
+--- !u!1 &5610912872392045532
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6822793826647016435}
-  - component: {fileID: 2185596353837811721}
-  - component: {fileID: 8149357662486448598}
-  - component: {fileID: 6094011021784049703}
-  - component: {fileID: 1245233612964482264}
-  - component: {fileID: 6737066879830623481}
-  - component: {fileID: 6204125889660519607}
-  - component: {fileID: 1235807214842546982}
+  - component: {fileID: 5747163296002456998}
+  - component: {fileID: 5089102087245517497}
+  - component: {fileID: 5214808109618930296}
+  - component: {fileID: 8589736818931373669}
+  - component: {fileID: 7196322890874662379}
+  - component: {fileID: 5727852880519696620}
+  - component: {fileID: 7023527611136259206}
   m_Layer: 7
-  m_Name: Spear Goblin
+  m_Name: EasyFirework
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6822793826647016435
+--- !u!4 &5747163296002456998
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015687279279957363}
+  m_GameObject: {fileID: 5610912872392045532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.16, y: 3.08, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.75, y: 3.36, z: 0}
+  m_LocalScale: {x: 0.8024, y: 0.8024, z: 0.8024}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2185596353837811721
+--- !u!212 &5089102087245517497
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015687279279957363}
+  m_GameObject: {fileID: 5610912872392045532}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -81,24 +80,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8082417263053353483, guid: 7dab9588e30461942994bf55b6e8d283, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd9ed747fb80e9e4ca15e4a2c55eaf8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1, y: 0.8828125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &8149357662486448598
-CapsuleCollider2D:
+--- !u!58 &5214808109618930296
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015687279279957363}
+  m_GameObject: {fileID: 5610912872392045532}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -108,7 +107,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -127,16 +126,15 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
---- !u!50 &6094011021784049703
+  m_Radius: 0.5
+--- !u!50 &8589736818931373669
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015687279279957363}
+  m_GameObject: {fileID: 5610912872392045532}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -156,13 +154,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1245233612964482264
+--- !u!114 &7196322890874662379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015687279279957363}
+  m_GameObject: {fileID: 5610912872392045532}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f59629de08458504b9299e22c2422504, type: 3}
@@ -172,17 +170,17 @@ MonoBehaviour:
   health: 60
   movementPattern: {fileID: 11400000, guid: 639a77d85cf9cb343b1bc2045a4613cf, type: 2}
   boundsCenter: {x: 0, y: 0}
-  boundsSize: {x: 12, y: 12}
+  boundsSize: {x: 13, y: 12}
   edgePadding: 0.02
   reentryMargin: 0.25
   bounceCooldown: 0.06
---- !u!114 &6737066879830623481
+--- !u!114 &5727852880519696620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015687279279957363}
+  m_GameObject: {fileID: 5610912872392045532}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 973f34082b885fd488cc2e2cff5c85b6, type: 3}
@@ -190,47 +188,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5955692588573619316, guid: 73fc4af2df615a54db9e1e6fe7ed788b, type: 3}
   bulletPatterns:
-  - {fileID: 11400000, guid: dfac6f6f5a80121479aae7eb9be1694c, type: 2}
-  fireRate: 1.5
+  - {fileID: 11400000, guid: 89859362624791b4ab521df317f9a9bc, type: 2}
+  fireRate: 0.45
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
---- !u!114 &6204125889660519607
+--- !u!114 &7023527611136259206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015687279279957363}
+  m_GameObject: {fileID: 5610912872392045532}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fabaf984d2385384cbad13c892059221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 100
-  _maxHealth: 100
+  _currentHealth: 20
+  _maxHealth: 20
   showHealthMeter: 1
   healthMeter: {fileID: 0}
   deathDelay: 0.25
   pointsOnDeath: 100
---- !u!95 &1235807214842546982
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6015687279279957363}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 05ff1b7f9fa2ec149b3326c8b903b21e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
