@@ -431,6 +431,14 @@ PrefabInstance:
       propertyPath: m_IncludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6463157382314982394, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+      propertyPath: damageMadeGO
+      value: 
+      objectReference: {fileID: 6457667176694231051, guid: fcc2e7c48ad7c774b9b7dc6370bc20cd, type: 3}
+    - target: {fileID: 6463157382314982394, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
+      propertyPath: damageDirectionGO
+      value: 
+      objectReference: {fileID: 7913598853871392790, guid: ac1c764e096a36b469424e1db442df62, type: 3}
     - target: {fileID: 6528337429905917336, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.34

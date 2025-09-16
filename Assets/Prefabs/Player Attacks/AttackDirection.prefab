@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 6709798676993726137}
   - component: {fileID: 4300952489471562504}
   m_Layer: 0
-  m_Name: Dummy AttackDirection
+  m_Name: AttackDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

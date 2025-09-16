@@ -9,10 +9,15 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private float damage = 5f; //the amount of damage that the player makes
     [SerializeField] private float damageDelay = 0.25f; //the time taken for the damage to be in effect
-    [SerializeField] private GameObject damageAttack; //the gameObject that shows the attack being made
+
+    [Header("Attack Sprites")]
+    [SerializeField] private GameObject damageDirectionGO; //the gameObject that shows the attack being made
+    [SerializeField] private GameObject damageMadeGO; //the gameObject that shows the attack being made
+    [SerializeField] private float distanceOfDamageMadeGO; //the distance from and at an enemy's position for the damageMade gameobject
 
     private List<StatusBase> reachableStatus; //the enemy or boss statuses that are within the damageRadius
-    private List<GameObject> damageAttacks; //the enemy or boss statuses that are within the damageRadius
+    private List<GameObject> damageDirections; //the gameobjects that show the direction of the damage being made
+    private List<GameObject> damageCreated; //the gameobjects that shows the damage made
 
     private float damageTimer = 0f;
 
@@ -20,7 +25,8 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         reachableStatus = new List<StatusBase>();
-        damageAttacks = new List<GameObject>();
+        damageDirections = new List<GameObject>();
+        damageCreated = new List<GameObject>();
     }
 
     void Update()
@@ -47,8 +53,8 @@ public class PlayerAttack : MonoBehaviour
 
                 reachableStatus.RemoveAt(index);
                 
-                Destroy(damageAttacks[index]);
-                damageAttacks.RemoveAt(index);
+                Destroy(damageDirections[index]);
+                damageDirections.RemoveAt(index);
             }
 
             damageTimer = 0f;
@@ -64,10 +70,15 @@ public class PlayerAttack : MonoBehaviour
         {
             reachableStatus.Add(status);
 
-            GameObject da = Instantiate(damageAttack, transform.position, Quaternion.identity);
-            da.GetComponent<AttackLookAtEnemy>().enemyTarget = collision.gameObject;
-            da.transform.parent = transform;
-            damageAttacks.Add(da);
+            //adds in the damageDirectionGO
+            GameObject dd = Instantiate(damageDirectionGO, transform.position, Quaternion.identity, transform);
+            dd.GetComponent<AttackLookAtEnemy>().enemyTarget = collision.gameObject;
+            damageDirections.Add(dd);
+
+            //adds in the damageMadeGO
+            GameObject dm = Instantiate(damageMadeGO, collision.transform.position, Quaternion.identity, collision.transform);
+            dm.transform.localPosition = new Vector3(0f, -distanceOfDamageMadeGO, 0f); //offsets the position to be below
+            damageCreated.Add(dm);
         }
     }
 
@@ -78,16 +89,17 @@ public class PlayerAttack : MonoBehaviour
         StatusBase status = collision.GetComponent<StatusBase>();
         if (status)
         {
-            int daIndex = reachableStatus.IndexOf(status);
-            if (daIndex != -1)
+            int ddIndex = reachableStatus.IndexOf(status);
+            if (ddIndex != -1)
             {
-                Destroy(damageAttacks[daIndex]);
-                damageAttacks.RemoveAt(daIndex);
+                Destroy(damageDirections[ddIndex]);
+                Destroy(damageCreated[ddIndex]);
+                
+                //removes the non-existing gameobjects
+                damageDirections.RemoveAt(ddIndex);
+                damageCreated.RemoveAt(ddIndex);
+                reachableStatus.Remove(status);
             }
-
-            reachableStatus.Remove(status);
-            Debug.Log(daIndex);
-            Debug.Log(reachableStatus.Count);
         }
     }
     #endregion
