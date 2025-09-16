@@ -533,7 +533,7 @@ MonoBehaviour:
     - prefab: {fileID: 143539609779087865, guid: b6cfd65be93a73c46b8e51311f9f3741, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
       count: 1
       spawnPointIndex: 0
     - prefab: {fileID: 143539609779087865, guid: b6cfd65be93a73c46b8e51311f9f3741, type: 3}
