@@ -525,7 +525,7 @@ MonoBehaviour:
     - prefab: {fileID: 143539609779087865, guid: b6cfd65be93a73c46b8e51311f9f3741, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
       count: 1
       spawnPointIndex: 0
   - name: 2 Burst Ring
@@ -533,7 +533,7 @@ MonoBehaviour:
     - prefab: {fileID: 143539609779087865, guid: b6cfd65be93a73c46b8e51311f9f3741, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
       count: 1
       spawnPointIndex: 0
     - prefab: {fileID: 143539609779087865, guid: b6cfd65be93a73c46b8e51311f9f3741, type: 3}
@@ -1106,7 +1106,7 @@ Transform:
   m_GameObject: {fileID: 1716770902}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.28, y: 4.32, z: 0}
+  m_LocalPosition: {x: 1.54, y: 4.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
