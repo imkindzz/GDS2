@@ -55,6 +55,9 @@ public class PlayerAttack : MonoBehaviour
                 
                 Destroy(damageDirections[index]);
                 damageDirections.RemoveAt(index);
+                
+                Destroy(damageCreated[index]);
+                damageCreated.RemoveAt(index);
             }
 
             damageTimer = 0f;
@@ -66,7 +69,7 @@ public class PlayerAttack : MonoBehaviour
         if (collision.CompareTag("Player") || collision.CompareTag("Soul")) return;
 
         StatusBase status = collision.GetComponent<StatusBase>();
-        if (status)
+        if (status && !reachableStatus.Contains(status))
         {
             reachableStatus.Add(status);
 
@@ -77,7 +80,6 @@ public class PlayerAttack : MonoBehaviour
 
             //adds in the damageMadeGO
             GameObject dm = Instantiate(damageMadeGO, collision.transform.position, Quaternion.identity, collision.transform);
-            dm.transform.localPosition = new Vector3(0f, -distanceOfDamageMadeGO, 0f); //offsets the position to be below
             damageCreated.Add(dm);
         }
     }
@@ -89,16 +91,17 @@ public class PlayerAttack : MonoBehaviour
         StatusBase status = collision.GetComponent<StatusBase>();
         if (status)
         {
-            int ddIndex = reachableStatus.IndexOf(status);
-            if (ddIndex != -1)
+            int statusIndex = reachableStatus.IndexOf(status);
+            if (statusIndex != -1)
             {
-                Destroy(damageDirections[ddIndex]);
-                Destroy(damageCreated[ddIndex]);
+                //destroys gameObjects on scene
+                Destroy(damageDirections[statusIndex]);
+                Destroy(damageCreated[statusIndex]);
                 
                 //removes the non-existing gameobjects
-                damageDirections.RemoveAt(ddIndex);
-                damageCreated.RemoveAt(ddIndex);
-                reachableStatus.Remove(status);
+                damageDirections.RemoveAt(statusIndex);
+                damageCreated.RemoveAt(statusIndex);
+                reachableStatus.RemoveAt(statusIndex);
             }
         }
     }
