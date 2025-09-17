@@ -18,7 +18,6 @@ public class PlayerSoulMovement : PlayerMovement
     private Vector2 lastMoveVelocity; //the last velocity made before it changes
     private float driftTimer = 0f; //the time that passes for the drift
 
-
     #region Player input methods
     //moves the player
     public override void MovePlayer()

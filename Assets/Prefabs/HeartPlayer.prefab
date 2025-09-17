@@ -636,6 +636,8 @@ MonoBehaviour:
   maxStreak: 100
   streakFillBar: {fileID: 0}
   maxStreakFlames: {fileID: 0}
+  damageFlashSprite: {fileID: 0}
+  flashFadeDuration: 0.5
 --- !u!114 &3750264898147574734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,9 +703,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soulBody: {fileID: 0}
   isSummoned: 0
-  summonDuration: 10
   returnSpeed: 30
-  summonCooldown: 4
+  idleDuration: 3
+  idleUIRoot: {fileID: 0}
+  idleUIImage: {fileID: 0}
+  summonCooldown: 0
   cooldownUIRoot: {fileID: 5359444023617516755}
   cooldownUIImage: {fileID: 8808546018571130722}
   linkWidth: 0.25

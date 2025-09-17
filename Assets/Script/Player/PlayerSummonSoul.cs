@@ -8,8 +8,12 @@ public class PlayerSummonSoul : MonoBehaviour
 {
     [SerializeField] private GameObject soulBody; //the body of the soul summoned
     [SerializeField] private bool isSummoned = false; //whether or not the soul is summoned
-    [SerializeField] private float summonDuration = 1f; //time taken for how long the soul stay summoned for
     [SerializeField] private float returnSpeed = 1f; //the speed of when the soul returns to the main body
+
+    [Header("Idle State")]
+    [SerializeField] private float idleDuration = 1f; //the duration it takes when the player is idle
+    [SerializeField] private GameObject idleUIRoot; //the gameobject that displays the idle timer
+    [SerializeField] private Image idleUIImage; //the image of the idle timer
 
     [Header("Cooldown")]
     [SerializeField] private float summonCooldown = 1f; //the cooldown duration after the summoning ended
@@ -23,13 +27,15 @@ public class PlayerSummonSoul : MonoBehaviour
 
     private PlayerSoulMovement soulMovement;
     private SpriteRenderer spSoulLink;
-
-    private float summonTimer = 0f; //timer that tracks the time taken when the soul is summoned
     private bool onReturn = false; //whether or not the soul returns to the main body
     
     private bool canSummon = true; //whether or not the soul can be summoned
     private bool onCooldown = false; //whether or not the soul summon is on cooldown
-    private float cooldownTimer = 0; //time taken for during the cooldown
+    private float cooldownTimer = 0; //time taken when on the cooldown
+    private bool onIdle = false; //whether or not the soul is idle
+    private float idleTimer = 0; //time taken when the soul is idle
+
+    private bool firstMoveMade = false; //whether or not the first movement input has been made
 
     private GameObject soulLink; //the link between the soul and the main body
     private bool soulLinkMirrorZ = true; //whether or not the soul link is mirrored
@@ -45,7 +51,8 @@ public class PlayerSummonSoul : MonoBehaviour
 
     void Start()
     {
-        ShowCooldownUI(isSummoned);
+        ShowCooldownUI(false);
+        ShowIdleTimerUI(false);
 
         if (isSummoned) SummonSoul();
         else soulBody.SetActive(false);
@@ -60,11 +67,29 @@ public class PlayerSummonSoul : MonoBehaviour
 
         if (isSummoned)
         {
-            summonTimer += Time.deltaTime;
-            
-            DecreaseSoulLinkOpacity();
+            if (idleDuration > 0)
+            {
+                //prevents showing the idle timer on the first movement
+                if (!firstMoveMade) firstMoveMade = soulMovement.input.sqrMagnitude >= 0.0001f;
 
-            if (Input.GetKeyDown(KeyCode.R) || summonTimer >= summonDuration) RemoveSoul();
+                //handles the idle state
+                if (firstMoveMade)
+                {
+                    if (soulMovement.input.sqrMagnitude < 0.0001f)
+                    {
+                        if (!onIdle) StartIdleTimer();
+                        OnIdleTime();
+                        DecreaseSoulLinkOpacity();
+                    }
+                    else
+                    {
+                        StopIdleTimer();
+                        ResetSoulLinkOpacity();
+                    }
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.R)) RemoveSoul();
         }
 
         if (onReturn) ReturnSoul();
@@ -80,12 +105,12 @@ public class PlayerSummonSoul : MonoBehaviour
     private void SummonSoul()
     {
         isSummoned = true;
-        summonTimer = 0f;
 
         soulBody.transform.position = transform.position;
         soulBody.SetActive(true);
 
         soulMovement.enabled = true;
+        firstMoveMade = false;
     }
 
     //removes the soul from the game
@@ -108,12 +133,58 @@ public class PlayerSummonSoul : MonoBehaviour
             soulBody.SetActive(false);
             onReturn = false;
 
-            StartSummonCooldown();
+            if (summonCooldown > 0) StartSummonCooldown();
         }
     }
     #endregion
 
-    #region Soul cooldown methods
+    #region Idle soul methods
+    //displays the idle timer UI
+    private void ShowIdleTimerUI(bool show)
+    {
+        if (idleUIRoot) idleUIRoot.SetActive(show);
+    }
+
+    //updates the UI of the idle timer
+    private void UpdateIdleTimerUI()
+    {
+        float fillAmount = 1f - (idleTimer / idleDuration);
+        if (idleUIImage) idleUIImage.fillAmount = fillAmount;
+    }
+
+    //starts the idle timer
+    private void StartIdleTimer()
+    {
+        onIdle = true;
+        idleTimer = 0f;
+
+        ShowIdleTimerUI(true);
+    }
+
+    //stops the idle timer the summon cooldown
+    private void StopIdleTimer()
+    {
+        onIdle = false;
+        ShowIdleTimerUI(false);
+    }
+
+    //when on summon cooldown
+    private void OnIdleTime()
+    {
+        idleTimer += Time.deltaTime;
+        UpdateIdleTimerUI();
+
+        if (idleTimer >= idleDuration)
+        {
+            onIdle = false;
+            ShowIdleTimerUI(false);
+
+            RemoveSoul();
+        }
+    }
+    #endregion
+
+    #region Summon cooldown methods
     //displays the cooldown timer UI
     private void ShowCooldownUI(bool show)
     {
@@ -177,11 +248,19 @@ public class PlayerSummonSoul : MonoBehaviour
     //decreases the soul link opacity overtime
     private void DecreaseSoulLinkOpacity()
     {
-        float t = summonTimer / summonDuration;
+        float t = idleTimer / idleDuration;
         float newOpacity = Mathf.Lerp(linkMaxOpacity, linkMinOpacity, t);
 
         Color linkColor = spSoulLink.color;
         linkColor.a = newOpacity;
+        spSoulLink.color = linkColor;
+    }
+
+    //reset soul link color
+    private void ResetSoulLinkOpacity()
+    {
+        Color linkColor = spSoulLink.color;
+        linkColor.a = 1;
         spSoulLink.color = linkColor;
     }
     #endregion
