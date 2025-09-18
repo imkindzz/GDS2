@@ -90,7 +90,7 @@ public class EnemyMover2D : MonoBehaviour
 
         if (v.sqrMagnitude > 0.0001f)
         {
-            float z = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90f;
+            float z = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 180f;
             rb.MoveRotation(z);
         }
     }
