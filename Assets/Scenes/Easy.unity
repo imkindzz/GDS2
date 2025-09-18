@@ -2555,6 +2555,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 2265717968468663027, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ae9cbebd9a70d9439b7c375d48a9adb, type: 3}
+    - target: {fileID: 2335453436297040865, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ae9cbebd9a70d9439b7c375d48a9adb, type: 3}
     - target: {fileID: 2482930231103161692, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: slider
       value: 
@@ -2563,6 +2571,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3381511468222108217, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ae9cbebd9a70d9439b7c375d48a9adb, type: 3}
+    - target: {fileID: 3709223111721359041, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ae9cbebd9a70d9439b7c375d48a9adb, type: 3}
     - target: {fileID: 3772869953151338028, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2571,6 +2587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5195973943967276091, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ae9cbebd9a70d9439b7c375d48a9adb, type: 3}
     - target: {fileID: 5511907789972405359, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: m_Camera
       value: 
