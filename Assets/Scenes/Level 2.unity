@@ -593,9 +593,6 @@ MonoBehaviour:
     - prefab: {fileID: 5492666743595665731, guid: 29b773c09c8471f4c8e17f50b767e32d, type: 3}
       count: 1
       spawnPointIndex: 3
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
-      count: 1
-      spawnPointIndex: 0
   timeBetweenSpawns: 3
   timeBetweenWaves: 3
   autoStart: 1
