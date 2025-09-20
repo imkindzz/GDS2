@@ -15,7 +15,7 @@ public class BulletEmitter : MonoBehaviour
 
     public bool aimAtPlayer;
     public Vector3 aimPos = new Vector3(0,0,0);
-
+    private Animator animator;
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -39,6 +39,10 @@ public class BulletEmitter : MonoBehaviour
                 bulletPatterns[currentPatternIndex].Emit(transform, bulletPrefab, aimPos);
             }
             
+            // trigger animation
+            if (animator != null)
+                animator.SetTrigger("Shoot");
+            animator = GetComponent<Animator>();
 
             currentPatternIndex = (currentPatternIndex + 1) % bulletPatterns.Count;
             fireCooldown = 1f / fireRate;

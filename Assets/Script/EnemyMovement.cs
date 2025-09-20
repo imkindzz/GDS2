@@ -87,12 +87,6 @@ public class EnemyMover2D : MonoBehaviour
         {
             bounceTimer = Mathf.Min(bounceTimer, 0.02f);
         }
-
-        if (v.sqrMagnitude > 0.0001f)
-        {
-            float z = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90f;
-            rb.MoveRotation(z);
-        }
     }
 
     void GetBounds(out Vector2 min, out Vector2 max)

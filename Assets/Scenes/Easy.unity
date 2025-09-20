@@ -288,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 356518624}
   - component: {fileID: 356518625}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691126523}
   - component: {fileID: 691126522}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,7 +925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096411781}
   - component: {fileID: 1096411782}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1141412759}
   - component: {fileID: 1141412760}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1806540629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BorderHitboxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2555,6 +2555,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 2265717968468663027, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7503640060801925158, guid: 6e3784df86393084f83faf2ee9ac79d0, type: 3}
+    - target: {fileID: 2335453436297040865, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7503640060801925158, guid: 6e3784df86393084f83faf2ee9ac79d0, type: 3}
     - target: {fileID: 2482930231103161692, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: slider
       value: 
@@ -2563,6 +2571,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3381511468222108217, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7503640060801925158, guid: 6e3784df86393084f83faf2ee9ac79d0, type: 3}
+    - target: {fileID: 3709223111721359041, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7503640060801925158, guid: 6e3784df86393084f83faf2ee9ac79d0, type: 3}
     - target: {fileID: 3772869953151338028, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2571,6 +2587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5195973943967276091, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7503640060801925158, guid: 6e3784df86393084f83faf2ee9ac79d0, type: 3}
     - target: {fileID: 5511907789972405359, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: m_Camera
       value: 

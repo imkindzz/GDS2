@@ -8,6 +8,7 @@ public class HobGoblinPhase2 : MonoBehaviour
 
     private BossState currentState;
     private float stateTimer;
+    private Animator animator;
 
     public enum BossState
     {
@@ -20,7 +21,7 @@ public class HobGoblinPhase2 : MonoBehaviour
 
     void Start()
     {
-
+        animator = GetComponent<Animator>();
         EnterState(BossState.Club1);
     }
 
@@ -59,13 +60,14 @@ public class HobGoblinPhase2 : MonoBehaviour
         {
             case BossState.Attack:
                 GetComponent<BulletEmitter>().enabled = true;
+
+                if (animator != null)
+                    animator.SetTrigger("Throw");
+
                 break;
 
             case BossState.Return:
                 GetComponent<BulletEmitter>().enabled = false;
-                break;
-
-            default:
                 break;
         }
     }
