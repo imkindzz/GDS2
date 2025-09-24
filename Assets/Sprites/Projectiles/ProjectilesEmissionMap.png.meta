@@ -1,21 +1,15 @@
 fileFormatVersion: 2
-guid: b29f62c3eea2a0149b95ad8f4a573381
+guid: 6a34b9c13232e6f42948bb400e7af750
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1252243683051303324
-    second: Projectiles_0
-  - first:
-      213: 6781167332700664777
-    second: Projectiles_1
-  - first:
-      213: -3548031942192175384
-    second: Projectiles_2
+      213: -497042583003558319
+    second: ProjectilesEmissionMap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -57,13 +51,13 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -106,64 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Projectiles_0
+      name: ProjectilesEmissionMap_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 96
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d68e5e64dbf326b459e21c2c6f473e08
-      internalID: 1252243683051303324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Projectiles_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e9803afc77252642b1cc2dd729fbc8c
-      internalID: 6781167332700664777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Projectiles_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebf4009c0acc4ed42b0628ba8f611717
-      internalID: -3548031942192175384
+      spriteID: 15e84d977662a19f0800000000000000
+      internalID: -497042583003558319
       vertices: []
       indices: 
       edges: []
@@ -171,19 +123,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e0a5dbac3a8c91f418cc5f91d64ec7b6
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 6a34b9c13232e6f42948bb400e7af750, type: 3}
-      name: _Emission
-    nameFileIdTable:
-      Projectiles_0: 1252243683051303324
-      Projectiles_1: 6781167332700664777
-      Projectiles_2: -3548031942192175384
+    secondaryTextures: []
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
