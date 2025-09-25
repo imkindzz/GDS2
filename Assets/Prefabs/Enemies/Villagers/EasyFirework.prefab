@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7196322890874662379}
   - component: {fileID: 5727852880519696620}
   - component: {fileID: 7023527611136259206}
+  - component: {fileID: -4501221546282633867}
   m_Layer: 7
   m_Name: EasyFirework
   m_TagString: Untagged
@@ -210,3 +211,25 @@ MonoBehaviour:
   healthMeter: {fileID: 0}
   deathDelay: 0.25
   pointsOnDeath: 100
+--- !u!95 &-4501221546282633867
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610912872392045532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03fd82772396ee34faa35280a2394cf6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
