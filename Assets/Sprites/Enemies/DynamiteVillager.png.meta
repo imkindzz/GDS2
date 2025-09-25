@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: -2657884755937087196
     second: DynamiteVillager_0
+  - first:
+      213: 1677561848141543028
+    second: DynamiteVillager_1
+  - first:
+      213: -3807039954681679569
+    second: DynamiteVillager_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,9 +109,9 @@ TextureImporter:
       name: DynamiteVillager_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 20
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -120,10 +126,52 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: DynamiteVillager_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476793fdc95e74710800000000000000
+      internalID: 1677561848141543028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DynamiteVillager_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21ba7fe45daa2bc0800000000000000
+      internalID: -3807039954681679569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 7e76d856e4cfb9f40afe99eab076e337
     internalID: 0
     vertices: []
     indices: 
@@ -132,6 +180,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       DynamiteVillager_0: -2657884755937087196
+      DynamiteVillager_1: 1677561848141543028
+      DynamiteVillager_2: -3807039954681679569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
