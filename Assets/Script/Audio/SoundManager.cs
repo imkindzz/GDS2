@@ -206,6 +206,30 @@ public class SoundManager : MonoBehaviour
         PlaySound(goblinSpearThrow, sfxVolume);
     }
 
+    public void PlayRandomGoblinNoise()
+    {
+        switch (UnityEngine.Random.Range(0, 5))
+        {
+            case 0:
+                PlayGoblinGrowl1();
+                break;
+            case 1:
+                PlayGoblinGrowl2();
+                break;
+            case 2:
+                PlayGoblinRatty1();
+                break;
+            case 3:
+                PlayGoblinRatty2();
+                break;
+            case 4:
+                PlayGoblinRatty3();
+                break;
+            default:
+                break;
+        }
+    }
+
     #endregion
 
     #region Private Helper Methods

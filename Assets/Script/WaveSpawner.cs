@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum SpawnType { Goblin, Villagers }
+
 public class WaveSpawner : MonoBehaviour
 {
     [Header("Spawn Points (choose 1+):")]
@@ -13,6 +15,9 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private float timeBetweenWaves = 2f;
     [SerializeField] private bool autoStart = true;
     [SerializeField] private bool loopWaves = false;
+
+    [Header("Start Sounds")]
+    [SerializeField] private SpawnType spawnType; //identifies that type of spawn the spawner produces
 
     private int _aliveInWave;
     private bool _running;
@@ -76,6 +81,8 @@ public class WaveSpawner : MonoBehaviour
                 var point = spawnPoints[chosenIndex];
 
                 GameObject go = Instantiate(entry.prefab, point.position, point.rotation);
+                
+                SoundManager.Instance.PlayRandomGoblinNoise();
 
                 var status = go.GetComponent<EnemyStatus>();
                 if (status != null)
