@@ -8,33 +8,17 @@ public class SoundManager : MonoBehaviour
     // Singleton instance
     public static SoundManager Instance { get; private set; }
 
-    [Header("Audio Clips")]
-    [SerializeField] private AudioClip backgroundMusic;
-    [SerializeField] private AudioClip bossMusic;
-    
-    [Header("UI Sounds")]
-    [SerializeField] private AudioClip buttonSound;
-    [SerializeField] private AudioClip UIButtonSound;
-    
-    [Header("Environment Sounds")]
-    [SerializeField] private AudioClip doorOpenSound;
-    [SerializeField] private AudioClip doorCloseSound;
-    [SerializeField] private AudioClip wallBreakSound;
-    [SerializeField] private AudioClip teleportEnterSound;
-    [SerializeField] private AudioClip teleportExitSound;
-    
-    [Header("Player Sounds")]
-    [SerializeField] private AudioClip walkSound;
-    [SerializeField] private AudioClip jumpSound;
-    [SerializeField] private AudioClip splatterSound;
-    [SerializeField] private AudioClip swordSound;
-    [SerializeField] private AudioClip shootSound;
-    [SerializeField] private AudioClip slimeHitSound;
-    
-    [Header("Enemy Sounds")]
-    [SerializeField] private AudioClip enemyDetectedSound;
-    [SerializeField] private AudioClip enemyDashSound;
-    [SerializeField] private AudioClip enemyLaserShootSound;
+    [Header("Goblin Sounds")]
+    [SerializeField] private AudioClip goblinBossExertion;
+    [SerializeField] private AudioClip goblinCannon;
+    [SerializeField] private AudioClip goblinClubThrowImpact;
+    [SerializeField] private AudioClip goblinClubThrow;
+    [SerializeField] private AudioClip goblinGrowl1;
+    [SerializeField] private AudioClip goblinGrowl2;
+    [SerializeField] private AudioClip goblinRatty1;
+    [SerializeField] private AudioClip goblinRatty2;
+    [SerializeField] private AudioClip goblinRatty3;
+    [SerializeField] private AudioClip goblinSpearThrow;
 
     [Header("Volume Settings")]
     [Range(0f, 1f)]
@@ -87,11 +71,11 @@ public class SoundManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         
         // Play background music
-        if (backgroundMusic != null)
+/*        if (backgroundMusic != null)
         {
             PlayMusic(backgroundMusic, musicVolume);
         }
-    }
+*/    }
     
     private void Update()
     {
@@ -164,22 +148,6 @@ public class SoundManager : MonoBehaviour
     
     #region Public Sound Methods
     
-    public void PlayBossMusicUntilDefeated(MonoBehaviour caller, System.Func<bool> isBossDefeated)
-    {
-        if (bossMusicRoutine != null)
-        {
-            caller.StopCoroutine(bossMusicRoutine);
-        }
-
-        bossMusicRoutine = caller.StartCoroutine(WaitForBossDefeat(isBossDefeated));
-    }
-
-    
-    // UI Sounds
-    public void PlayButtonSound()
-    {
-        PlaySound(buttonSound, sfxVolume);
-    }
     public void PlayCustomButtonSound(AudioClip clip)
     {
         if (clip != null)
@@ -188,132 +156,60 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    
-    // Environment Sounds
-    public void PlayDoorOpenSound()
+    public void PlayGoblinBossExertion()
     {
-        PlaySound(doorOpenSound, sfxVolume);
+        PlaySound(goblinBossExertion, sfxVolume);
     }
-    
-    public void PlayDoorCloseSound()
+
+    public void PlayGoblinCannon()
     {
-        PlaySound(doorCloseSound, sfxVolume);
+        PlaySound(goblinCannon, sfxVolume);
     }
-    
-    public void PlayWallBreakSound(Vector3 position)
+
+    public void PlayGoblinClubThrowImpact()
     {
-        PlaySoundAtPosition(wallBreakSound, position, sfxVolume);
+        PlaySound(goblinClubThrowImpact, sfxVolume);
     }
-    
-    public void PlayTeleportEnterSound()
+
+    public void PlayGoblinClubThrow()
     {
-        PlaySound(teleportEnterSound, sfxVolume);
+        PlaySound(goblinClubThrow, sfxVolume);
     }
-    
-    public void PlayTeleportExitSound()
+
+    public void PlayGoblinGrowl1()
     {
-        PlaySound(teleportExitSound, sfxVolume);
+        PlaySound(goblinGrowl1, sfxVolume);
     }
-    
-    // Player Sounds
-    public void PlayWalkSound()
+
+    public void PlayGoblinGrowl2()
     {
-        if (walkSound != null && !isWalking && !isSplattering)
-        {
-            isWalking = true;
-            loopSource.clip = walkSound;
-            loopSource.volume = sfxVolume * masterVolume;
-            loopSource.Play();
-        }
+        PlaySound(goblinGrowl2, sfxVolume);
     }
-    
-    public void StopWalkSound()
+
+    public void PlayGoblinRatty1()
     {
-        if (isWalking)
-        {
-            isWalking = false;
-            loopSource.Stop();
-        }
+        PlaySound(goblinRatty1, sfxVolume);
     }
-    
-    public void PlayJumpSound()
+
+    public void PlayGoblinRatty2()
     {
-        if (jumpSound != null)
-        {
-            loopSource.Stop();
-            PlaySound(jumpSound, sfxVolume);
-        }
+        PlaySound(goblinRatty2, sfxVolume);
     }
-    
-    public void PlaySplatterSound()
+
+    public void PlayGoblinRatty3()
     {
-        if (splatterSound != null)
-        {
-            PlaySoundAtPosition(splatterSound, GetPlayerPosition(), sfxVolume * 0.5f);
-        }
+        PlaySound(goblinRatty3, sfxVolume);
     }
-    
-    public void PlaySwordSound()
+
+    public void PlayGoblinSpearThrow()
     {
-        if (swordSound != null)
-        {
-            PlaySoundAtPosition(swordSound, GetPlayerPosition(), sfxVolume * 2f);
-        }
+        PlaySound(goblinSpearThrow, sfxVolume);
     }
-    
-    public void PlayShootSound()
-    {
-        if (shootSound != null)
-        {
-            PlaySoundAtPosition(shootSound, GetPlayerPosition(), sfxVolume * 5f);
-        }
-    }
-    
-    public void PlaySlimeHitSound(Vector3 position)
-    {
-        if (slimeHitSound != null)
-        {
-            PlaySoundAtPosition(slimeHitSound, position, sfxVolume);
-        }
-    }
-    
-    // Enemy Sounds
-    public void PlayEnemyDetectedSound()
-    {
-        PlaySound(enemyDetectedSound, sfxVolume * 1.2f);
-    }
-    
-    public void PlayEnemyDashSound()
-    {
-        PlaySound(enemyDashSound, sfxVolume * 1.1f);
-    }
-    
-    public void PlayEnemyLaserShootSound(Vector3 position)
-    {
-        PlaySoundAtPosition(enemyLaserShootSound, position, sfxVolume);
-    }
-    
-    // Music Control
-    public void PlayBossMusic()
-    {
-        if (musicSource != null && bossMusic != null)
-        {
-            StartCoroutine(FadeOutAndSwitchMusic(bossMusic, 1.5f, musicVolume * 1.15f));
-        }
-    }
-    
-    public void ResumeBackgroundMusic()
-    {
-        if (musicSource != null && backgroundMusic != null)
-        {
-            StartCoroutine(FadeOutAndSwitchMusic(backgroundMusic, 1.5f, musicVolume));
-        }
-    }
-    
+
     #endregion
-    
+
     #region Private Helper Methods
-    
+
     private void PlaySound(AudioClip clip, float volume)
     {
         if (clip == null)
@@ -421,7 +317,7 @@ public class SoundManager : MonoBehaviour
         // Active sound effects will update on their next play
     }
     
-    private IEnumerator WaitForBossDefeat(System.Func<bool> isBossDefeated)
+/*    private IEnumerator WaitForBossDefeat(System.Func<bool> isBossDefeated)
     {
         PlayBossMusic();
 
@@ -432,7 +328,7 @@ public class SoundManager : MonoBehaviour
 
         ResumeBackgroundMusic();
     }
-
+*/
     
     #endregion
 }
