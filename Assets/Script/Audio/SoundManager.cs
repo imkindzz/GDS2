@@ -45,9 +45,7 @@ public class SoundManager : MonoBehaviour
     // Pooling system
     private Queue<AudioSource> audioSourcePool = new Queue<AudioSource>();
     private List<AudioSource> activeAudioSources = new List<AudioSource>();
-    // Keyed loop channels so multiple different loops can run at once
-    private readonly Dictionary<string, AudioSource> loopChannels = new Dictionary<string, AudioSource>();
-
+    
     // State tracking
     private bool isWalking = false;
     private bool isSplattering = false;
@@ -238,24 +236,14 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayLoopGhostAttack()
+    public void PlayGhostAttack()
     {
-        PlayLoop("ghostAttack", ghostAttack, sfxVolume);
+        PlaySound(ghostAttack, sfxVolume);
     }
 
-    public void PlayLoopGhostMovement()
+    public void PlayGhostMovement()
     {
-        PlayLoop("ghostMovement", ghostMovement, sfxVolume);
-    }
-
-    public void StopLoopGhostAttack()
-    {
-        StopLoop("ghostAttack");
-    }
-
-    public void StopLoopGhostMovement()
-    {
-        StopLoop("ghostMovement");
+        PlaySound(ghostMovement, sfxVolume);
     }
 
     public void PlayPlayerHit()
@@ -333,65 +321,6 @@ public class SoundManager : MonoBehaviour
         }
 
         musicSource.volume = targetVolume * masterVolume;
-    }
-
-    private void ReturnSourceToPool(AudioSource src)
-    {
-        if (src == null) return;
-        src.Stop();
-        src.loop = false;
-        src.clip = null;
-
-        // If it came from the pool, it should be in activeAudioSources
-        int idx = activeAudioSources.IndexOf(src);
-        if (idx >= 0)
-        {
-            activeAudioSources.RemoveAt(idx);
-            audioSourcePool.Enqueue(src);
-        }
-    }
-
-    // Plays a looping clip on a named channel (id). Use unique ids per loop type, e.g. "footsteps", "engine".
-    private void PlayLoop(string id, AudioClip clip, float volume = -1f, float spatialBlend = 0f, bool restartIfSame = false)
-    {
-        if (string.IsNullOrEmpty(id) || clip == null) return;
-
-        // If channel exists
-        if (loopChannels.TryGetValue(id, out var src))
-        {
-            // Already playing the same clip and no restart requested
-            if (src.isPlaying && src.clip == clip && !restartIfSame) return;
-
-            // Reuse the same source
-            src.clip = clip;
-        }
-        else
-        {
-            // Take from pool so we track/clean consistently
-            src = GetAudioSource();
-            loopChannels[id] = src;
-        }
-
-        src.loop = true;
-        src.spatialBlend = Mathf.Clamp01(spatialBlend);
-        float baseVol = (volume >= 0f ? Mathf.Clamp01(volume) : sfxVolume);
-        src.volume = baseVol * masterVolume;
-        src.Play();
-    }
-
-    // Stops the loop playing on the named channel (id).
-    public void StopLoop(string id)
-    {
-        if (string.IsNullOrEmpty(id)) return;
-        if (!loopChannels.TryGetValue(id, out var src) || src == null || !src.isPlaying)
-        {
-            // Nothing to stop
-            loopChannels.Remove(id);
-            return;
-        }
-
-        ReturnSourceToPool(src);
-        loopChannels.Remove(id);
     }
     #endregion
 
