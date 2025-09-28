@@ -8,6 +8,12 @@ public class SoundManager : MonoBehaviour
     // Singleton instance
     public static SoundManager Instance { get; private set; }
 
+    [Header("Player Sounds")]
+    [SerializeField] private AudioClip ghostAttack;
+    [SerializeField] private AudioClip ghostMovement;
+    [SerializeField] private AudioClip playerHit;
+    [SerializeField] private AudioClip playerWarp;
+
     [Header("Goblin Sounds")]
     [SerializeField] private AudioClip goblinBossExertion;
     [SerializeField] private AudioClip goblinCannon;
@@ -230,6 +236,25 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    public void PlayGhostAttack()
+    {
+        PlaySound(ghostAttack, sfxVolume);
+    }
+
+    public void PlayGhostMovement()
+    {
+        PlaySound(ghostMovement, sfxVolume);
+    }
+
+    public void PlayPlayerHit()
+    {
+        PlaySound(playerHit, sfxVolume);
+    }
+
+    public void PlayPlayerWarp()
+    {
+        PlaySound(playerWarp, sfxVolume);
+    }
     #endregion
 
     #region Private Helper Methods
@@ -297,11 +322,10 @@ public class SoundManager : MonoBehaviour
 
         musicSource.volume = targetVolume * masterVolume;
     }
-    
     #endregion
-    
+
     #region Volume Control
-    
+
     public void SetMasterVolume(float volume)
     {
         masterVolume = Mathf.Clamp01(volume);

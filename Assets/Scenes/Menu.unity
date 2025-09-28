@@ -817,6 +817,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e791af0addfd3594a9fabe2dd1d638a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghostAttack: {fileID: 8300000, guid: 3b7c21f3fdccc53419145f615a98e59b, type: 3}
+  ghostMovement: {fileID: 8300000, guid: 849053455deb333428f4e6d128dcfaf7, type: 3}
+  playerHit: {fileID: 8300000, guid: e2bc4802adff01d47997bd481c73575f, type: 3}
+  playerWarp: {fileID: 8300000, guid: 40c146fdc405b0a48ba56fa91de27630, type: 3}
   goblinBossExertion: {fileID: 8300000, guid: 6f09647114ea3384bb822c9c6930a940, type: 3}
   goblinCannon: {fileID: 8300000, guid: 2cb8ee1f30b105943a0772b436edc885, type: 3}
   goblinClubThrowImpact: {fileID: 8300000, guid: 9200c46bfa62fc14a97486102c112613, type: 3}
