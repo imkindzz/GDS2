@@ -261,6 +261,8 @@ public class SoundManager : MonoBehaviour
 
     private void PlaySound(AudioClip clip, float volume)
     {
+        Debug.Log("Playing Sound");
+        return;
         if (clip == null)
             return;
             
