@@ -356,6 +356,8 @@ public class SoundManager : MonoBehaviour
     // Plays a looping clip on a named channel (id). Use unique ids per loop type, e.g. "footsteps", "engine".
     private void PlayLoop(string id, AudioClip clip, float volume = -1f, float spatialBlend = 0f, bool restartIfSame = false)
     {
+        Debug.Log("Play Loop Sound");
+        return;
         if (string.IsNullOrEmpty(id) || clip == null) return;
 
         // If channel exists
@@ -384,6 +386,8 @@ public class SoundManager : MonoBehaviour
     // Stops the loop playing on the named channel (id).
     public void StopLoop(string id)
     {
+        Debug.Log("Stop Loop Sound");
+        return;
         if (string.IsNullOrEmpty(id)) return;
         if (!loopChannels.TryGetValue(id, out var src) || src == null || !src.isPlaying)
         {
