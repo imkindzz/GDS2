@@ -58,6 +58,9 @@ public class PlayerSoulMovement : PlayerMovement
 
             rb.velocity = drift;
         }
+
+        if (!rb.velocity.Equals(Vector2.zero)) SoundManager.Instance.PlayLoopGhostMovement();
+        else SoundManager.Instance.StopLoopGhostMovement();
     }
     #endregion
 }
