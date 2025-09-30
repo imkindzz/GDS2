@@ -75,14 +75,12 @@ public class PlayerAttack : MonoBehaviour
         {
             reachableStatus.Add(status);
 
-            // --- Spawn the beam (damageDirectionGO) ---
-            GameObject beamGO = Instantiate(damageDirectionGO, Vector3.zero, Quaternion.identity); // world-space
-            AttackLookAtEnemy beamScript = beamGO.GetComponent<AttackLookAtEnemy>();
-            beamScript.soul = transform;               // assign the player
-            beamScript.enemy = collision.transform;   // assign the enemy
-            damageDirections.Add(beamGO);
+            //adds in the damageDirectionGO
+            GameObject dd = Instantiate(damageDirectionGO, transform.position, Quaternion.identity, transform);
+            dd.GetComponent<AttackLookAtEnemy>().enemyTarget = collision.gameObject;
+            damageDirections.Add(dd);
 
-            // --- Spawn the impact/damage indicator (damageMadeGO) ---
+            //adds in the damageMadeGO
             GameObject dm = Instantiate(damageMadeGO, collision.transform.position, Quaternion.identity, collision.transform);
             damageCreated.Add(dm);
 
@@ -90,8 +88,6 @@ public class PlayerAttack : MonoBehaviour
             SoundManager.Instance.PlayLoopGhostAttack();
         }
     }
-
-
 
     void OnTriggerExit2D(Collider2D collision)
     {
