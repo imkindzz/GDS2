@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 6a34b9c13232e6f42948bb400e7af750
+guid: 67f95e9db3c06f04eb0a9b4fe67f157a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -497042583003558319
-    second: ProjectilesEmissionMap_0
+      213: -2351156727781230690
+    second: Attack 1_0
   - first:
-      213: 6083692404083591793
-    second: ProjectilesEmissionMap_1
+      213: -3877564771510113781
+    second: Attack 1_1
   - first:
-      213: 8229378170025345153
-    second: ProjectilesEmissionMap_2
+      213: 8036391861149860661
+    second: Attack 1_2
+  - first:
+      213: 3199637627024557385
+    second: Attack 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -106,12 +109,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ProjectilesEmissionMap_0
+      name: Attack 1_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 1
         y: 0
-        width: 8
+        width: 76
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -120,19 +123,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15e84d977662a19f0800000000000000
-      internalID: -497042583003558319
+      spriteID: e97745db9630f5fd0800000000000000
+      internalID: -2351156727781230690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ProjectilesEmissionMap_1
+      name: Attack 1_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 33
+        y: 9
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a2290726f103ac0800000000000000
+      internalID: -3877564771510113781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 1_2
+      rect:
+        serializedVersion: 2
+        x: 68
         y: 0
-        width: 12
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5338dafa1dff68f60800000000000000
+      internalID: 8036391861149860661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack 1_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 114
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,29 +186,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17a052c320e9d6450800000000000000
-      internalID: 6083692404083591793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ProjectilesEmissionMap_2
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 2
-        width: 28
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 18007b238df943270800000000000000
-      internalID: 8229378170025345153
+      spriteID: 945c5c82875676c20800000000000000
+      internalID: 3199637627024557385
       vertices: []
       indices: 
       edges: []
