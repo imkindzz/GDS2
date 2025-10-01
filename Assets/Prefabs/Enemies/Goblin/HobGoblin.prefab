@@ -288,6 +288,7 @@ MonoBehaviour:
   bulletPatterns:
   - {fileID: 11400000, guid: 2740551a0f1c969458e7ed0cddc61716, type: 2}
   fireRate: 0.5
+  sfxName: 3
   aimAtPlayer: 0
   aimPos: {x: 0, y: 0, z: 0}
 --- !u!114 &6366611090954349491
@@ -423,6 +424,7 @@ MonoBehaviour:
   bulletPatterns:
   - {fileID: 11400000, guid: b917b4cbbe209ad4e9b767adeede19d2, type: 2}
   fireRate: 0.75
+  sfxName: 9
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
 --- !u!114 &776280578321754836

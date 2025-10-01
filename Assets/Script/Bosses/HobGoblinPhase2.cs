@@ -10,6 +10,8 @@ public class HobGoblinPhase2 : MonoBehaviour
     private float stateTimer;
     private Animator animator;
 
+    private AudioSource audioSource;
+
     public enum BossState
     {
         Idle,
@@ -22,6 +24,10 @@ public class HobGoblinPhase2 : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        // Ensure we have audio sources
+        audioSource = gameObject.AddComponent<AudioSource>();
+
         EnterState(BossState.Club1);
     }
 
@@ -58,6 +64,10 @@ public class HobGoblinPhase2 : MonoBehaviour
 
         switch (newState)
         {
+            case BossState.Club1:
+            case BossState.Club2:
+                SoundManager.instance.PlaySfxSound(SfxSoundName.GoblinClubThrow, audioSource);
+                break;
             case BossState.Attack:
                 GetComponent<BulletEmitter>().enabled = true;
 
