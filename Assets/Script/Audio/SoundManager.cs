@@ -28,8 +28,6 @@ public class SoundManager : MonoBehaviour
     [Header("Volume Settings")]
     [SerializeField, Range(0f, 1f)] private float sfxVolume = 1.0f;
 
-    private Queue<AudioSource> audioSources = new Queue<AudioSource>();
-
     void Awake()
     {
         if (instance == null)
@@ -44,33 +42,11 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (audioSources.Count > 0)
-        {
-            AudioSource head = audioSources.Peek();
-            if (!head.isPlaying)
-            {
-                Destroy(head);
-                audioSources.Dequeue();
-            }
-        }
-    }
-
     #region Public player
     //plays the sfx sound
     public AudioSource PlaySfxSound(SfxSoundName soundName, AudioSource audioSource, bool loop = false)
     {
         return CreateSound(sfxSoundClips[(int)soundName], sfxVolume, loop, audioSource);
-    }
-
-    //plays the death sound
-    public void PlayDeathSound()
-    {
-        AudioSource audioSource = gameObject.AddComponent<AudioSource>();
-        PlaySfxSound(SfxSoundName.DeathSound, audioSource);
-
-        audioSources.Enqueue(audioSource);
     }
     #endregion
 
