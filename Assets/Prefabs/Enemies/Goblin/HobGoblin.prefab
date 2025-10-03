@@ -272,6 +272,7 @@ MonoBehaviour:
   clubStartpos: {fileID: 8191354335130764375}
   club1pos: {x: 3, y: 0}
   club2pos: {x: -3, y: 0}
+  animator: {fileID: 0}
 --- !u!114 &3677743766140865472
 MonoBehaviour:
   m_ObjectHideFlags: 0

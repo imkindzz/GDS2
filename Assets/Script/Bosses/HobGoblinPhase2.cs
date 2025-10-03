@@ -8,7 +8,7 @@ public class HobGoblinPhase2 : MonoBehaviour
 
     private BossState currentState;
     private float stateTimer;
-    private Animator animator;
+    public Animator animator;
 
     private AudioSource audioSource;
 
@@ -23,10 +23,10 @@ public class HobGoblinPhase2 : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInParent<Animator>();
 
         // Ensure we have audio sources
-        audioSource = gameObject.AddComponent<AudioSource>();
+        if (!audioSource) audioSource = gameObject.AddComponent<AudioSource>();
 
         EnterState(BossState.Club1);
     }
