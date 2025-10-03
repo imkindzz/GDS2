@@ -67,9 +67,6 @@ public class PlayerStatus : StatusBase
         {
             base.TakeDamage(amount);
             Debug.Log("Player is taking damage");
-            
-            SoundManager.instance.PlaySfxSound(SfxSoundName.PlayerHit, audioSource);
-
             StartInvincibility(invincibilityDuration);
 
             isTakingDamage = true;

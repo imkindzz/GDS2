@@ -14,13 +14,10 @@ public class StatusBase : MonoBehaviour
     [Header("Death")]
     [SerializeField] private float deathDelay = 0.25f; //the time taken before the gameObject completely disappears
 
-    private AudioSource _audioSource;
-
     #region Properties
     public float currentHealth { get => _currentHealth; set => _currentHealth = value; }
     public float maxHealth { get => _maxHealth; }
     public bool noHealth { get => currentHealth == 0; } //when there is no health
-    public AudioSource audioSource { get => _audioSource; set => _audioSource = value; }
     #endregion
 
     #region Unity methods
@@ -35,8 +32,6 @@ public class StatusBase : MonoBehaviour
     private void LateUpdate()
     {
         if (noHealth) OnDeathState();
-
-        if (!audioSource) audioSource = gameObject.AddComponent<AudioSource>();
     }
     #endregion
 
