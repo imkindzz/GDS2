@@ -10,7 +10,6 @@ public class BulletEmitter : MonoBehaviour
     public float fireRate = 1f; 
     private float fireCooldown = 0f;
 
-    public bool hasAudio = true;
     public SfxSoundName sfxName;
     private AudioSource audioSource;
 
@@ -26,15 +25,14 @@ public class BulletEmitter : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) playerTransform = player.transform;
         
-        if (!audioSource && hasAudio) audioSource = this.AddComponent<AudioSource>();
+        if (!audioSource) audioSource = this.AddComponent<AudioSource>();
     }
     void Update()
     {
         fireCooldown -= Time.deltaTime;
         if (fireCooldown <= 0f && bulletPatterns.Count > 0)
         {
-            if (hasAudio) SoundManager.instance.PlaySfxSound(sfxName, audioSource);
-
+            SoundManager.instance.PlaySfxSound(sfxName, audioSource);
             if (aimAtPlayer) 
             {
                 Vector3? playerPos = playerTransform != null ? playerTransform.position : (Vector3?)null;
