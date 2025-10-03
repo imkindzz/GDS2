@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletEmitter : MonoBehaviour
@@ -9,9 +8,6 @@ public class BulletEmitter : MonoBehaviour
 
     public float fireRate = 1f; 
     private float fireCooldown = 0f;
-
-    public SfxSoundName sfxName;
-    private AudioSource audioSource;
 
     private int currentPatternIndex = 0;
 
@@ -24,15 +20,13 @@ public class BulletEmitter : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) playerTransform = player.transform;
-        
-        if (!audioSource) audioSource = this.AddComponent<AudioSource>();
     }
     void Update()
     {
         fireCooldown -= Time.deltaTime;
         if (fireCooldown <= 0f && bulletPatterns.Count > 0)
         {
-            SoundManager.instance.PlaySfxSound(sfxName, audioSource);
+
             if (aimAtPlayer) 
             {
                 Vector3? playerPos = playerTransform != null ? playerTransform.position : (Vector3?)null;
