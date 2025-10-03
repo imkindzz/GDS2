@@ -95,6 +95,8 @@ public class PlayerStatus : StatusBase
     #region State methods
     public override void OnDeathState()
     {
+        SoundManager.instance.PlayDeathSound();
+
         EndInvincibility(); //ensures that the invisbility is gone before anything else
 
         this.gameObject.SetActive(false);

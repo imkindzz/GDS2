@@ -110,7 +110,9 @@ public class StatusBase : MonoBehaviour
         
         Collider2D col = GetComponent<Collider2D>(); 
         if (col) col.enabled = false;
-        
+
+        SoundManager.instance.PlayDeathSound();
+
         Destroy(this.gameObject, deathDelay);
     }
     #endregion
