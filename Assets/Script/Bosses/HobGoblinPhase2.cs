@@ -8,7 +8,7 @@ public class HobGoblinPhase2 : MonoBehaviour
 
     private BossState currentState;
     private float stateTimer;
-    private Animator animator;
+    public Animator animator;
 
     public enum BossState
     {
@@ -21,7 +21,7 @@ public class HobGoblinPhase2 : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInParent<Animator>();
         EnterState(BossState.Club1);
     }
 
