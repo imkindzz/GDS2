@@ -5,7 +5,14 @@ public class PlayerSwapManager : MonoBehaviour
     public PlayerMovement heart;
     public PlayerMovement soul;
 
+    private AudioSource audioSource;
+
     // private bool controlsSwapped = false;
+
+    void Start()
+    {
+        if (!audioSource) audioSource = gameObject.AddComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -15,6 +22,8 @@ public class PlayerSwapManager : MonoBehaviour
             Vector3 temp = heart.transform.position;
             heart.transform.position = soul.transform.position;
             soul.transform.position = temp;
+
+            SoundManager.instance.PlaySfxSound(SfxSoundName.PlayerWarp, audioSource);
 
             /* swap input
             if (!controlsSwapped)

@@ -11,13 +11,20 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private Vector2 _input; //the input that the player makes for the movement
 
+    private AudioSource _audioSource;
+
     #region Properties
     public Vector2 input { get => _input; set => _input = value; }
     public Rigidbody2D rb { get => _rb; private set => _rb = value; }
+    public AudioSource audioSource { get => _audioSource; private set => _audioSource = value; }
     #endregion
 
     #region Unity methods
-    void Awake() => rb = GetComponent<Rigidbody2D>();
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        if (!audioSource) audioSource = gameObject.AddComponent<AudioSource>();
+    }
 
     void Update()
     {

@@ -25,6 +25,17 @@ public class PlayerSoulMovement : PlayerMovement
         Vector2 waveOffset = Vector2.zero; //the wave that is added to the movement input
         bool hasInput = !input.Equals(Vector2.zero);
 
+        //plays the player ghost movement audio when there is movement
+        if (rb.velocity.sqrMagnitude > 0.01f)
+        {
+            if (!audioSource.isPlaying) SoundManager.instance.PlaySfxSound(SfxSoundName.GhostMovement, audioSource, true); 
+            Debug.Log("hi");
+        }
+        else
+        {
+            if (audioSource.isPlaying) audioSource.Stop();
+        }
+
         if (hasInput)
         {
             waveTime += Time.deltaTime;
