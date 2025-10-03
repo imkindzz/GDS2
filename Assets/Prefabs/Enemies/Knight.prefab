@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   health: 60
-  movementPattern: {fileID: 11400000, guid: ae5a85aac29a1c1408dee13af8937e83, type: 2}
+  movementPattern: {fileID: 11400000, guid: 14314659193b2db42bfb9bc3582f4458, type: 2}
   boundsCenter: {x: 0, y: 0}
   boundsSize: {x: 13, y: 12}
   edgePadding: 0.02
@@ -189,7 +189,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5955692588573619316, guid: 73fc4af2df615a54db9e1e6fe7ed788b, type: 3}
   bulletPatterns:
   - {fileID: 11400000, guid: 53aac7caec328314b80af57ecadf4571, type: 2}
-  fireRate: 0.6
+  fireRate: 0.45
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
 --- !u!114 &8890102103317095501
