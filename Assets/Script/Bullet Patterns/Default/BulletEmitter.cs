@@ -26,6 +26,7 @@ public class BulletEmitter : MonoBehaviour
         fireCooldown -= Time.deltaTime;
         if (fireCooldown <= 0f && bulletPatterns.Count > 0)
         {
+            GetComponent<GoblinAudio>()?.PlayAttack();
 
             if (aimAtPlayer) 
             {
