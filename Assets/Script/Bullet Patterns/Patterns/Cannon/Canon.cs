@@ -50,9 +50,6 @@ public class BigFastSingleShot : BulletPattern
             }
         }
 
-        //Sounds
-        SoundManager.Instance.PlayGoblinCannon();
-
         // Safety cleanup
         Destroy(bulletObj, bulletLifetime);
     }

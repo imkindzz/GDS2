@@ -71,8 +71,6 @@ public class PlayerStatus : StatusBase
             GetComponent<PlayerAudio>()?.PlayHurt();
 
             StartInvincibility(invincibilityDuration);
-            
-            SoundManager.Instance.PlayPlayerHit();
 
             isTakingDamage = true;
 

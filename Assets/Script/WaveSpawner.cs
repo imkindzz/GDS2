@@ -76,7 +76,7 @@ public class WaveSpawner : MonoBehaviour
                 var point = spawnPoints[chosenIndex];
 
                 GameObject go = Instantiate(entry.prefab, point.position, point.rotation);
-                
+
                 var status = go.GetComponent<EnemyStatus>();
                 if (status != null)
                 {

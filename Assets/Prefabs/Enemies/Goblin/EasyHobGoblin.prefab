@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6424307730302393798}
   - component: {fileID: 213483433280654577}
   - component: {fileID: 484910178388802785}
-  - component: {fileID: 7627658120795366555}
   m_Layer: 0
   m_Name: Phase 2
   m_TagString: Untagged
@@ -168,10 +167,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
-//--- !u!1 &2236884587194436240
-//GameObject:
---- !u!114 &7627658120795366555
-MonoBehaviour:
+--- !u!1 &2236884587194436240
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
