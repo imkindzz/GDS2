@@ -192,6 +192,7 @@ MonoBehaviour:
   bulletPatterns:
   - {fileID: 11400000, guid: dfac6f6f5a80121479aae7eb9be1694c, type: 2}
   fireRate: 1.5
+  bulletSFX: {fileID: 8300000, guid: 1c6a2affe97bd1144833564eed326161, type: 3}
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
 --- !u!114 &6204125889660519607

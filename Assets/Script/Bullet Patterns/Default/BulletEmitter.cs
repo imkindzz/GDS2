@@ -9,6 +9,10 @@ public class BulletEmitter : MonoBehaviour
     public float fireRate = 1f; 
     private float fireCooldown = 0f;
 
+    [Header("Sound")]
+    public AudioClip bulletSFX;                   
+    private AudioSource audioSource;
+
     private int currentPatternIndex = 0;
 
     private Transform playerTransform;
@@ -20,6 +24,12 @@ public class BulletEmitter : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) playerTransform = player.transform;
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
     void Update()
     {
@@ -38,7 +48,9 @@ public class BulletEmitter : MonoBehaviour
 
                 bulletPatterns[currentPatternIndex].Emit(transform, bulletPrefab, aimPos);
             }
-            
+
+            PlayBulletSound();
+
             // trigger animation
             if (animator != null)
                 animator.SetTrigger("Shoot");
@@ -53,5 +65,13 @@ public class BulletEmitter : MonoBehaviour
     {
         bulletPatterns[currentPatternIndex].Emit(transform, bulletPrefab);
         currentPatternIndex = (currentPatternIndex + 1) % bulletPatterns.Count;
+    }
+
+    private void PlayBulletSound()
+    {
+        if (bulletSFX != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(bulletSFX);
+        }
     }
 }
