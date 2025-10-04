@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 950677619299550769}
   - component: {fileID: -3054297458136713223}
   - component: {fileID: -2634589526473503418}
+  - component: {fileID: 2069158967166667641}
   m_Layer: 7
   m_Name: RightCanon
   m_TagString: Untagged
@@ -155,9 +156,9 @@ MonoBehaviour:
   bulletPatterns:
   - {fileID: 11400000, guid: 5593348761b23514f9b899d7555f325c, type: 2}
   fireRate: 0.3
-  bulletSFX: {fileID: 8300000, guid: 2cb8ee1f30b105943a0772b436edc885, type: 3}
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
+  bulletSfx: 1
 --- !u!114 &950677619299550769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,3 +236,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2069158967166667641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2967261118870211946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54729b7921703ab43b53fd12c2264a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startGrowl: 1

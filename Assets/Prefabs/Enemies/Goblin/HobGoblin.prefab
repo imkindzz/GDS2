@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 213483433280654577}
   - component: {fileID: 7308544117200081004}
   - component: {fileID: 864846617270436409}
-  - component: {fileID: 618608302614595178}
+  - component: {fileID: 7589387628894445045}
   m_Layer: 0
   m_Name: Phase 2
   m_TagString: Untagged
@@ -168,7 +168,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &618608302614595178
+--- !u!114 &7589387628894445045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,9 +177,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 464101021153346604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94c1ace9cdff5746b94c0f0e2c39607, type: 3}
+  m_Script: {fileID: 11500000, guid: 54729b7921703ab43b53fd12c2264a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGrowl: 1
 --- !u!1 &5337365775426962189
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +304,7 @@ MonoBehaviour:
   fireRate: 0.5
   aimAtPlayer: 0
   aimPos: {x: 0, y: 0, z: 0}
+  bulletSfx: 3
 --- !u!114 &6366611090954349491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +345,7 @@ GameObject:
   - component: {fileID: 7999229639112604541}
   - component: {fileID: 3343897842849612537}
   - component: {fileID: 3680498081825766993}
-  - component: {fileID: 8704111658357727627}
+  - component: {fileID: 3669307707861426437}
   m_Layer: 0
   m_Name: Phase 1
   m_TagString: Untagged
@@ -439,6 +441,7 @@ MonoBehaviour:
   fireRate: 0.75
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
+  bulletSfx: 9
 --- !u!114 &776280578321754836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,7 +556,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8704111658357727627
+--- !u!114 &3669307707861426437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -562,9 +565,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5383545502268860129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94c1ace9cdff5746b94c0f0e2c39607, type: 3}
+  m_Script: {fileID: 11500000, guid: 54729b7921703ab43b53fd12c2264a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startGrowl: 1
 --- !u!1 &5946669198946357408
 GameObject:
   m_ObjectHideFlags: 0

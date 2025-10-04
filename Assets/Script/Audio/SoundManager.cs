@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public enum SfxSoundName
@@ -24,6 +21,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager instance { get; private set; }
 
     [SerializeField] private List<AudioClip> sfxSoundClips = new List<AudioClip>(); //stores the sounds, where the index align with the variables in the SoundName enum
+    [SerializeField] private AudioSource audioSourceObject;
 
     [Header("Volume Settings")]
     [SerializeField, Range(0f, 1f)] private float sfxVolume = 1.0f;
@@ -40,13 +38,30 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning("Multiple SoundManager instances found! Destroying the duplicate.");
             Destroy(gameObject);
         }
+
+        if (!audioSourceObject) Debug.LogError("AudioSource audioSourceObject is null in SoundManager.cs");
     }
 
     #region Public player
-    //plays the sfx sound
-    public AudioSource PlaySound(SfxSoundName soundName, AudioSource audioSource, bool loop = false)
+    //plays a sound
+    public AudioSource PlaySound(SfxSoundName soundName, Transform parent = null, bool loop = false)
     {
-        return CreateSound(sfxSoundClips[(int)soundName], sfxVolume, loop, audioSource);
+        return CreateSound(sfxSoundClips[(int)soundName], sfxVolume, loop, parent);
+    }
+
+    //plays a random sound
+    public AudioSource PlayRandomSound(SfxSoundName[] soundNames, Transform parent = null, bool loop = false)
+    {
+        int randIndex = Random.Range(0, soundNames.Length);
+        SfxSoundName chosenSound = soundNames[randIndex];
+        return CreateSound(sfxSoundClips[(int)chosenSound], sfxVolume, loop, parent);
+    }
+
+    //stops a sound loop
+    public void StopSoundLoop(AudioSource audioSource)
+    {
+        audioSourceObject.Stop();
+        Destroy(audioSource.gameObject); //destorys the gameobject when it is no longer used
     }
     #endregion
 
@@ -55,6 +70,8 @@ public class SoundManager : MonoBehaviour
     private void PlaySound(AudioClip clip, AudioSource audioSource, float volume)
     {
         audioSource.PlayOneShot(clip, volume);
+        Destroy(audioSource.gameObject, clip.length); //destorys the gameobject after the clip is finished
+
     }
 
     //plays a sound loop
@@ -73,8 +90,12 @@ public class SoundManager : MonoBehaviour
     }
 
     //creates the sound in the scene where it can be stored under specific gameobjects
-    private AudioSource CreateSound(AudioClip clip, float volume, bool loop, AudioSource audioSource)
+    private AudioSource CreateSound(AudioClip clip, float volume, bool loop, Transform parent = null)
     {
+        //instantiate an audioSource as a child of a gameobject
+        Transform actualParent = parent == null ? transform : parent; // ✅ safe null check
+        AudioSource audioSource = Instantiate(audioSourceObject, Vector3.zero, Quaternion.identity, actualParent);
+
         if (loop) PlayLoop(clip, audioSource, volume);
         else PlaySound(clip, audioSource, volume);
 
