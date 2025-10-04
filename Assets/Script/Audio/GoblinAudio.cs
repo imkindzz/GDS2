@@ -5,10 +5,15 @@ using UnityEngine;
 public class GoblinAudio : MonoBehaviour
 {
     [SerializeField] private AudioSource voiceAudioSource; //the audioSource that makes the voice sounds
+    [SerializeField] private bool startGrowl = true; //plays a growl at the beginning
 
     [Header("Attack Sounds")]
     [SerializeField] private SfxSoundName attackSfx;
     [SerializeField] private AudioSource attackAudioSource; //the audioSource that makes the attack sounds
+
+    [Header("Action Sounds")]
+    [SerializeField] private SfxSoundName actionSfx;
+    [SerializeField] private AudioSource actionAudioSource; //the audioSource that makes the action sounds besides the attacking
 
     void Awake()
     {
@@ -16,17 +21,25 @@ public class GoblinAudio : MonoBehaviour
         else Debug.LogWarning("voiceAudioSource AudioSource in GoblinAudio.cs is null");
         if (attackAudioSource) attackAudioSource.playOnAwake = false;
         else Debug.LogWarning("attackAudioSource AudioSource in GoblinAudio.cs is null");
+        if (actionAudioSource) actionAudioSource.playOnAwake = false;
+        else Debug.LogWarning("actionAudioSource AudioSource in GoblinAudio.cs is null");
     }
 
     void Start()
     {
-        PlayRandomGrowl();
+        if (startGrowl) PlayRandomGrowl();
     }
 
     //plays the attack sfx
     public void PlayAttack()
     {
         SoundManager.instance.PlaySound(attackSfx, attackAudioSource);
+    }
+
+    //plays the action sfx
+    public void PlayAction()
+    {
+        SoundManager.instance.PlaySound(actionSfx, actionAudioSource);
     }
 
     //plays a random goblin growl sound

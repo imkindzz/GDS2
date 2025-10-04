@@ -58,6 +58,11 @@ public class HobGoblinPhase2 : MonoBehaviour
 
         switch (newState)
         {
+            case BossState.Club1:
+            case BossState.Club2:
+                GetComponent<GoblinAudio>()?.PlayAction();
+                break;
+
             case BossState.Attack:
                 GetComponent<BulletEmitter>().enabled = true;
 
