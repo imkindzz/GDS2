@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 
 public class PlayerSoulMovement : PlayerMovement
@@ -22,6 +23,10 @@ public class PlayerSoulMovement : PlayerMovement
     //moves the player
     public override void MovePlayer()
     {
+        //plays the player ghost movement audio when there is movement
+        if (rb.velocity.sqrMagnitude > 0.01f) GetComponent<PlayerAudio>()?.PlayMovementLoop();
+        else GetComponent<PlayerAudio>()?.StopMovementLoop();
+
         Vector2 waveOffset = Vector2.zero; //the wave that is added to the movement input
         bool hasInput = !input.Equals(Vector2.zero);
 

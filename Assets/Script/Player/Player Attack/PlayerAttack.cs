@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -60,8 +61,11 @@ public class PlayerAttack : MonoBehaviour
                 damageCreated.RemoveAt(index);
             }
 
-            damageTimer = 0f;
+            damageTimer = 0f; 
         }
+
+        //when there are no reachable statuses to play the audio
+        if (reachableStatus.Count == 0) GetComponent<PlayerAudio>()?.StopAttackLoop();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -83,6 +87,8 @@ public class PlayerAttack : MonoBehaviour
             // --- Spawn the impact/damage indicator (damageMadeGO) ---
             GameObject dm = Instantiate(damageMadeGO, collision.transform.position, Quaternion.identity, collision.transform);
             damageCreated.Add(dm);
+
+            GetComponent<PlayerAudio>()?.PlayAttackLoop();
         }
     }
 

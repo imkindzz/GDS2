@@ -45,8 +45,8 @@ public class PlayerSummonSoul : MonoBehaviour
     {
         soulMovement = soulBody.GetComponent<PlayerSoulMovement>();
 
-        soulLink = soulBody.transform.GetChild(0).gameObject;
-        spSoulLink = soulLink.GetComponent<SpriteRenderer>();
+        soulLink = soulBody.transform.Find("Soul Link")?.gameObject;
+        spSoulLink = soulLink ? soulLink.GetComponent<SpriteRenderer>() : null;
     }
 
     void Start()

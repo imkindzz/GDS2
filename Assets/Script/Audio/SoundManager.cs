@@ -60,6 +60,12 @@ public class SoundManager : MonoBehaviour
     //plays a sound loop
     private void PlayLoop(AudioClip clip, AudioSource audioSource, float volume)
     {
+        if (audioSource.isPlaying)
+        {
+            Debug.LogWarning(audioSource.name + " AudioSource is currently playing");
+            return;
+        }
+
         audioSource.clip = clip;
         audioSource.volume = volume;
         audioSource.loop = true;
