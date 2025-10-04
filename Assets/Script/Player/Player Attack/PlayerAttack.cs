@@ -59,7 +59,6 @@ public class PlayerAttack : MonoBehaviour
                 Destroy(damageCreated[index]);
                 damageCreated.RemoveAt(index);
 
-                if (reachableStatus.Count == 0) SoundManager.Instance.StopLoopGhostAttack();
             }
 
             damageTimer = 0f;
@@ -87,7 +86,6 @@ public class PlayerAttack : MonoBehaviour
             damageCreated.Add(dm);
 
             //makes sound
-            SoundManager.Instance.PlayLoopGhostAttack();
         }
     }
 
@@ -113,7 +111,6 @@ public class PlayerAttack : MonoBehaviour
                 reachableStatus.RemoveAt(statusIndex);
 
                 //stops sound
-                SoundManager.Instance.StopLoopGhostAttack();
             }
         }
     }

@@ -69,7 +69,6 @@ public class PlayerStatus : StatusBase
             Debug.Log("Player is taking damage");
             StartInvincibility(invincibilityDuration);
             
-            SoundManager.Instance.PlayPlayerHit();
 
             isTakingDamage = true;
 

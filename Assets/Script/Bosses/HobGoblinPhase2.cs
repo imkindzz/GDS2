@@ -60,8 +60,6 @@ public class HobGoblinPhase2 : MonoBehaviour
         {
             case BossState.Attack:
                 GetComponent<BulletEmitter>().enabled = true;
-                SoundManager.Instance.PlayGoblinClubThrowImpact();
-
                 if (animator != null)
                     animator.SetTrigger("Throw");
 
