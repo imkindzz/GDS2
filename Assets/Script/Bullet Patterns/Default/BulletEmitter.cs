@@ -30,6 +30,7 @@ public class BulletEmitter : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -54,7 +55,6 @@ public class BulletEmitter : MonoBehaviour
             // trigger animation
             if (animator != null)
                 animator.SetTrigger("Shoot");
-            animator = GetComponent<Animator>();
 
             currentPatternIndex = (currentPatternIndex + 1) % bulletPatterns.Count;
             fireCooldown = 1f / fireRate;
