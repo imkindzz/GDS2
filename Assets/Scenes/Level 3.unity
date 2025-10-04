@@ -520,26 +520,26 @@ MonoBehaviour:
   - {fileID: 2129303759}
   - {fileID: 699551689}
   waves:
-  - name: 1 Knight
+  - name: 1 Burst Ring
     entries:
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
-      count: 1
-      spawnPointIndex: 2
-    - prefab: {fileID: 2043612635996268810, guid: f1d612ee499330046a48529f2dcae130, type: 3}
-      count: 1
-      spawnPointIndex: 0
-  - name: 2 Knight
-    entries:
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
       count: 1
       spawnPointIndex: 2
     - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
       count: 1
       spawnPointIndex: 0
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+  - name: 2 Burst Ring
+    entries:
+    - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
       count: 1
       spawnPointIndex: 2
-  - name: 2 SeedShot 1 Knight
+    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+      count: 1
+      spawnPointIndex: 0
+    - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
+      count: 1
+      spawnPointIndex: 2
+  - name: 2 SeedShot
     entries:
     - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       count: 1
@@ -547,32 +547,29 @@ MonoBehaviour:
     - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       count: 1
       spawnPointIndex: 0
-    - prefab: {fileID: 8380617655607345261, guid: 61ff280163aab5147a98bfc3f9894545, type: 3}
-      count: 1
-      spawnPointIndex: 0
-  - name: 1 Firework 1 Knight 1 Lance
+  - name: 2 Seedshot 1 Burst Ring
     entries:
-    - prefab: {fileID: 5610912872392045532, guid: b5f34229796318b489eaaa9ec1210b4a, type: 3}
+    - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 8380617655607345261, guid: 61ff280163aab5147a98bfc3f9894545, type: 3}
+    - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       count: 1
       spawnPointIndex: 0
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       count: 1
       spawnPointIndex: 1
-  - name: 2 Knight 1 Lance 1 Spear
+  - name: 2 Seedshot 2 Burst Ring
     entries:
-    - prefab: {fileID: 6015687279279957363, guid: fffa7f16649463c45b45d0451122250e, type: 3}
+    - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       count: 1
       spawnPointIndex: 1
-    - prefab: {fileID: 8380617655607345261, guid: 61ff280163aab5147a98bfc3f9894545, type: 3}
+    - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       count: 1
       spawnPointIndex: 0
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
       count: 2
       spawnPointIndex: 2
-  - name: 1 Firework 2 SeedShot 2 Knight
+  - name: 1 Firework 2 SeedShot
     entries:
     - prefab: {fileID: 5610912872392045532, guid: 64043fa3162e73a458fb019b8de49822, type: 3}
       count: 1
@@ -580,18 +577,15 @@ MonoBehaviour:
     - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       count: 2
       spawnPointIndex: 0
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
-      count: 2
-      spawnPointIndex: 0
-  - name: 2 Knight 2 Lance 1 SeedShot
+  - name: 2 Firework 2 Seedshot 1 Burst Ring
     entries:
-    - prefab: {fileID: 2043612635996268810, guid: f1d612ee499330046a48529f2dcae130, type: 3}
+    - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
       count: 2
       spawnPointIndex: 0
-    - prefab: {fileID: 8380617655607345261, guid: 61ff280163aab5147a98bfc3f9894545, type: 3}
+    - prefab: {fileID: 5610912872392045532, guid: 64043fa3162e73a458fb019b8de49822, type: 3}
       count: 2
       spawnPointIndex: 1
   - name: Boss

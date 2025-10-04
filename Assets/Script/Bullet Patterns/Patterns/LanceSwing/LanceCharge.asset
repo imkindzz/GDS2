@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LanceCharge
   m_EditorClassIdentifier: 
   length: 2.8
-  segments: 6
-  lifetime: 0.7
+  segments: 7
+  lifetime: 0.4
