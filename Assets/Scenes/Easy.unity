@@ -2553,66 +2553,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1665431648213807071, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2265717968468663027, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7825934393113767931, guid: c83258e1c05f4be4c8b2e613788a5405, type: 3}
-    - target: {fileID: 2335453436297040865, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1059714156992443467, guid: c83258e1c05f4be4c8b2e613788a5405, type: 3}
-    - target: {fileID: 2482930231103161692, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 1749433602}
-    - target: {fileID: 2482930231103161692, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3381511468222108217, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1087259456350229998, guid: c83258e1c05f4be4c8b2e613788a5405, type: 3}
-    - target: {fileID: 3709223111721359041, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 78952812453755768, guid: c83258e1c05f4be4c8b2e613788a5405, type: 3}
-    - target: {fileID: 3772869953151338028, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5003170715487600368, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5195973943967276091, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2094154610920275841, guid: c83258e1c05f4be4c8b2e613788a5405, type: 3}
     - target: {fileID: 5511907789972405359, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1555349503}
-    - target: {fileID: 6269411912299310337, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6269411912299310337, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Direction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6269411912299310337, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6424867212957417117, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
