@@ -823,6 +823,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1236507424
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284241265397523195, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093483990511279605, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+      propertyPath: m_Name
+      value: Damage Border
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+--- !u!212 &1236507425 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8314508678863399419, guid: fad2519cedddf4d448b801e7baa3e95b, type: 3}
+  m_PrefabInstance: {fileID: 1236507424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1384149746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 627326808767499721, guid: 72b7e5f0961a9994eabaa9ea7868a9d8, type: 3}
@@ -969,6 +1031,10 @@ PrefabInstance:
       propertyPath: maxStreakFlames
       value: 
       objectReference: {fileID: 1423723069}
+    - target: {fileID: 4230809457801205476, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
+      propertyPath: damageFlashSprite
+      value: 
+      objectReference: {fileID: 1236507425}
     - target: {fileID: 4230809457801205476, guid: 511c4ba8166561a488e0120c59142e50, type: 3}
       propertyPath: 'heartImages.Array.data[0]'
       value: 
@@ -1342,3 +1408,4 @@ SceneRoots:
   - {fileID: 1206143776}
   - {fileID: 62907545}
   - {fileID: 403134844}
+  - {fileID: 1236507424}

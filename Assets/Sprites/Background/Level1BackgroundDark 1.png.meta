@@ -370,7 +370,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Level1BackgroundDark 1_0: 4353142277671147165
+      Level1BackgroundDark 1_1: -272940965891377922
+      Level1BackgroundDark 1_10: 4770594488640827017
+      Level1BackgroundDark 1_2: -3426738440876856596
+      Level1BackgroundDark 1_3: 1760909257438358859
+      Level1BackgroundDark 1_4: 7492580743851005039
+      Level1BackgroundDark 1_5: 1821033960282389016
+      Level1BackgroundDark 1_6: -2097701590342885204
+      Level1BackgroundDark 1_7: -4371948731320179769
+      Level1BackgroundDark 1_8: 7369255043187600377
+      Level1BackgroundDark 1_9: -4070348095045296877
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
