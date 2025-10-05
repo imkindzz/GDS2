@@ -590,9 +590,9 @@ MonoBehaviour:
       spawnPointIndex: 1
   - name: Boss
     entries:
-    - prefab: {fileID: 5492666743595665731, guid: 29b773c09c8471f4c8e17f50b767e32d, type: 3}
+    - prefab: {fileID: 5261957007587431385, guid: b449128c8c16d3d40a1d4c738b7e1922, type: 3}
       count: 1
-      spawnPointIndex: 3
+      spawnPointIndex: 4
   timeBetweenSpawns: 3
   timeBetweenWaves: 3
   autoStart: 1
