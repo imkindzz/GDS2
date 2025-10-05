@@ -136,8 +136,8 @@ MonoBehaviour:
   speed: 10
   horizontalAxis: Horizontal2
   verticalAxis: Vertical2
-  waveAmplitude: 0
-  waveFrequency: 0
+  waveAmplitude: 1
+  waveFrequency: 10
   driftHalfLife: 0.1
   minDriftSpeed: 1.4
 --- !u!58 &37588092306523304
