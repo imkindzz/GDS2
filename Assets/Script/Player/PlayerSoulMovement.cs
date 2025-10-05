@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 
 public class PlayerSoulMovement : PlayerMovement
@@ -18,10 +19,26 @@ public class PlayerSoulMovement : PlayerMovement
     private Vector2 lastMoveVelocity; //the last velocity made before it changes
     private float driftTimer = 0f; //the time that passes for the drift
 
+    private AudioSource moveLoopSource;
+
     #region Player input methods
     //moves the player
     public override void MovePlayer()
     {
+        //plays the player ghost movement audio when there is movement
+        if (rb.velocity.sqrMagnitude > 0.01f)
+        {
+            if (moveLoopSource == null) moveLoopSource = SoundManager.instance.PlaySound(SfxSoundName.GhostMovement, transform, true);
+        }
+        else
+        {
+            if (moveLoopSource != null)
+            {
+                SoundManager.instance.StopSoundLoop(moveLoopSource);
+                moveLoopSource = null;
+            }
+        }
+
         Vector2 waveOffset = Vector2.zero; //the wave that is added to the movement input
         bool hasInput = !input.Equals(Vector2.zero);
 

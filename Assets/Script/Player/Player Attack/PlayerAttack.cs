@@ -21,6 +21,8 @@ public class PlayerAttack : MonoBehaviour
 
     private float damageTimer = 0f;
 
+    private AudioSource attackLoopSource;
+
     #region Unity methods
     void Start()
     {
@@ -62,6 +64,13 @@ public class PlayerAttack : MonoBehaviour
             }
 
             damageTimer = 0f;
+
+            //when there are no reachable statuses to play the audio
+            if (reachableStatus.Count == 0 && attackLoopSource != null)
+            {
+                SoundManager.instance.StopSoundLoop(attackLoopSource);
+                attackLoopSource = null;
+            }
         }
     }
 
@@ -86,6 +95,7 @@ public class PlayerAttack : MonoBehaviour
             damageCreated.Add(dm);
 
             //makes sound
+            if (attackLoopSource == null) attackLoopSource = SoundManager.instance.PlaySound(SfxSoundName.GhostAttack, transform, true);
         }
     }
 
@@ -109,8 +119,6 @@ public class PlayerAttack : MonoBehaviour
                 damageDirections.RemoveAt(statusIndex);
                 damageCreated.RemoveAt(statusIndex);
                 reachableStatus.RemoveAt(statusIndex);
-
-                //stops sound
             }
         }
     }

@@ -67,6 +67,9 @@ public class PlayerStatus : StatusBase
         {
             base.TakeDamage(amount);
             Debug.Log("Player is taking damage");
+
+            SoundManager.instance.PlaySound(SfxSoundName.PlayerHit, transform);
+
             StartInvincibility(invincibilityDuration);
             
 
@@ -93,6 +96,8 @@ public class PlayerStatus : StatusBase
     #region State methods
     public override void OnDeathState()
     {
+        SoundManager.instance.PlaySound(SfxSoundName.DeathSound);
+
         EndInvincibility(); //ensures that the invisbility is gone before anything else
 
         this.gameObject.SetActive(false);

@@ -16,6 +16,8 @@ public class PlayerSwapManager : MonoBehaviour
             heart.transform.position = soul.transform.position;
             soul.transform.position = temp;
 
+            SoundManager.instance.PlaySound(SfxSoundName.PlayerWarp);
+
             /* swap input
             if (!controlsSwapped)
             {
