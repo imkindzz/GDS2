@@ -850,7 +850,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4724675ce918ab242a78e22bcb41cb42, type: 3}
   - {fileID: 8300000, guid: f12a7593d93413940a34b6a15bde6e43, type: 3}
   audioSourceObject: {fileID: 6420736149182768374, guid: a2fe6f6da19e25b4581b9e0bd55a12e1, type: 3}
-  sfxVolume: 1
+  sfxVolume: 0.75
 --- !u!1 &1498813741
 GameObject:
   m_ObjectHideFlags: 0

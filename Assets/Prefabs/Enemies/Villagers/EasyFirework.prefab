@@ -193,6 +193,7 @@ MonoBehaviour:
   fireRate: 0.45
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
+  bulletSfx: 9
 --- !u!114 &7023527611136259206
 MonoBehaviour:
   m_ObjectHideFlags: 0
