@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ad2e7f5eb45ea44bc3997c4d86c306, type: 3}
   m_Name: Boss3Phase2
   m_EditorClassIdentifier: 
-  bulletSpeed: 4
-  bulletLifetime: 5
-  numBullets: 20
-  spread: 45
+  bulletSpeed: 3.2
+  bulletLifetime: 6
+  numBullets: 25
+  spread: 60
