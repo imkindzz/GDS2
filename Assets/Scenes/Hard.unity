@@ -767,6 +767,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5969884894423819616, guid: 2ccb97433b45fbc4884815bd6d89bcd0, type: 3}
+      propertyPath: m_Name
+      value: Background_Bushes
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
