@@ -1314,7 +1314,7 @@ Transform:
   m_GameObject: {fileID: 1350674150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6022.1133}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   - {fileID: 8995154407686431259, guid: 998ddf986dfb7eb4e9b109be0bf03d73, type: 3}
   scrollSpeed: 3
   sortingLayerName: Default
-  orderInLayer: 0
+  orderInLayer: 3
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -1440,7 +1440,7 @@ Transform:
   m_GameObject: {fileID: 1401805194}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6022.1133}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1462,7 +1462,7 @@ MonoBehaviour:
   - {fileID: 8995154407686431259, guid: 998ddf986dfb7eb4e9b109be0bf03d73, type: 3}
   scrollSpeed: 5
   sortingLayerName: Default
-  orderInLayer: 0
+  orderInLayer: 3
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -1678,7 +1678,7 @@ Transform:
   m_GameObject: {fileID: 1454052250}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6022.1133}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1700,7 +1700,7 @@ MonoBehaviour:
   - {fileID: 8995154407686431259, guid: 998ddf986dfb7eb4e9b109be0bf03d73, type: 3}
   scrollSpeed: 8
   sortingLayerName: Default
-  orderInLayer: 0
+  orderInLayer: 3
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -2862,6 +2862,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1687289490981343455, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b3f1bc793f7343c47b5f1dc79d8ce74f, type: 2}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: maxProps
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: minProps
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: propScaleMax
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: propSpawnChance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: propSprites.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: 'propSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -7353686454604568911, guid: a6f0011812a225b48a650f28ba5ae02c, type: 3}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: 'propSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2498187180630625057, guid: a6f0011812a225b48a650f28ba5ae02c, type: 3}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: 'propSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -2695419450332155925, guid: a6f0011812a225b48a650f28ba5ae02c, type: 3}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: 'propSprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: 6046716211225014488, guid: a6f0011812a225b48a650f28ba5ae02c, type: 3}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: 'propSprites.Array.data[4]'
+      value: 
+      objectReference: {fileID: 3571327160713579162, guid: a6f0011812a225b48a650f28ba5ae02c, type: 3}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: 'propSprites.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2835084335344000788, guid: a6f0011812a225b48a650f28ba5ae02c, type: 3}
     - target: {fileID: 8309773409677931957, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
       propertyPath: m_Name
       value: Background_Dirt
