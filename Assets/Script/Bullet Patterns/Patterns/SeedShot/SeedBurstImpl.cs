@@ -16,7 +16,7 @@ public class SeedBurstImpl : MonoBehaviour
     [SerializeField] float flashInterval = 0.08f;  // how quickly to toggle color
 
     //sounds
-    [SerializeField] private SfxSoundName explodeSfx = SfxSoundName.GoblinClubThrowImpact; //the sound of when the explosion happens
+    [SerializeField] private SfxSoundName explodeSfx = SfxSoundName.VillagerDynamiteLessDramatic; //the sound of when the explosion happens
 
     // Internals
     float t;

@@ -8,11 +8,15 @@ public enum SfxSoundName
     GoblinGrowl1, GoblinGrowl2, GoblinRatty1, GoblinRatty2, GoblinRatty3,
     GoblinSpearThrow,
 
+    //villager
+    VillagerBossRaking, VillagerBossStomp, VillagerDynamiteLessDramatic, 
+    VillagerDynamiteMoreDramatic, VillagerGroundStomp, VillagerHaybaleImpact,
+
     //player
-    GhostAttack, GhostMovement, PlayerHit, PlayerWarp,
+    GhostAttack, GhostMovement, PlayerHit, PlayerWarp, SoulRetraction,
 
     //other
-    AmbienceJungle, DeathSound
+    AmbienceJungle, AmbienceVillage, DeathSound
 }
 
 public class SoundManager : MonoBehaviour

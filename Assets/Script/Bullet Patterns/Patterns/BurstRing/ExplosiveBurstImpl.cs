@@ -29,7 +29,7 @@ public class SingularityPulseImpl : MonoBehaviour
     Color originalMatColor = Color.white;
 
     //sound
-    [SerializeField] private SfxSoundName explodeSfx = SfxSoundName.GoblinClubThrowImpact;
+    [SerializeField] private SfxSoundName explodeSfx = SfxSoundName.VillagerDynamiteMoreDramatic; //the sound of when the explosion happens
 
     void Awake()
     {

@@ -40,6 +40,8 @@ public class PlayerSummonSoul : MonoBehaviour
     private GameObject soulLink; //the link between the soul and the main body
     private bool soulLinkMirrorZ = true; //whether or not the soul link is mirrored
 
+    private AudioSource soulRetractionLoop;
+
     #region Unity methods
     void Awake()
     {
@@ -116,6 +118,8 @@ public class PlayerSummonSoul : MonoBehaviour
     //removes the soul from the game
     private void RemoveSoul()
     {
+        soulRetractionLoop = SoundManager.instance.PlaySound(SfxSoundName.SoulRetraction, transform, true);
+
         isSummoned = false;
         onReturn = true;
 
@@ -130,6 +134,8 @@ public class PlayerSummonSoul : MonoBehaviour
         float distance = Vector2.Distance(soulBody.transform.position, transform.position);
         if (distance < 0.05f)
         {
+            SoundManager.instance.StopSoundLoop(soulRetractionLoop);
+
             soulBody.SetActive(false);
             onReturn = false;
 

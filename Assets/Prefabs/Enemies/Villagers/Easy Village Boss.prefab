@@ -215,6 +215,7 @@ MonoBehaviour:
   bulletsPerLine: 1
   spacing: 0.5
   lineFlashDuration: 1
+  attackSfx: 11
 --- !u!1 &7976116153025345617
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +382,7 @@ MonoBehaviour:
   bulletsPerLine: 20
   spacing: 1
   lineFlashDuration: 0.7
+  attackSfx: 11
 --- !u!114 &330608820523807281
 MonoBehaviour:
   m_ObjectHideFlags: 0
