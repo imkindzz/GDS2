@@ -242,6 +242,8 @@ MonoBehaviour:
   scrollSpeed: 5
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -934,6 +936,8 @@ MonoBehaviour:
   scrollSpeed: 5
   sortingLayerName: Default
   orderInLayer: 1
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites: []
   minProps: 1
   maxProps: 3
@@ -1200,6 +1204,8 @@ MonoBehaviour:
   scrollSpeed: 3
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -1337,6 +1343,8 @@ MonoBehaviour:
   scrollSpeed: 3
   sortingLayerName: Default
   orderInLayer: 3
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -1463,6 +1471,8 @@ MonoBehaviour:
   scrollSpeed: 5
   sortingLayerName: Default
   orderInLayer: 3
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -1591,6 +1601,8 @@ MonoBehaviour:
   scrollSpeed: 10
   sortingLayerName: Default
   orderInLayer: 2
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites: []
   minProps: 1
   maxProps: 3
@@ -1701,6 +1713,8 @@ MonoBehaviour:
   scrollSpeed: 8
   sortingLayerName: Default
   orderInLayer: 3
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -1838,6 +1852,8 @@ MonoBehaviour:
   scrollSpeed: 8
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -2874,6 +2890,10 @@ PrefabInstance:
       propertyPath: minProps
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
+      propertyPath: propMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: b3f1bc793f7343c47b5f1dc79d8ce74f, type: 2}
     - target: {fileID: 6652505363841589480, guid: c61e65754eb729f47a984c30cbee246b, type: 3}
       propertyPath: propScaleMax
       value: 1.5

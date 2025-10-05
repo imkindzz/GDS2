@@ -12,6 +12,12 @@ public class BackgroundScroller : MonoBehaviour
     public string sortingLayerName = "Default";
     public int orderInLayer = 0;
 
+    [Header("Material Settings")]
+    [Tooltip("Optional: Apply this material to all background sprites")]
+    public Material backgroundMaterial;
+    [Tooltip("Optional: Apply this material to all prop sprites")]
+    public Material propMaterial;
+
     [Header("Prop Settings")]
     public Sprite[] propSprites;              // Sprites to spawn as props
     public int minProps = 1;                  // Minimum number of props per background
@@ -34,9 +40,13 @@ public class BackgroundScroller : MonoBehaviour
             backgroundHeight = sr.bounds.size.y;
             backgroundWidth = sr.bounds.size.x;
 
-            // Applying sorting settings to the starting background too
+            // Apply sorting
             sr.sortingLayerName = sortingLayerName;
             sr.sortingOrder = orderInLayer;
+
+            // Apply background material if assigned
+            if (backgroundMaterial != null)
+                sr.material = backgroundMaterial;
 
             // Try spawning props here
             TrySpawnProps();
@@ -82,6 +92,11 @@ public class BackgroundScroller : MonoBehaviour
         sr.sortingLayerName = sortingLayerName;
         sr.sortingOrder = orderInLayer;
 
+        // Apply background material if assigned
+        if (backgroundMaterial != null)
+            sr.material = backgroundMaterial;
+
+        // Copy all properties to new scroller
         BackgroundScroller scroller = newBG.AddComponent<BackgroundScroller>();
         scroller.backgroundSprites = backgroundSprites;
         scroller.scrollSpeed = scrollSpeed;
@@ -93,6 +108,8 @@ public class BackgroundScroller : MonoBehaviour
         scroller.propSpawnChance = propSpawnChance;
         scroller.propScaleMin = propScaleMin;
         scroller.propScaleMax = propScaleMax;
+        scroller.backgroundMaterial = backgroundMaterial;
+        scroller.propMaterial = propMaterial;
 
         newBG.transform.position = spawnPos;
     }
@@ -115,6 +132,10 @@ public class BackgroundScroller : MonoBehaviour
             // Match sorting (props always appear above background)
             sr.sortingLayerName = sortingLayerName;
             sr.sortingOrder = orderInLayer + 1;
+
+            // Apply prop material if assigned
+            if (propMaterial != null)
+                sr.material = propMaterial;
 
             // Random position inside background bounds
             float randX = Random.Range(-backgroundWidth / 2f, backgroundWidth / 2f);
