@@ -15,6 +15,9 @@ public class SeedBurstImpl : MonoBehaviour
     [SerializeField] float flashLeadTime = 0.4f;   // start flashing this many seconds before explode
     [SerializeField] float flashInterval = 0.08f;  // how quickly to toggle color
 
+    //sounds
+    [SerializeField] private SfxSoundName explodeSfx = SfxSoundName.GoblinClubThrowImpact; //the sound of when the explosion happens
+
     // Internals
     float t;
     bool flashing;
@@ -76,6 +79,8 @@ public class SeedBurstImpl : MonoBehaviour
     {
         float step = 360f / miniCount;
         Vector3 pos = transform.position;
+
+        SoundManager.instance.PlaySound(explodeSfx);
 
         for (int i = 0; i < miniCount; i++)
         {

@@ -28,6 +28,9 @@ public class SingularityPulseImpl : MonoBehaviour
     bool useBaseColor;     // true if material has _BaseColor, else _Color
     Color originalMatColor = Color.white;
 
+    //sound
+    [SerializeField] private SfxSoundName explodeSfx = SfxSoundName.GoblinClubThrowImpact;
+
     void Awake()
     {
         // Prefer SpriteRenderer if present
@@ -137,6 +140,8 @@ public class SingularityPulseImpl : MonoBehaviour
 
         for (int i = 0; i < bulletsPerPulse; i++)
         {
+            SoundManager.instance.PlaySound(explodeSfx);
+
             float ang = spin + step * i;
             Quaternion rot = Quaternion.Euler(0f, 0f, ang - 90f);
             GameObject g = Instantiate(prefab, pos, rot);

@@ -20,6 +20,8 @@ public class VillagerPhase1LineAttack : MonoBehaviour
     public float lineFlashDuration = 3f;
     private List<GameObject> lineGameObjects = new List<GameObject>();
 
+    public SfxSoundName attackSfx;
+
 
     IEnumerator LineAttack()
     {
@@ -44,6 +46,8 @@ public class VillagerPhase1LineAttack : MonoBehaviour
         lineGameObjects.Clear();
 
         yield return new WaitForSeconds(0.35f);
+
+        SoundManager.instance.PlaySound(attackSfx);
 
         foreach (float x2 in linePositions)
         {

@@ -20,6 +20,7 @@ public class VillagerBossPhase2Attack : MonoBehaviour
     public float lineFlashDuration = 3f;
     private List<GameObject> lineGameObjects = new List<GameObject>();
 
+    public SfxSoundName placeSfx;
 
     IEnumerator LineAttack()
     {
@@ -52,7 +53,8 @@ public class VillagerBossPhase2Attack : MonoBehaviour
 
                 float y = i * spacing - ((bulletsPerLine - 1) * spacing / 2);
 
-                
+                SoundManager.instance.PlaySound(placeSfx);
+
                 Vector3 bulletUpPos = new Vector3(x2, y + 0.3f, 0f);
                 Instantiate(bulletUp, bulletUpPos, Quaternion.identity);
 
