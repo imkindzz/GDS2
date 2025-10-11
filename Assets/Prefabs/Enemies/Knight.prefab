@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3724076224247303649}
   - component: {fileID: 4733268241414789772}
   - component: {fileID: 8890102103317095501}
+  - component: {fileID: 7122767038829474685}
   m_Layer: 7
   m_Name: Knight
   m_TagString: Untagged
@@ -192,6 +193,7 @@ MonoBehaviour:
   fireRate: 0.45
   aimAtPlayer: 1
   aimPos: {x: 0, y: 0, z: 0}
+  bulletSfx: 0
 --- !u!114 &8890102103317095501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +212,25 @@ MonoBehaviour:
   healthMeter: {fileID: 0}
   deathDelay: 0.25
   pointsOnDeath: 100
+--- !u!95 &7122767038829474685
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4150298338263743262}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: beac894b8416ef346a38e92f9df6b144, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
