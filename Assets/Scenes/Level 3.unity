@@ -644,7 +644,7 @@ MonoBehaviour:
     - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 6015687279279957363, guid: 66c4ccabd3fa1c8459215f7db7050879, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
       count: 1
       spawnPointIndex: 0
   - name: 2 Burst Ring
