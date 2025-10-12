@@ -31,6 +31,8 @@ public class LaserSweeper2D : MonoBehaviour
 
         
         direction = (startingDirection == RotationDirection.Clockwise) ? -1 : 1;
+
+        SoundManager.instance.PlaySound(SfxSoundName.GhostAttack, transform, true);
     }
 
     void Update()
