@@ -17,8 +17,6 @@ public class EnemyStatus : StatusBase
         base.TakeDamage(amount);
         Debug.Log("Enemy is taking damage");
     }
-
-    // Called exactly once by StatusBase when the enemy dies
     public override void OnDeathState()
     {
         // Fire BEFORE base in case base destroys the GameObject.
@@ -29,10 +27,17 @@ public class EnemyStatus : StatusBase
             ScoreManager.Instance.AddScore(pointsOnDeath);
             Debug.Log($"Enemy died! Awarded {pointsOnDeath} points.");
 
+            // Add souls to the Soul Bar when enemy dies
+            if (SoulBarManager.Instance != null)
+            {
+                SoulBarManager.Instance.AddSouls(10f); 
+            }
+
             Died?.Invoke(this);
         }
 
-        base.OnDeathState(); // likely destroys/despawns
+        base.OnDeathState(); 
     }
+
 }
 
