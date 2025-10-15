@@ -727,7 +727,7 @@ MonoBehaviour:
     - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: e38dfae8803ee2d4c90142b9b74242d8, type: 3}
       count: 1
       spawnPointIndex: 0
   - name: 2 Burst Ring
@@ -735,7 +735,7 @@ MonoBehaviour:
     - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: e38dfae8803ee2d4c90142b9b74242d8, type: 3}
       count: 1
       spawnPointIndex: 0
     - prefab: {fileID: 143539609779087865, guid: 9cb59c7a9cfcc324fb7abf044509b7d8, type: 3}
@@ -743,18 +743,18 @@ MonoBehaviour:
       spawnPointIndex: 2
   - name: 1 Lance 1 Knight
     entries:
-    - prefab: {fileID: 181993939917045503, guid: 83fa4bec0db3fae4ebad797345c54418, type: 3}
+    - prefab: {fileID: 181993939917045503, guid: 2be2373f13777834999b59b3c1c0441b, type: 3}
       count: 1
       spawnPointIndex: 1
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: e38dfae8803ee2d4c90142b9b74242d8, type: 3}
       count: 1
       spawnPointIndex: 0
   - name: 2 Knight 1 Lance
     entries:
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: e38dfae8803ee2d4c90142b9b74242d8, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 181993939917045503, guid: 83fa4bec0db3fae4ebad797345c54418, type: 3}
+    - prefab: {fileID: 181993939917045503, guid: 2be2373f13777834999b59b3c1c0441b, type: 3}
       count: 2
       spawnPointIndex: 0
     - prefab: {fileID: 2043612635996268810, guid: 44ba614950f841e4e93f992428dbacf1, type: 3}
@@ -762,13 +762,13 @@ MonoBehaviour:
       spawnPointIndex: 1
   - name: 2 Knight 2 Lance
     entries:
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: e38dfae8803ee2d4c90142b9b74242d8, type: 3}
       count: 1
       spawnPointIndex: 1
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: e38dfae8803ee2d4c90142b9b74242d8, type: 3}
       count: 1
       spawnPointIndex: 0
-    - prefab: {fileID: 181993939917045503, guid: 83fa4bec0db3fae4ebad797345c54418, type: 3}
+    - prefab: {fileID: 181993939917045503, guid: 2be2373f13777834999b59b3c1c0441b, type: 3}
       count: 2
       spawnPointIndex: 2
   - name: 1 Firework 2 Lance
@@ -776,18 +776,18 @@ MonoBehaviour:
     - prefab: {fileID: 5610912872392045532, guid: 64043fa3162e73a458fb019b8de49822, type: 3}
       count: 1
       spawnPointIndex: 1
-    - prefab: {fileID: 181993939917045503, guid: 83fa4bec0db3fae4ebad797345c54418, type: 3}
+    - prefab: {fileID: 181993939917045503, guid: 2be2373f13777834999b59b3c1c0441b, type: 3}
       count: 2
       spawnPointIndex: 0
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: e38dfae8803ee2d4c90142b9b74242d8, type: 3}
       count: 1
       spawnPointIndex: 0
   - name: 2 Firework 2 Seedshot 1 Burst Ring
     entries:
-    - prefab: {fileID: 181993939917045503, guid: 83fa4bec0db3fae4ebad797345c54418, type: 3}
+    - prefab: {fileID: 181993939917045503, guid: 2be2373f13777834999b59b3c1c0441b, type: 3}
       count: 1
       spawnPointIndex: 2
-    - prefab: {fileID: 4150298338263743262, guid: 8a62e91b8ab162f43a5d88c56876efc1, type: 3}
+    - prefab: {fileID: 4150298338263743262, guid: e38dfae8803ee2d4c90142b9b74242d8, type: 3}
       count: 2
       spawnPointIndex: 0
     - prefab: {fileID: 5610912872392045532, guid: 64043fa3162e73a458fb019b8de49822, type: 3}
