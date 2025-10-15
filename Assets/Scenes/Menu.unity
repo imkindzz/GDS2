@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 114925118}
   - component: {fileID: 114925120}
   - component: {fileID: 114925119}
+  - component: {fileID: 114925121}
   m_Layer: 5
   m_Name: BackgroundImage
   m_TagString: Untagged
@@ -271,7 +272,7 @@ RectTransform:
   m_GameObject: {fileID: 114925117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.19, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1129370782}
@@ -319,6 +320,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114925117}
   m_CullTransparentMesh: 1
+--- !u!114 &114925121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114925117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cce9a6cfc50c3db4e910238ce5325ee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parallaxAmount: 16
 --- !u!20 &293363055 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1557431172211313189, guid: dba0680cb6a67594598cbac357327a46, type: 3}
@@ -1228,7 +1242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080326526039781659, guid: 4be0936966c9ed2409353bf5f57bae4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.07
+      value: -8.47
       objectReference: {fileID: 0}
     - target: {fileID: 4080326526039781659, guid: 4be0936966c9ed2409353bf5f57bae4d, type: 3}
       propertyPath: m_LocalPosition.z
