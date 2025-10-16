@@ -60,7 +60,7 @@ public class HobGoblinPhase2 : MonoBehaviour
         {
             case BossState.Club1:
             case BossState.Club2:
-                SoundManager.instance.PlaySound(SfxSoundName.GoblinClubThrow, transform);
+                SoundManager.instance.PlaySound(SfxSoundName.GoblinClubThrow, transform, false, 0.5f);
                 break;
 
             case BossState.Attack:

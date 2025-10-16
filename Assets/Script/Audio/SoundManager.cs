@@ -48,17 +48,19 @@ public class SoundManager : MonoBehaviour
 
     #region Public player
     //plays a sound
-    public AudioSource PlaySound(SfxSoundName soundName, Transform parent = null, bool loop = false)
+    public AudioSource PlaySound(SfxSoundName soundName, Transform parent = null, bool loop = false, float volume = -1)
     {
-        return CreateSound(sfxSoundClips[(int)soundName], sfxVolume, loop, parent);
+        float actualVolume = volume >= 0 && volume <= 1 ? volume : sfxVolume;
+
+        return CreateSound(sfxSoundClips[(int)soundName], actualVolume, loop, parent);
     }
 
     //plays a random sound
-    public AudioSource PlayRandomSound(SfxSoundName[] soundNames, Transform parent = null, bool loop = false)
+    public AudioSource PlayRandomSound(SfxSoundName[] soundNames, Transform parent = null, bool loop = false, float volume = -1)
     {
         int randIndex = Random.Range(0, soundNames.Length);
         SfxSoundName chosenSound = soundNames[randIndex];
-        return CreateSound(sfxSoundClips[(int)chosenSound], sfxVolume, loop, parent);
+        return PlaySound(chosenSound, parent, loop,volume);
     }
 
     //stops a sound loop
