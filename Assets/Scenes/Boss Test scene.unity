@@ -176,6 +176,8 @@ MonoBehaviour:
   scrollSpeed: 10
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites: []
   minProps: 1
   maxProps: 3
@@ -309,7 +311,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 175184931
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 0.22745098}
@@ -528,6 +530,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 2453564699077267431, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2482930231103161692, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
       propertyPath: slider
       value: 
@@ -716,6 +722,8 @@ MonoBehaviour:
   scrollSpeed: 5
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -997,7 +1005,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 175184931
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 0.22745098}
@@ -1321,6 +1329,8 @@ MonoBehaviour:
   scrollSpeed: 8
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -1803,6 +1813,8 @@ MonoBehaviour:
   scrollSpeed: 3
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -1874,6 +1886,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2086632740
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5261957007587431385, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_Name
+      value: Boss3 Easy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.004592955
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1409574
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381963434239042558, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84725619b96daf543a2d0dd9d9372c62, type: 3}
 --- !u!1001 &5543447390098656551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1885,6 +1954,10 @@ PrefabInstance:
     - target: {fileID: 5261957007587431385, guid: b449128c8c16d3d40a1d4c738b7e1922, type: 3}
       propertyPath: m_Name
       value: Boss3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261957007587431385, guid: b449128c8c16d3d40a1d4c738b7e1922, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5381963434239042558, guid: b449128c8c16d3d40a1d4c738b7e1922, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2015,3 +2088,4 @@ SceneRoots:
   - {fileID: 5543447390098656551}
   - {fileID: 1205599407}
   - {fileID: 204804472}
+  - {fileID: 2086632740}
