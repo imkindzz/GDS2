@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public enum SfxSoundName
 {
@@ -19,16 +20,34 @@ public enum SfxSoundName
     AmbienceJungle, AmbienceVillage, DeathSound
 }
 
+public enum MusicName
+{
+    Menu, Death,
+
+    //goblin
+    GoblinNormal, GoblinBoss,
+
+    //village
+    VillageNormal, VillageBoss,
+
+    //castle
+}
+
 public class SoundManager : MonoBehaviour
 {
     // Singleton instance
     public static SoundManager instance { get; private set; }
 
-    [SerializeField] private List<AudioClip> sfxSoundClips = new List<AudioClip>(); //stores the sounds, where the index align with the variables in the SoundName enum
+
+    [SerializeField] private List<AudioClip> sfxSoundClips = new List<AudioClip>(); //stores the sounds, where the index align with the variables in the SfxSoundName enum
+    [SerializeField] private List<AudioClip> musicClips = new List<AudioClip>(); //stores the music, where the index align with the variables in the MusicName enum
     [SerializeField] private AudioSource audioSourceObject;
 
     [Header("Volume Settings")]
     [SerializeField, Range(0f, 1f)] private float sfxVolume = 1.0f;
+    [SerializeField, Range(0f, 1f)] private float musicVolume = 1.0f;
+
+    private AudioSource musicPlayer;
 
     void Awake()
     {
@@ -44,6 +63,13 @@ public class SoundManager : MonoBehaviour
         }
 
         if (!audioSourceObject) Debug.LogError("AudioSource audioSourceObject is null in SoundManager.cs");
+        else musicPlayer = Instantiate(audioSourceObject, transform);
+    }
+
+    private void Start()
+    {
+        //plays the music of the scene it is at
+        PlayMusic(MusicName.Menu);
     }
 
     #region Public player
@@ -63,11 +89,27 @@ public class SoundManager : MonoBehaviour
         return PlaySound(chosenSound, parent, loop,volume);
     }
 
+    //plays a music loop, where there can only be one music playing in the scene
+    public void PlayMusic(MusicName musicName, float volume = -1)
+    {
+        AudioClip clip = musicClips[(int)musicName];
+        if (clip.Equals(musicPlayer.clip))
+        {
+            Debug.LogWarning("The music clip selected is already playing");
+            return;
+        }
+        else musicPlayer.Stop();
+
+        float actualVolume = volume >= 0 && volume <= 1 ? volume : musicVolume;
+
+        PlayLoop(clip, musicPlayer, actualVolume);
+    }
+
     //stops a sound loop
     public void StopSoundLoop(AudioSource audioSource)
     {
-        audioSourceObject.Stop();
-        Destroy(audioSource.gameObject); //destorys the gameobject when it is no longer used
+        audioSource.Stop();
+        Destroy(audioSource.gameObject); //destroys the gameobject when it is no longer used
     }
     #endregion
 
@@ -76,7 +118,7 @@ public class SoundManager : MonoBehaviour
     private void PlaySound(AudioClip clip, AudioSource audioSource, float volume)
     {
         audioSource.PlayOneShot(clip, volume);
-        Destroy(audioSource.gameObject, clip.length); //destorys the gameobject after the clip is finished
+        Destroy(audioSource.gameObject, clip.length); //destroys the gameobject after the clip is finished
 
     }
 
@@ -99,9 +141,13 @@ public class SoundManager : MonoBehaviour
     private AudioSource CreateSound(AudioClip clip, float volume, bool loop, Transform parent = null)
     {
         //instantiate an audioSource as a child of a gameobject
-        Transform actualParent = parent == null ? transform : parent; // ✅ safe null check
+        Transform actualParent = parent == null ? transform : parent; 
         AudioSource audioSource = Instantiate(audioSourceObject, Vector3.zero, Quaternion.identity, actualParent);
 
+        //names the audioSource
+        audioSource.name = clip.name + " AudioSource";
+
+        //plays the sound
         if (loop) PlayLoop(clip, audioSource, volume);
         else PlaySound(clip, audioSource, volume);
 

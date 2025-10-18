@@ -12,8 +12,6 @@ public class BossManager : MonoBehaviour
     
     public static TextMeshProUGUI bossPhaseText;
 
-    public AudioClip bossMusic;
-
     private BossUIManager bossUIManager;
     
     
@@ -23,19 +21,6 @@ public class BossManager : MonoBehaviour
         bossUIManager = FindFirstObjectByType<BossUIManager>();
 
         bossUIManager.activateBossUI();
-
-        
-        
-        
-
-
-       
-
-        GameObject audioSource = GameObject.Find("Audio Source");
-        audioSource.GetComponent<AudioSource>().clip = bossMusic;
-        audioSource.GetComponent<AudioSource>().Play();
-
-
     }
 
     // Update is called once per frame
