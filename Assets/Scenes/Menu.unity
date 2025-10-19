@@ -1051,12 +1051,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9674b3bcefb161b47845f8499ec1ff5f, type: 3}
   - {fileID: 8300000, guid: f12a7593d93413940a34b6a15bde6e43, type: 3}
   musicClips:
-  - {fileID: 8300000, guid: 62ea5affcf92056418c39aeba0867f08, type: 3}
-  - {fileID: 8300000, guid: 19d070b8194ed114bbdf6caf723201de, type: 3}
-  - {fileID: 8300000, guid: f1fcce09fc07c4841ab6475c5e47c62b, type: 3}
-  - {fileID: 8300000, guid: 54b9345c6654bab448587f4e2589ec1c, type: 3}
-  - {fileID: 8300000, guid: ef8bf61b0f77f18429218d133ae7d30c, type: 3}
-  - {fileID: 8300000, guid: d299d3770e973ee49a1102c1e6a77580, type: 3}
+  - {fileID: 8300000, guid: bc2d8dbca77ead143bf5aa3aff247ba0, type: 3}
+  - {fileID: 8300000, guid: e0b858bff7201e84bbed2f4518380dbc, type: 3}
+  - {fileID: 8300000, guid: 9171cb89df0ddbf41ae0b92dbdfa892f, type: 3}
+  - {fileID: 8300000, guid: 4d077dddb04eed84abc32f75ad172497, type: 3}
+  - {fileID: 8300000, guid: afef643a745b98d4d906357a0adcec7c, type: 3}
+  - {fileID: 8300000, guid: 0fd0d4e843f2c434ea2df7fb256e2551, type: 3}
+  - {fileID: 8300000, guid: 24b3d1484041ce344b3d515772c75ba7, type: 3}
+  - {fileID: 8300000, guid: fc54b22818bf96840adcfb94a69b8b02, type: 3}
   audioSourceObject: {fileID: 6420736149182768374, guid: a2fe6f6da19e25b4581b9e0bd55a12e1, type: 3}
   sfxVolume: 0.25
   musicVolume: 1

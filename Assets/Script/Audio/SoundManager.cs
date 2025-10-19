@@ -33,6 +33,7 @@ public enum MusicName
     VillageNormal, VillageBoss,
 
     //castle
+    CastleNormal, CastleBoss,
 }
 
 public class SoundManager : MonoBehaviour

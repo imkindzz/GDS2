@@ -18,27 +18,24 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
 
-        switch (sceneName)
+        if (sceneName == "Menu" || sceneName == "Difficulty")
         {
-            case "Menu":
-            case "Difficulty":
-                SoundManager.instance.PlayMusic(MusicName.Menu);
-                break;
-            case "Hard":
-            case "Easy":
-                SoundManager.instance.PlayMusic(MusicName.GoblinNormal);
-                SoundManager.instance.PreloadMusic(MusicName.GoblinBoss);
-                break;
-            case "Level 2":
-            case "Level 2 Easy":
-                SoundManager.instance.PlayMusic(MusicName.VillageNormal);
-                SoundManager.instance.PreloadMusic(MusicName.VillageBoss);
-                break;
-            case "Level 3":
-            case "Level 3 Easy":
-                break;
-            default:
-                break;
+            SoundManager.instance.PlayMusic(MusicName.Menu);
+        }
+        else if (sceneName == "Hard" || sceneName == "Easy")
+        {
+            SoundManager.instance.PlayMusic(MusicName.GoblinNormal);
+            SoundManager.instance.PreloadMusic(MusicName.GoblinBoss);
+        }
+        else if (sceneName == "Level 2" || sceneName == "Level 2 Easy")
+        {
+            SoundManager.instance.PlayMusic(MusicName.VillageNormal);
+            SoundManager.instance.PreloadMusic(MusicName.VillageBoss);
+        }
+        else if (sceneName == "Level 3" || sceneName == "Level 3 Easy")
+        {
+            SoundManager.instance.PlayMusic(MusicName.CastleNormal);
+            SoundManager.instance.PreloadMusic(MusicName.CastleBoss);
         }
     }
 }

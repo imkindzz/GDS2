@@ -535,6 +535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5381963434239042558}
+  - component: {fileID: 3783537684353122349}
   m_Layer: 0
   m_Name: Boss3 Easy
   m_TagString: Untagged
@@ -559,6 +560,19 @@ Transform:
   - {fileID: 2014039366067425509}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3783537684353122349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5261957007587431385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859ae6ceb433b8b47be2634b16613add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossMusic: 7
 --- !u!1 &8888838606355154359
 GameObject:
   m_ObjectHideFlags: 0
