@@ -27,10 +27,12 @@ public class Button : MonoBehaviour
             case "Hard":
             case "Easy":
                 SoundManager.instance.PlayMusic(MusicName.GoblinNormal);
+                SoundManager.instance.PreloadMusic(MusicName.GoblinBoss);
                 break;
             case "Level 2":
             case "Level 2 Easy":
                 SoundManager.instance.PlayMusic(MusicName.VillageNormal);
+                SoundManager.instance.PreloadMusic(MusicName.VillageBoss);
                 break;
             case "Level 3":
             case "Level 3 Easy":

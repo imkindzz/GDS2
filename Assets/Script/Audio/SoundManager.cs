@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -110,6 +111,36 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.Stop();
         Destroy(audioSource.gameObject); //destroys the gameobject when it is no longer used
+    }
+
+    public void PreloadMusic(MusicName musicName)
+    {
+        var clip = musicClips[(int)musicName];
+        if (clip && clip.loadState != AudioDataLoadState.Loaded)
+            clip.LoadAudioData(); // async when possible
+    }
+
+    private IEnumerator WaitUntilLoaded(AudioClip clip)
+    {
+        while (clip && clip.loadState == AudioDataLoadState.Loading)
+            yield return null;
+    }
+
+    public IEnumerator PlayMusicPreloaded(MusicName musicName, float volume = -1f)
+    {
+        var clip = musicClips[(int)musicName];
+        if (!clip) yield break;
+
+        // Warm up first (prevents the hitch)
+        PreloadMusic(musicName);
+        yield return StartCoroutine(WaitUntilLoaded(clip));
+
+        float actualVol = (volume >= 0f && volume <= 1f) ? volume : musicVolume;
+
+        if (musicPlayer.isPlaying) musicPlayer.Stop();
+        musicPlayer.clip = clip;
+        musicPlayer.volume = actualVol;
+        musicPlayer.Play();
     }
     #endregion
 

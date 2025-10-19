@@ -8,6 +8,6 @@ public class BossMusicAudio : MonoBehaviour
 
     void Start()
     {
-        SoundManager.instance.PlayMusic(bossMusic);
+        StartCoroutine(SoundManager.instance.PlayMusicPreloaded(bossMusic));
     }
 }
