@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
+using System.Runtime.CompilerServices;
 
 public enum SfxSoundName
 {
@@ -49,6 +50,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField, Range(0f, 1f)] private float musicVolume = 1.0f;
 
     private AudioSource musicPlayer;
+    private bool isPlayingDeathMusic = false;
 
     void Awake()
     {
@@ -64,7 +66,11 @@ public class SoundManager : MonoBehaviour
         }
 
         if (!audioSourceObject) Debug.LogError("AudioSource audioSourceObject is null in SoundManager.cs");
-        else musicPlayer = Instantiate(audioSourceObject, transform);
+        else
+        {
+            musicPlayer = Instantiate(audioSourceObject, transform);
+            musicPlayer.gameObject.name = "Music Player AudioSource";
+        }
     }
 
     private void Start()
@@ -104,6 +110,9 @@ public class SoundManager : MonoBehaviour
         float actualVolume = volume >= 0 && volume <= 1 ? volume : musicVolume;
 
         PlayLoop(clip, musicPlayer, actualVolume);
+
+        if (musicName.Equals(MusicName.Death)) isPlayingDeathMusic = true;
+        else isPlayingDeathMusic = false;
     }
 
     //stops a sound loop
@@ -148,6 +157,12 @@ public class SoundManager : MonoBehaviour
     //plays the sound
     private void PlaySound(AudioClip clip, AudioSource audioSource, float volume)
     {
+        if (!clip || !audioSource)
+        {
+            Debug.LogWarning("The AudioClip or AudioSource in the PlaySound function from the SoundManager script is null");
+            return;
+        }
+
         audioSource.PlayOneShot(clip, volume);
         Destroy(audioSource.gameObject, clip.length); //destroys the gameobject after the clip is finished
 
@@ -156,6 +171,12 @@ public class SoundManager : MonoBehaviour
     //plays a sound loop
     private void PlayLoop(AudioClip clip, AudioSource audioSource, float volume)
     {
+        if (!clip || !audioSource)
+        {
+            Debug.LogWarning("The AudioClip or AudioSource in the PlayLoop function from the SoundManager script is null");
+            return;
+        }
+
         if (audioSource.isPlaying)
         {
             Debug.LogWarning(audioSource.name + " AudioSource is currently playing");
@@ -171,6 +192,8 @@ public class SoundManager : MonoBehaviour
     //creates the sound in the scene where it can be stored under specific gameobjects
     private AudioSource CreateSound(AudioClip clip, float volume, bool loop, Transform parent = null)
     {
+        if (isPlayingDeathMusic) return null;
+
         //instantiate an audioSource as a child of a gameobject
         Transform actualParent = parent == null ? transform : parent; 
         AudioSource audioSource = Instantiate(audioSourceObject, Vector3.zero, Quaternion.identity, actualParent);
