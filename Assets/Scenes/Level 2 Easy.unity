@@ -572,6 +572,14 @@ PrefabInstance:
       propertyPath: soulBar
       value: 
       objectReference: {fileID: 111438483}
+    - target: {fileID: 4351599528522387967, guid: e9f4dd8c3828f8142a7b8e2478be8905, type: 3}
+      propertyPath: maxSoulIcon
+      value: 
+      objectReference: {fileID: 1890932461}
+    - target: {fileID: 4351599528522387967, guid: e9f4dd8c3828f8142a7b8e2478be8905, type: 3}
+      propertyPath: fullSoulText
+      value: 
+      objectReference: {fileID: 1890932462}
     - target: {fileID: 5751667485989951106, guid: e9f4dd8c3828f8142a7b8e2478be8905, type: 3}
       propertyPath: m_Name
       value: GameSoulBarManager
@@ -1209,6 +1217,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 888629392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1890932461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1972532580727446775, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+  m_PrefabInstance: {fileID: 1332883647}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1890932462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9161625503816665143, guid: 721c6f111a5f68240802950bbf21d214, type: 3}
+  m_PrefabInstance: {fileID: 1332883647}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1910369976
 PrefabInstance:
   m_ObjectHideFlags: 0
