@@ -148,6 +148,8 @@ MonoBehaviour:
   scrollSpeed: 10
   sortingLayerName: Default
   orderInLayer: 2
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites: []
   minProps: 1
   maxProps: 3
@@ -258,6 +260,8 @@ MonoBehaviour:
   scrollSpeed: 8
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -379,6 +383,8 @@ MonoBehaviour:
   scrollSpeed: 3
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -500,6 +506,8 @@ MonoBehaviour:
   scrollSpeed: 5
   sortingLayerName: Default
   orderInLayer: 0
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites:
   - {fileID: 3349391187094723686, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
   - {fileID: -1551757773269413495, guid: 69d8e348d1c91eb42b937841202f50c4, type: 3}
@@ -628,6 +636,8 @@ MonoBehaviour:
   scrollSpeed: 5
   sortingLayerName: Default
   orderInLayer: 1
+  backgroundMaterial: {fileID: 0}
+  propMaterial: {fileID: 0}
   propSprites: []
   minProps: 1
   maxProps: 3
@@ -758,6 +768,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5770211738836001042, guid: 582c9fb05feed0e4997c4e2585d50a09, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
