@@ -1,16 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; 
 
 public class SoulBarManager : MonoBehaviour
 {
     public static SoulBarManager Instance;
 
     [Header("Soul Bar Settings")]
-    [SerializeField] private Slider soulBar;       
-    [SerializeField] private float maxSoul = 100f; 
+    [SerializeField] private Slider soulBar;
+    [SerializeField] private float maxSoul = 100f;
     [SerializeField] private float gainAmount = 10f;
 
+    [Header("UI Elements")]
+    [SerializeField] private TextMeshProUGUI fullSoulText; 
+    [SerializeField] private Image maxSoulIcon;     
+
     private float currentSoul = 0f;
+    private bool soulBarIsFull = false;
 
     private void Awake()
     {
@@ -29,20 +35,42 @@ public class SoulBarManager : MonoBehaviour
             soulBar.maxValue = maxSoul;
             soulBar.value = currentSoul;
         }
+
+        if (fullSoulText != null)
+            fullSoulText.gameObject.SetActive(false);
+
+        if (maxSoulIcon != null)
+            maxSoulIcon.enabled = false;
     }
 
-    /// <summary>
-    /// Call this when an enemy dies to increase the soul bar.
-    /// </summary>
+    private void Update()
+    {
+        if (soulBarIsFull && Input.GetKeyDown(KeyCode.F))
+        {
+            GivePlayerHeart();
+            ResetSoulBar();
+        }
+    }
+
     public void AddSouls(float amount)
     {
         currentSoul += amount;
         if (currentSoul >= maxSoul)
         {
-            currentSoul -= maxSoul;
-            GivePlayerHeart();
+            currentSoul = maxSoul;
+            OnSoulBarFull();
         }
         UpdateSoulBarUI();
+    }
+
+    private void OnSoulBarFull()
+    {
+        soulBarIsFull = true;
+        if (fullSoulText != null)
+            fullSoulText.gameObject.SetActive(true);
+
+        if (maxSoulIcon != null)
+            maxSoulIcon.enabled = true;
     }
 
     private void GivePlayerHeart()
@@ -50,7 +78,6 @@ public class SoulBarManager : MonoBehaviour
         if (PlayerStatus.Instance != null)
         {
             PlayerStatus player = PlayerStatus.Instance;
-            // Prevent going over max hearts
             var heartField = player.GetType().GetField("maxHearts", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             var currentField = player.GetType().GetField("currentHearts", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
 
@@ -62,7 +89,6 @@ public class SoulBarManager : MonoBehaviour
                 currentHearts++;
                 currentField.SetValue(player, currentHearts);
 
-                // Call the private UpdateHeartsUI() method via reflection
                 var updateMethod = player.GetType().GetMethod("UpdateHeartsUI", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                 updateMethod?.Invoke(player, null);
 
@@ -70,7 +96,7 @@ public class SoulBarManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Soul bar filled, but hearts are already at max.");
+                Debug.Log("Soul bar full, but hearts already at max.");
             }
         }
     }
@@ -83,14 +109,20 @@ public class SoulBarManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Optional: reset soul bar manually.
-    /// </summary>
     public void ResetSoulBar()
     {
         currentSoul = 0f;
+        soulBarIsFull = false;
+
+        if (fullSoulText != null)
+            fullSoulText.gameObject.SetActive(false);
+
+        if (maxSoulIcon != null)
+            maxSoulIcon.enabled = false;
+
         UpdateSoulBarUI();
     }
 }
+
 
 
