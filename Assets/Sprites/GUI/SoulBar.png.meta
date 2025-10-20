@@ -127,10 +127,10 @@ TextureImporter:
       name: SoulBar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 100
-        width: 84
-        height: 50
+        x: 10
+        y: 117
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,10 +148,10 @@ TextureImporter:
       name: SoulBar_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 50
-        width: 84
-        height: 50
+        x: 10
+        y: 67
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: SoulBar_2
       rect:
         serializedVersion: 2
-        x: 84
-        y: 50
-        width: 84
-        height: 50
+        x: 94
+        y: 67
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: SoulBar_3
       rect:
         serializedVersion: 2
-        x: 168
-        y: 50
-        width: 84
-        height: 50
+        x: 178
+        y: 67
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: SoulBar_4
       rect:
         serializedVersion: 2
-        x: 252
-        y: 50
-        width: 84
-        height: 50
+        x: 262
+        y: 67
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: SoulBar_5
       rect:
         serializedVersion: 2
-        x: 336
-        y: 50
-        width: 84
-        height: 50
+        x: 346
+        y: 67
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: SoulBar_6
       rect:
         serializedVersion: 2
-        x: 420
-        y: 50
-        width: 84
-        height: 50
+        x: 430
+        y: 67
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: SoulBar_7
       rect:
         serializedVersion: 2
-        x: 504
-        y: 50
-        width: 84
-        height: 50
+        x: 514
+        y: 67
+        width: 64
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,9 +296,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 5
         width: 84
-        height: 50
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,9 +317,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 84
-        y: 0
+        y: 5
         width: 84
-        height: 50
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,7 +327,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f54fff9a189ab6740b55ff86528777ed
+      spriteID: dcf6dcd71e21e484a8233dae0d4c0fd0
       internalID: -840919433
       vertices: []
       indices: 
@@ -338,9 +338,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 168
-        y: 0
+        y: 5
         width: 84
-        height: 50
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,7 +348,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c8e5a0b13a0b8e49b507ee7a1904125
+      spriteID: 9d05edffcf4a86e4c89ba61c4d8e49b7
       internalID: -1892270140
       vertices: []
       indices: 
