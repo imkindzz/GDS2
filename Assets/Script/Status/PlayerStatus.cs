@@ -16,6 +16,7 @@ public class PlayerStatus : StatusBase
     [SerializeField] private List<Image> heartImages; 
     private int currentHearts;
     private int maxHearts = 5;
+    private int lowHPHearts = 1;
 
     [Header("Streak System")]
     [SerializeField] private float streakIncreaseRate = 1f; 
@@ -26,8 +27,6 @@ public class PlayerStatus : StatusBase
     [Header("Damage Flash")]
     [SerializeField] private SpriteRenderer damageFlashSprite; 
     [SerializeField] private float flashFadeDuration = 0.5f;   
-
-
 
     private SpriteRenderer spriteRenderer;
 
@@ -42,6 +41,8 @@ public class PlayerStatus : StatusBase
     private float invincibilityTimer = 0f;
     private Coroutine flashRoutine;
 
+    private AudioSource lowHPAudio = null;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -53,6 +54,7 @@ public class PlayerStatus : StatusBase
     void Update()
     {
         HandleStreak();
+        HandleLowHP();
     }
 
     #region Health methods
@@ -90,6 +92,17 @@ public class PlayerStatus : StatusBase
                 }
             }
         }
+    }
+
+    private void HandleLowHP()
+    {
+        if (currentHearts > lowHPHearts && lowHPAudio || currentHearts == 0)
+        {
+            SoundManager.instance.StopSoundLoop(lowHPAudio);
+            lowHPAudio = null;
+        }
+        else if (currentHearts <= lowHPHearts && !lowHPAudio)
+            lowHPAudio = SoundManager.instance.PlaySound(SfxSoundName.LowHP, transform, true, 0.5f);
     }
     #endregion
 
