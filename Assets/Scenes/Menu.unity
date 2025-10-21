@@ -1025,6 +1025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c73ef9d6f4f99814181919e687da8361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startMusicName: 0
   sfxSoundClips:
   - {fileID: 8300000, guid: 6f09647114ea3384bb822c9c6930a940, type: 3}
   - {fileID: 8300000, guid: 2cb8ee1f30b105943a0772b436edc885, type: 3}
@@ -1039,14 +1040,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 07027a2735ba75d4da3158e71067931b, type: 3}
   - {fileID: 8300000, guid: 1c6bb7780771e6b45a378893d63b5ef8, type: 3}
   - {fileID: 8300000, guid: bbac9d0d1602a944288fd14222c2425d, type: 3}
-  - {fileID: 8300000, guid: 9942a7ea80091a848ae1b9afa7987304, type: 3}
+  - {fileID: 8300000, guid: f162fe26830011a449a81aad30790e90, type: 3}
   - {fileID: 8300000, guid: d3962b9e612ad684dbc037eba3013bcb, type: 3}
   - {fileID: 8300000, guid: 77a8da26c58c4f84682ad7b527e95e2c, type: 3}
+  - {fileID: 8300000, guid: 41a0421cbde499b43bec6071c12d09a7, type: 3}
+  - {fileID: 8300000, guid: 00d08c0bee7080e4d937e5fc43cbd3df, type: 3}
+  - {fileID: 8300000, guid: b9c951d392cd1f0439c1b3381d974bf5, type: 3}
+  - {fileID: 8300000, guid: aed45e8602fc0b74b99a7e07d5fb3f68, type: 3}
   - {fileID: 8300000, guid: 3b7c21f3fdccc53419145f615a98e59b, type: 3}
   - {fileID: 8300000, guid: 3746e20e354ae7445a07a991b68d32ec, type: 3}
   - {fileID: 8300000, guid: e2bc4802adff01d47997bd481c73575f, type: 3}
   - {fileID: 8300000, guid: 40c146fdc405b0a48ba56fa91de27630, type: 3}
   - {fileID: 8300000, guid: ead5725ec2056c840b48977b753c7bfd, type: 3}
+  - {fileID: 8300000, guid: cc18d4bb29e86f84695d956c21af4e86, type: 3}
+  - {fileID: 8300000, guid: 44f556a39fc209c458048280c0b97a1a, type: 3}
+  - {fileID: 8300000, guid: f6feb2c8d3a7d4e40acbb85289554443, type: 3}
   - {fileID: 8300000, guid: 4724675ce918ab242a78e22bcb41cb42, type: 3}
   - {fileID: 8300000, guid: 9674b3bcefb161b47845f8499ec1ff5f, type: 3}
   - {fileID: 8300000, guid: f12a7593d93413940a34b6a15bde6e43, type: 3}

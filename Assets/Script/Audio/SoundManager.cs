@@ -15,8 +15,12 @@ public enum SfxSoundName
     VillagerBossRaking, VillagerBossStomp, VillagerDynamiteLessDramatic, 
     VillagerDynamiteMoreDramatic, VillagerGroundStomp, VillagerHaybaleImpact,
 
+    //castle
+    KnightCling, LanceCling, LanceChargeAttack, SwordSwing,
+
     //player
     GhostAttack, GhostMovement, PlayerHit, PlayerWarp, SoulRetraction,
+    DashCharge, GainHP, LowHP,
 
     //other
     AmbienceJungle, AmbienceVillage, DeathSound
@@ -41,7 +45,9 @@ public class SoundManager : MonoBehaviour
     // Singleton instance
     public static SoundManager instance { get; private set; }
 
+    [SerializeField] private MusicName startMusicName;
 
+    [Header("Audio Clips")]
     [SerializeField] private List<AudioClip> sfxSoundClips = new List<AudioClip>(); //stores the sounds, where the index align with the variables in the SfxSoundName enum
     [SerializeField] private List<AudioClip> musicClips = new List<AudioClip>(); //stores the music, where the index align with the variables in the MusicName enum
     [SerializeField] private AudioSource audioSourceObject;
@@ -77,7 +83,7 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         //plays the music of the scene it is at
-        PlayMusic(MusicName.Menu);
+        PlayMusic(startMusicName);
     }
 
     #region Public player
