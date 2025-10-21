@@ -92,6 +92,8 @@ public class SoulBarManager : MonoBehaviour
                 var updateMethod = player.GetType().GetMethod("UpdateHeartsUI", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                 updateMethod?.Invoke(player, null);
 
+                SoundManager.instance.PlaySound(SfxSoundName.GainHP);
+
                 Debug.Log("Gained 1 heart from soul bar!");
             }
             else
