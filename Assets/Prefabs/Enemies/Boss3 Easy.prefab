@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 5129763654826749661}
   - component: {fileID: 6374378557038047189}
   - component: {fileID: 1678523210001089861}
+  - component: {fileID: 4679989244663429485}
   m_Layer: 0
   m_Name: Phase 2
   m_TagString: Untagged
@@ -401,6 +402,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e79d20bd28e18a489e39e1c5893ff97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4679989244663429485
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274381997684223279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f635f3eccbd5c1458a78af84898eb4b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3854416416144675378
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +609,7 @@ GameObject:
   - component: {fileID: 4070025381814181826}
   - component: {fileID: 2398317003708880262}
   - component: {fileID: 5571557001311192693}
+  - component: {fileID: 8779457825445870554}
   m_Layer: 0
   m_Name: Phase 1
   m_TagString: Untagged
@@ -731,6 +755,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sword: {fileID: 2420616775206782832}
+--- !u!95 &8779457825445870554
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888838606355154359}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f635f3eccbd5c1458a78af84898eb4b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &712519924087170704
 PrefabInstance:
   m_ObjectHideFlags: 0
