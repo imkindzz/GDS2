@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStatus : StatusBase
 {
@@ -114,6 +115,7 @@ public class PlayerStatus : StatusBase
 
         EndInvincibility(); //ensures that the invisbility is gone before anything else
 
+        SceneManager.LoadScene("Menu");
         this.gameObject.SetActive(false);
         soulBody.SetActive(false);
 
