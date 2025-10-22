@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5afefca9dca52f640bcfeecbd75757c7
+guid: 7b0b874f9112fac46be2a3fd2c44c146
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,9 +103,9 @@ TextureImporter:
       name: LanceKnight_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 32
+        width: 22
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}

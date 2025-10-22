@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 816083530772622497}
   - component: {fileID: 2508684876349556881}
   - component: {fileID: 7857249546161880433}
+  - component: {fileID: -2390821993990634438}
   m_Layer: 7
   m_Name: LanceEasy
   m_TagString: Untagged
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7b0b874f9112fac46be2a3fd2c44c146, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5afefca9dca52f640bcfeecbd75757c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -211,3 +212,15 @@ MonoBehaviour:
   healthMeter: {fileID: 0}
   deathDelay: 0.25
   pointsOnDeath: 100
+--- !u!114 &-2390821993990634438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181993939917045503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f9f7460f4ccf8448bd046ea08df3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
