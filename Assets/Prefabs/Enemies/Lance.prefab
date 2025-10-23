@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2508684876349556881}
   - component: {fileID: 7857249546161880433}
   - component: {fileID: 1152145482287100835}
+  - component: {fileID: -1250718600384149225}
   m_Layer: 7
   m_Name: Lance
   m_TagString: Untagged
@@ -154,7 +155,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &816083530772622497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,3 +225,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f9f7460f4ccf8448bd046ea08df3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &-1250718600384149225
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181993939917045503}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1434f442fbaf954bb05e096ccd3764a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
