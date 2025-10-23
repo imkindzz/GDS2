@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 7f4a9d408f357884ba751e22f6e01997
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7266608659126388705
+    second: Level_3_map_0
+  - first:
+      213: -6638295675921090047
+    second: Level_3_map_1
+  - first:
+      213: 4847096357533920712
+    second: Level_3_map_2
+  - first:
+      213: 5276061854065638044
+    second: Level_3_map_3
+  - first:
+      213: 5281805909509210616
+    second: Level_3_map_4
+  - first:
+      213: 9086245134169178206
+    second: Level_3_map_5
+  - first:
+      213: -5545742960753194970
+    second: Level_3_map_6
+  - first:
+      213: -3993433812487149262
+    second: Level_3_map_7
+  - first:
+      213: -5750546651528954592
+    second: Level_3_map_8
+  - first:
+      213: -6417345879835697389
+    second: Level_3_map_9
+  - first:
+      213: -1476891227743946256
+    second: Level_3_map_10
+  - first:
+      213: -2677372385338082507
+    second: Level_3_map_11
+  - first:
+      213: 4729407708705186462
+    second: Level_3_map_12
+  - first:
+      213: -671561662121015384
+    second: Level_3_map_13
+  - first:
+      213: 4911572532371939660
+    second: Level_3_map_14
+  - first:
+      213: -7677064821083622657
+    second: Level_3_map_15
+  - first:
+      213: 9090641968208066799
+    second: Level_3_map_16
+  - first:
+      213: -7437462089702041582
+    second: Level_3_map_17
+  - first:
+      213: 6161926223379030642
+    second: Level_3_map_18
+  - first:
+      213: 1457980522673062558
+    second: Level_3_map_19
+  - first:
+      213: -1623097174785457675
+    second: Level_3_map_20
+  - first:
+      213: -1403184387389105917
+    second: Level_3_map_21
+  - first:
+      213: -3735923542565624690
+    second: Level_3_map_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Level_3_map_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 703
+        width: 162
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f187ef6bce1d72b90800000000000000
+      internalID: -7266608659126388705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 703
+        width: 150
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a36b2014900e3a0800000000000000
+      internalID: -6638295675921090047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_2
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 703
+        width: 178
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd26e6c478544340800000000000000
+      internalID: 4847096357533920712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_3
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 664
+        width: 242
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a32907d46583940800000000000000
+      internalID: 5276061854065638044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 479
+        width: 324
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f10bd09d7ebc4940800000000000000
+      internalID: 5281805909509210616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 463
+        width: 82
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50864cfec3d81e70800000000000000
+      internalID: 9086245134169178206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_6
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 487
+        width: 85
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628cea8e8209903b0800000000000000
+      internalID: -5545742960753194970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_7
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 496
+        width: 117
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2396bac0b197498c0800000000000000
+      internalID: -3993433812487149262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_8
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 495
+        width: 114
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02dfd43c944f130b0800000000000000
+      internalID: -5750546651528954592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_9
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 303
+        width: 102
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f939f3ce101f6a0800000000000000
+      internalID: -6417345879835697389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_10
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 296
+        width: 66
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f97e66d047018be0800000000000000
+      internalID: -1476891227743946256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_11
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 426
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53bbb78300018dad0800000000000000
+      internalID: -2677372385338082507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_12
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 303
+        width: 122
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e92ed5be04b32a140800000000000000
+      internalID: 4729407708705186462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_13
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 307
+        width: 127
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a78184f9322ea6f0800000000000000
+      internalID: -671561662121015384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_14
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 303
+        width: 109
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4168901239692440800000000000000
+      internalID: 4911572532371939660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_15
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 303
+        width: 90
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2b9a55836957590800000000000000
+      internalID: -7677064821083622657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_16
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 303
+        width: 106
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8bc4fa4b2782e70800000000000000
+      internalID: 9090641968208066799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_17
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 119
+        width: 136
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21810e082a3d8c890800000000000000
+      internalID: -7437462089702041582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_18
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 87
+        width: 194
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 272ebacb04f838550800000000000000
+      internalID: 6161926223379030642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_19
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 80
+        width: 166
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e92cd578f89cb3410800000000000000
+      internalID: 1457980522673062558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_20
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 103
+        width: 131
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f109f418b99979e0800000000000000
+      internalID: -1623097174785457675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_21
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 111
+        width: 106
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3095c4beb33e68ce0800000000000000
+      internalID: -1403184387389105917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Level_3_map_22
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 23
+        width: 82
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e846b51f455572cc0800000000000000
+      internalID: -3735923542565624690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Level_3_map_0: -7266608659126388705
+      Level_3_map_1: -6638295675921090047
+      Level_3_map_10: -1476891227743946256
+      Level_3_map_11: -2677372385338082507
+      Level_3_map_12: 4729407708705186462
+      Level_3_map_13: -671561662121015384
+      Level_3_map_14: 4911572532371939660
+      Level_3_map_15: -7677064821083622657
+      Level_3_map_16: 9090641968208066799
+      Level_3_map_17: -7437462089702041582
+      Level_3_map_18: 6161926223379030642
+      Level_3_map_19: 1457980522673062558
+      Level_3_map_2: 4847096357533920712
+      Level_3_map_20: -1623097174785457675
+      Level_3_map_21: -1403184387389105917
+      Level_3_map_22: -3735923542565624690
+      Level_3_map_3: 5276061854065638044
+      Level_3_map_4: 5281805909509210616
+      Level_3_map_5: 9086245134169178206
+      Level_3_map_6: -5545742960753194970
+      Level_3_map_7: -3993433812487149262
+      Level_3_map_8: -5750546651528954592
+      Level_3_map_9: -6417345879835697389
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
