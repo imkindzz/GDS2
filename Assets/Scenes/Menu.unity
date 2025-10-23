@@ -1069,7 +1069,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fc54b22818bf96840adcfb94a69b8b02, type: 3}
   audioSourceObject: {fileID: 6420736149182768374, guid: a2fe6f6da19e25b4581b9e0bd55a12e1, type: 3}
   sfxVolume: 0.25
-  musicVolume: 1
+  musicVolume: 0.85
 --- !u!1 &1407991852
 GameObject:
   m_ObjectHideFlags: 0
