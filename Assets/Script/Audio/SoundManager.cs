@@ -211,7 +211,8 @@ public class SoundManager : MonoBehaviour
             //sfxSoundName.Equals(SfxSoundName.VillagerGroundStomp) ||
             //sfxSoundName.Equals(SfxSoundName.VillagerHaybaleImpact) ||
             sfxSoundName.Equals(SfxSoundName.LanceChargeAttack) ||
-            sfxSoundName.Equals(SfxSoundName.SwordSwing)
+            sfxSoundName.Equals(SfxSoundName.SwordSwing) ||
+            sfxSoundName.Equals(SfxSoundName.GainHP)
             )
                 return volume - (volume * decreaseSfxVolumePercent);
 
@@ -221,10 +222,10 @@ public class SoundManager : MonoBehaviour
             //sfxSoundName.Equals(SfxSoundName.VillagerBossStomp) ||
             //sfxSoundName.Equals(SfxSoundName.VillagerGroundStomp) ||
             sfxSoundName.Equals(SfxSoundName.GhostAttack) ||
-            sfxSoundName.Equals(SfxSoundName.GhostMovement) ||
+            //sfxSoundName.Equals(SfxSoundName.GhostMovement) ||
             sfxSoundName.Equals(SfxSoundName.PlayerHit) ||
-            sfxSoundName.Equals(SfxSoundName.PlayerWarp) ||
-            sfxSoundName.Equals(SfxSoundName.SoulRetraction) ||
+            //sfxSoundName.Equals(SfxSoundName.PlayerWarp) ||
+            //sfxSoundName.Equals(SfxSoundName.SoulRetraction) ||
             sfxSoundName.Equals(SfxSoundName.LowHP)
             )
                 return volume + (volume * increaseSfxVolumePercent);

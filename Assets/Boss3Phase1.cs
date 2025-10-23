@@ -15,6 +15,8 @@ public class Boss3Phase1 : MonoBehaviour
     {
         float time = 0f;
 
+        SoundManager.instance.PlaySound(SfxSoundName.SwordSwing);
+
         while (time < duration)
         {
             time += Time.deltaTime;

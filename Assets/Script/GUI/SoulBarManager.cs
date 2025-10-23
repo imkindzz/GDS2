@@ -77,6 +77,8 @@ public class SoulBarManager : MonoBehaviour
     {
         if (PlayerStatus.Instance != null)
         {
+            SoundManager.instance.PlaySound(SfxSoundName.GainHP);
+
             PlayerStatus player = PlayerStatus.Instance;
             var heartField = player.GetType().GetField("maxHearts", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             var currentField = player.GetType().GetField("currentHearts", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
@@ -91,8 +93,6 @@ public class SoulBarManager : MonoBehaviour
 
                 var updateMethod = player.GetType().GetMethod("UpdateHeartsUI", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                 updateMethod?.Invoke(player, null);
-
-                SoundManager.instance.PlaySound(SfxSoundName.GainHP);
 
                 Debug.Log("Gained 1 heart from soul bar!");
             }
