@@ -103,7 +103,7 @@ public class PlayerStatus : StatusBase
             lowHPAudio = null;
         }
         else if (currentHearts <= lowHPHearts && !lowHPAudio)
-            lowHPAudio = SoundManager.instance.PlaySound(SfxSoundName.LowHP, transform, true, 0.5f);
+            lowHPAudio = SoundManager.instance.PlaySound(SfxSoundName.LowHP, transform, true);
     }
     #endregion
 

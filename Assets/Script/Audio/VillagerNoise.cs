@@ -15,6 +15,6 @@ public class VillagerNoise : MonoBehaviour
     public void PlayRandomRatty()
     {
         SfxSoundName[] soundArray = new SfxSoundName[] { SfxSoundName.GoblinRatty1, SfxSoundName.GoblinRatty2, SfxSoundName.GoblinRatty3 };
-        SoundManager.instance.PlayRandomSound(soundArray, transform, false, 0.5f);
+        SoundManager.instance.PlayRandomSound(soundArray, transform, false);
     }
 }

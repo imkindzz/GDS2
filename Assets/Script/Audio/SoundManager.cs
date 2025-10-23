@@ -53,7 +53,9 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource audioSourceObject;
 
     [Header("Volume Settings")]
-    [SerializeField, Range(0f, 1f)] private float sfxVolume = 1.0f;
+    [SerializeField, Range(0f, 1f)] private float baseSfxVolume = 1.0f;
+    [SerializeField, Range(0f, 1f)] private float increaseSfxVolumePercent = 0f;
+    [SerializeField, Range(0f, 1f)] private float decreaseSfxVolumePercent = 0f;
     [SerializeField, Range(0f, 1f)] private float musicVolume = 1.0f;
 
     private AudioSource musicPlayer;
@@ -88,19 +90,19 @@ public class SoundManager : MonoBehaviour
 
     #region Public player
     //plays a sound
-    public AudioSource PlaySound(SfxSoundName soundName, Transform parent = null, bool loop = false, float volume = -1)
+    public AudioSource PlaySound(SfxSoundName soundName, Transform parent = null, bool loop = false)
     {
-        float actualVolume = volume >= 0 && volume <= 1 ? volume : sfxVolume;
+        float actualVolume = AdjustVolumeBasedOnSound(soundName);
 
         return CreateSound(sfxSoundClips[(int)soundName], actualVolume, loop, parent);
     }
 
     //plays a random sound
-    public AudioSource PlayRandomSound(SfxSoundName[] soundNames, Transform parent = null, bool loop = false, float volume = -1)
+    public AudioSource PlayRandomSound(SfxSoundName[] soundNames, Transform parent = null, bool loop = false)
     {
         int randIndex = Random.Range(0, soundNames.Length);
         SfxSoundName chosenSound = soundNames[randIndex];
-        return PlaySound(chosenSound, parent, loop,volume);
+        return PlaySound(chosenSound, parent, loop);
     }
 
     //plays a music loop, where there can only be one music playing in the scene
@@ -194,6 +196,40 @@ public class SoundManager : MonoBehaviour
         audioSource.volume = volume;
         audioSource.loop = true;
         audioSource.Play();
+    }
+
+    //adjusts the volume of the clips that are extra loud
+    private float AdjustVolumeBasedOnSound(SfxSoundName sfxSoundName)
+    {
+        float volume = baseSfxVolume;
+
+        //decrease volume
+        if (sfxSoundName.Equals(SfxSoundName.GoblinBossExertion) ||
+            sfxSoundName.Equals(SfxSoundName.GoblinCannon) ||
+            sfxSoundName.Equals(SfxSoundName.VillagerDynamiteLessDramatic) ||
+            sfxSoundName.Equals(SfxSoundName.VillagerDynamiteMoreDramatic) ||
+            //sfxSoundName.Equals(SfxSoundName.VillagerGroundStomp) ||
+            //sfxSoundName.Equals(SfxSoundName.VillagerHaybaleImpact) ||
+            sfxSoundName.Equals(SfxSoundName.LanceChargeAttack) ||
+            sfxSoundName.Equals(SfxSoundName.SwordSwing)
+            )
+                return volume - (volume * decreaseSfxVolumePercent);
+
+        //increase volume
+        if (sfxSoundName.Equals(SfxSoundName.GoblinClubThrow) ||
+            sfxSoundName.Equals(SfxSoundName.GoblinRatty3) ||
+            //sfxSoundName.Equals(SfxSoundName.VillagerBossStomp) ||
+            //sfxSoundName.Equals(SfxSoundName.VillagerGroundStomp) ||
+            sfxSoundName.Equals(SfxSoundName.GhostAttack) ||
+            sfxSoundName.Equals(SfxSoundName.GhostMovement) ||
+            sfxSoundName.Equals(SfxSoundName.PlayerHit) ||
+            sfxSoundName.Equals(SfxSoundName.PlayerWarp) ||
+            sfxSoundName.Equals(SfxSoundName.SoulRetraction) ||
+            sfxSoundName.Equals(SfxSoundName.LowHP)
+            )
+                return volume + (volume * increaseSfxVolumePercent);
+
+        return volume;
     }
 
     //creates the sound in the scene where it can be stored under specific gameobjects
