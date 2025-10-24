@@ -251,5 +251,33 @@ public class SoundManager : MonoBehaviour
 
         return audioSource;
     }
+
+    public void SetMusicVolume(float value)
+    {
+        musicVolume = Mathf.Clamp01(value);
+        if (musicPlayer != null)
+            musicPlayer.volume = musicVolume;
+    }
+
+    public void SetSfxBaseVolume(float value)
+    {
+        baseSfxVolume = Mathf.Clamp01(value);
+    }
+
+#if UNITY_EDITOR
+    void OnValidate()
+    {
+        // Only update the music volume if the musicPlayer exists
+        if (musicPlayer != null)
+        {
+            musicPlayer.volume = Mathf.Clamp01(musicVolume);
+        }
+
+        // Clamp SFX volume as well
+        baseSfxVolume = Mathf.Clamp01(baseSfxVolume);
+    }
+#endif
+
+
     #endregion
 }
